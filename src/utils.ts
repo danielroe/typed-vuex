@@ -20,18 +20,18 @@ type ModuleTransformer<T> = T extends NuxtModules
   : {}
 
 type BlankStore = {
-  getters: {}
-  mutations: {}
-  actions: {}
-  modules: {}
+  getters: {};
+  mutations: {};
+  actions: {};
+  modules: {};
 }
 
 type NuxtStore = {
-  state: () => unknown
-  getters: Record<string, any>
-  mutations: Record<string, any>
-  actions: Record<string, any>
-  modules: NuxtModules
+  state: () => unknown;
+  getters: Record<string, any>;
+  mutations: Record<string, any>;
+  actions: Record<string, any>;
+  modules: NuxtModules;
 }
 type NuxtModules = Record<string, NuxtStore>
 
@@ -42,11 +42,11 @@ type NuxtStoreInput<
   A,
   S extends { [key: string]: NuxtStore }
 > = {
-  state: T
-  getters?: G
-  mutations?: M
-  actions?: A
-  modules?: S
+  state: T;
+  getters?: G;
+  mutations?: M;
+  actions?: A;
+  modules?: S;
 }
 
 type MergedStoreType<T extends NuxtStore> = ReturnType<T['state']> &
@@ -68,10 +68,10 @@ type FunctionProcessor<M extends Record<string, () => any>> = <
 
 export type StoreType<T extends Required<NuxtStore>> = {
   state: ReturnType<T['state']> &
-    { [P in keyof T['modules']]: ReturnType<T['modules'][P]['state']> }
-  getters: { [P in keyof T['getters']]: ReturnType<T['getters'][P]> }
-  commit: FunctionProcessor<T['mutations']>
-  dispatch: FunctionProcessor<T['actions']>
+    { [P in keyof T['modules']]: ReturnType<T['modules'][P]['state']> };
+  getters: { [P in keyof T['getters']]: ReturnType<T['getters'][P]> };
+  commit: FunctionProcessor<T['mutations']>;
+  dispatch: FunctionProcessor<T['actions']>;
 }
 
 export const getStoreType = <
@@ -81,8 +81,8 @@ export const getStoreType = <
   A,
   S extends NuxtModules
 >(
-    store: NuxtStoreInput<T, G, M, A, S>
-  ) => {
+  store: NuxtStoreInput<T, G, M, A, S>
+) => {
   return {} as StoreType<typeof store & BlankStore> &
     Omit<Store<ReturnType<T>>, 'getters' | 'dispatch' | 'commit'>
 }
@@ -94,8 +94,8 @@ export const getAccessorType = <
   A extends ActionTree<ReturnType<T>, ReturnType<T>>,
   S extends NuxtModules
 >(
-    store: NuxtStoreInput<T, G, M, A, S>
-  ) => {
+  store: NuxtStoreInput<T, G, M, A, S>
+) => {
   return {} as MergedStoreType<typeof store & BlankStore>
 }
 
@@ -108,18 +108,18 @@ const createAccessor = <T extends () => any, G, M, A, S extends NuxtModules>(
   const accessor: Record<string, any> = {}
   Object.keys(getters || {}).forEach(getter => {
     Object.defineProperty(accessor, getter, {
-      get: () => store.getters[`${namespacedPath}${getter}`]
+      get: () => store.getters[`${namespacedPath}${getter}`],
     })
   })
   Object.keys(state ? state() : {}).forEach(prop => {
     if (!Object.getOwnPropertyNames(accessor).includes(prop)) {
       if (namespace) {
         Object.defineProperty(accessor, prop, {
-          get: () => (store.state as any)[namespace][prop]
+          get: () => (store.state as any)[namespace][prop],
         })
       } else {
         Object.defineProperty(accessor, prop, {
-          get: () => (store.state as any)[prop]
+          get: () => (store.state as any)[prop],
         })
       }
     }
@@ -142,9 +142,9 @@ export const useAccessor = <
   A extends ActionTree<ReturnType<T>, ReturnType<T>>,
   S extends NuxtModules
 >(
-    store: Store<ReturnType<T>>,
-    input: Required<NuxtStoreInput<T, G, M, A, S>>
-  ) => {
+  store: Store<ReturnType<T>>,
+  input: Required<NuxtStoreInput<T, G, M, A, S>>
+) => {
   const accessor = createAccessor(store, input)
   Object.keys(input.modules || {}).forEach(namespace => {
     accessor[namespace] = createAccessor(

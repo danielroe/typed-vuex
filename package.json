@@ -15,21 +15,24 @@
   ],
   "main": "lib/module.js",
   "scripts": {
-    "lint": "eslint --ext .js lib",
+    "lint": "eslint --ext .js,.ts src",
     "build": "tsc",
     "prepublish": "yarn build",
     "release": "yarn test && standard-version && git push --follow-tags && npm publish",
     "generate": "yarn build && yarn nuxt generate test/fixture",
-    "test": "yarn generate && jest"
+    "test": "yarn lint && yarn generate && jest"
   },
   "devDependencies": {
     "@babel/core": "^7.6.2",
     "@babel/plugin-transform-runtime": "^7.6.2",
     "@babel/preset-env": "^7.6.2",
+    "@nuxtjs/eslint-config": "^1.1.2",
     "@babel/preset-typescript": "^7.6.0",
     "@nuxt/typescript-build": "^0.3.0",
     "@nuxt/typescript-runtime": "^0.2.0",
     "@types/jest": "^24.0.18",
+    "@typescript-eslint/eslint-plugin": "^2.3.1",
+    "@typescript-eslint/parser": "^2.3.1",
     "babel-eslint": "^10.0.3",
     "babel-jest": "^24.9.0",
     "codecov": "^3.5.0",
