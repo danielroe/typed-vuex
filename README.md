@@ -36,9 +36,9 @@ There is another helper function you may wish to take advantage of as well: `get
 import { getStoreType } from 'nuxt-typed-vuex'
 import * as store from '~/store'
 
-const storeType = getStoreType(store)
+const { storeType, storeInstance } = getStoreType(store)
 
-const store: storeType
+const store: storeInstance
 // You will now get type checking on getters, actions, state and mutations
 store.commit('SAMPLE_MUTATION', 30)
 ```

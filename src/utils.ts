@@ -1,32 +1,39 @@
-import { Store, GetterTree, MutationTree, ActionTree } from 'vuex'
+import {
+  Store,
+  GetterTree,
+  MutationTree,
+  ActionTree,
+  DispatchOptions,
+  CommitOptions,
+} from 'vuex'
 
-type MergedFunctionProcessor<T extends () => any> = Parameters<
+type MergedFunctionProcessor<T extends () => any, O> = Parameters<
   T
 >[1] extends undefined
-  ? () => ReturnType<T>
-  : (payload: Parameters<T>[1]) => ReturnType<T>
+  ? (options?: O) => ReturnType<T>
+  : (payload: Parameters<T>[1], options?: O) => ReturnType<T>
 
 type GettersTransformer<T extends Record<string, any>> = Readonly<
   { [P in keyof T]: ReturnType<T[P]> }
 >
 type MutationsTransformer<T extends Record<string, any>> = {
-  [P in keyof T]: MergedFunctionProcessor<T[P]>
+  [P in keyof T]: MergedFunctionProcessor<T[P], CommitOptions>
 }
 type ActionTransformer<T extends Record<string, any>> = {
-  [P in keyof T]: MergedFunctionProcessor<T[P]>
+  [P in keyof T]: MergedFunctionProcessor<T[P], DispatchOptions>
 }
 type ModuleTransformer<T> = T extends NuxtModules
   ? { [P in keyof T]: MergedStoreType<T[P]> }
   : {}
 
-type BlankStore = {
+interface BlankStore {
   getters: {};
   mutations: {};
   actions: {};
   modules: {};
 }
 
-type NuxtStore = {
+interface NuxtStore {
   state: () => unknown;
   getters: Record<string, any>;
   mutations: Record<string, any>;
@@ -35,13 +42,13 @@ type NuxtStore = {
 }
 type NuxtModules = Record<string, NuxtStore>
 
-type NuxtStoreInput<
+interface NuxtStoreInput<
   T extends () => any,
   G,
   M,
   A,
   S extends { [key: string]: NuxtStore }
-> = {
+> {
   state: T;
   getters?: G;
   mutations?: M;
@@ -56,22 +63,40 @@ type MergedStoreType<T extends NuxtStore> = ReturnType<T['state']> &
   ModuleTransformer<T['modules']>
 
 type StoreParameter<T extends () => any> = Parameters<T>[1] extends undefined
-  ? []
-  : [Parameters<T>[1]]
+  ? never
+  : Parameters<T>[1]
 
-type FunctionProcessor<M extends Record<string, () => any>> = <
-  P extends keyof M
->(
-  mutation: P,
-  ...args: StoreParameter<M[P]>
-) => ReturnType<M[P]>
+interface Dispatch<T extends Record<string, () => any>> {
+  <P extends keyof T>(
+    action: P,
+    payload: StoreParameter<T[P]>,
+    options?: DispatchOptions
+  ): ReturnType<T[P]>;
+  <P extends keyof T>(
+    action: StoreParameter<T[P]> extends never ? P : never,
+    options?: DispatchOptions
+  ): ReturnType<T[P]>;
+}
 
-export type StoreType<T extends Required<NuxtStore>> = {
-  state: ReturnType<T['state']> &
-    { [P in keyof T['modules']]: ReturnType<T['modules'][P]['state']> };
+interface Commit<T extends Record<string, () => any>> {
+  <P extends keyof T>(
+    mutation: P,
+    payload: StoreParameter<T[P]>,
+    options?: DispatchOptions
+  ): ReturnType<T[P]>;
+  <P extends keyof T>(
+    mutation: StoreParameter<T[P]> extends never ? P : never,
+    options?: CommitOptions
+  ): ReturnType<T[P]>;
+}
+
+export type ActionContext<T extends Required<NuxtStore>> = {
+  state: ReturnType<T['state']>;
   getters: { [P in keyof T['getters']]: ReturnType<T['getters'][P]> };
-  commit: FunctionProcessor<T['mutations']>;
-  dispatch: FunctionProcessor<T['actions']>;
+  commit: Commit<T['mutations']>;
+  dispatch: Dispatch<T['actions']>;
+  rootState: any;
+  rootGetters: any;
 }
 
 export const getStoreType = <
@@ -83,8 +108,11 @@ export const getStoreType = <
 >(
   store: NuxtStoreInput<T, G, M, A, S>
 ) => {
-  return {} as StoreType<typeof store & BlankStore> &
-    Omit<Store<ReturnType<T>>, 'getters' | 'dispatch' | 'commit'>
+  return {
+    actionContext: {} as ActionContext<typeof store & BlankStore>,
+    storeInstance: {} as ActionContext<typeof store & BlankStore> &
+      Omit<Store<ReturnType<T>>, 'dispatch' | 'commit' | 'state' | 'getters'>,
+  }
 }
 
 export const getAccessorType = <
