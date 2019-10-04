@@ -127,6 +127,8 @@ export default class SampleComponent extends Vue {
 
 3. This may require additional work for submodules split into separate `state.ts`, `actions.ts`, `mutations.ts` and `getters.ts`.
 
+4. Note that this does not support [object-style commits](https://vuex.vuejs.org/guide/mutations.html#object-style-commit).
+
 ## License
 
 [MIT License](./LICENSE) - Copyright &copy; Daniel Roe
