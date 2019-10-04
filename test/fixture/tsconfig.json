@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "target": "esnext",
+    "module": "esnext",
+    "moduleResolution": "node",
+    "lib": ["esnext", "esnext.asynciterable", "dom"],
+    "resolveJsonModule": true,
+    "strict": true,
+    "noImplicitAny": true,
+    "noEmit": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "baseUrl": ".",
+    "typeRoots": ["./@types", "./node_modules/@types", "./node_modules"],
+    "types": ["@types/node", "@nuxt/types", "@types/webpack-env"],
+    "esModuleInterop": true,
+    "paths": {
+      "~/*": ["./*"],
+      "@/*": ["./*"]
+    },
+    "allowJs": true
+  }
+}
