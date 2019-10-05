@@ -34,7 +34,6 @@ type ModuleTransformer<T> = T extends NuxtModules
   : {}
 
 interface BlankStore {
-  state: () => {};
   getters: {};
   mutations: {};
   actions: {};
