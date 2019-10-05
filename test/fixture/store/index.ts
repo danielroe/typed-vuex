@@ -7,6 +7,12 @@ export const state = () => ({
   email: '',
 })
 
+type AnotherState = {
+  untypedSubmodule: {
+    property: 2;
+  };
+}
+
 type RootState = ReturnType<typeof state>
 
 export const getters = {
@@ -26,7 +32,7 @@ export const mutations = {
 export const actions = {
   async resetEmail(
     this: Store<RootState>,
-    { commit }: ActionContext<RootState, RootState>
+    { commit }: ActionContext<RootState, AnotherState>
   ) {
     commit('setEmail', 'james@giantpeach.com')
   },

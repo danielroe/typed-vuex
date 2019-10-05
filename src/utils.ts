@@ -117,9 +117,9 @@ export const getStoreType = <
 
 export const getAccessorType = <
   T extends () => any,
-  G extends GetterTree<ReturnType<T>, ReturnType<T>>,
+  G extends GetterTree<ReturnType<T>, ReturnType<any>>,
   M extends MutationTree<ReturnType<T>>,
-  A extends ActionTree<ReturnType<T>, ReturnType<T>>,
+  A extends ActionTree<ReturnType<T>, ReturnType<any>>,
   S extends NuxtModules
 >(
   store: NuxtStoreInput<T, G, M, A, S>
