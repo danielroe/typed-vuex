@@ -1,18 +1,15 @@
 export const state = () => ({
-  name: ''
+  name: '',
 })
 
 type SubmoduleState = ReturnType<typeof state>
 
 export const getters = {
-  name: (state: SubmoduleState) => state.name
+  name: (state: SubmoduleState) => state.name,
 }
 
 export const mutations = {
-  setName (state: SubmoduleState, newValue: string) {
+  setName(state: SubmoduleState, newValue: string) {
     state.name = newValue
-  }
+  },
 }
-
-export const actions = {}
-export const modules = {}

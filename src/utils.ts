@@ -23,7 +23,7 @@ type ActionTransformer<T extends Record<string, any>> = {
   [P in keyof T]: MergedFunctionProcessor<T[P], DispatchOptions>
 }
 type ModuleTransformer<T> = T extends NuxtModules
-  ? { [P in keyof T]: MergedStoreType<T[P]> }
+  ? { [P in keyof T]: MergedStoreType<T[P] & BlankStore> }
   : {}
 
 interface BlankStore {
@@ -40,14 +40,14 @@ interface NuxtStore {
   actions: Record<string, any>;
   modules: NuxtModules;
 }
-type NuxtModules = Record<string, NuxtStore>
+type NuxtModules = Record<string, Partial<NuxtStore> & { state: () => unknown }>
 
 interface NuxtStoreInput<
   T extends () => any,
   G,
   M,
   A,
-  S extends { [key: string]: NuxtStore }
+  S extends { [key: string]: Partial<NuxtStore> }
 > {
   state: T;
   getters?: G;
