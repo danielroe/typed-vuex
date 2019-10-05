@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.4](https://github.com/danielroe/nuxt-typed-vuex/compare/v0.1.3...v0.1.4) (2019-10-05)
+
+
+### Bug Fixes
+
+* state is still required ([91ae3d7](https://github.com/danielroe/nuxt-typed-vuex/commit/91ae3d7))
+
+
+### Features
+
+* support state objects ([97ed828](https://github.com/danielroe/nuxt-typed-vuex/commit/97ed828))
+
 ### [0.1.3](https://github.com/danielroe/nuxt-typed-vuex/compare/v0.1.2...v0.1.3) (2019-10-05)
 
 
