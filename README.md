@@ -127,13 +127,11 @@ export default class SampleComponent extends Vue {
 
 ## Key limitations and assumptions
 
-1. All typings require being passed a state function.
+1. If you use the Vuex helper functions in your store, such as `GetterTree`, we will not be able to infer correct types. However, your store properties will be checked at the point you pass them into `getAccessorType` and you will get an error if (for example) you pass in a getter that doesn't match Vuex's type signature for a getter.
 
-2. If you use the Vuex helper functions in your store, such as `GetterTree`, we will not be able to infer correct types. However, your store properties will be checked at the point you pass them into `getAccessorType` and you will get an error if (for example) you pass in a getter that doesn't match Vuex's type signature for a getter.
+2. This may require additional work for submodules split into separate `state.ts`, `actions.ts`, `mutations.ts` and `getters.ts`.
 
-3. This may require additional work for submodules split into separate `state.ts`, `actions.ts`, `mutations.ts` and `getters.ts`.
-
-4. Note that this does not support [object-style commits](https://vuex.vuejs.org/guide/mutations.html#object-style-commit).
+3. Note that this does not support [object-style commits](https://vuex.vuejs.org/guide/mutations.html#object-style-commit).
 
 ## License
 
