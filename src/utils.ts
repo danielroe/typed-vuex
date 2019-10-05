@@ -10,7 +10,7 @@ import {
 type Not<T, M> = T extends M ? never : T
 
 type StateObject = Not<Record<string, any>, Function>
-type StateFunction = Not<() => unknown | any, Object>
+type StateFunction = Not<() => unknown | any, Record<string, any>>
 type State = StateObject | StateFunction
 type StateType<T extends State> = T extends () => any ? ReturnType<T> : T
 
@@ -34,19 +34,19 @@ type ModuleTransformer<T> = T extends NuxtModules
   : {}
 
 interface BlankStore {
-  state: () => {}
-  getters: {}
-  mutations: {}
-  actions: {}
-  modules: {}
+  state: () => {};
+  getters: {};
+  mutations: {};
+  actions: {};
+  modules: {};
 }
 
 interface NuxtStore {
-  state: State
-  getters: Record<string, any>
-  mutations: Record<string, any>
-  actions: Record<string, any>
-  modules: NuxtModules
+  state: State;
+  getters: Record<string, any>;
+  mutations: Record<string, any>;
+  actions: Record<string, any>;
+  modules: NuxtModules;
 }
 type NuxtModules = Record<string, Partial<NuxtStore> & { state: () => unknown }>
 
@@ -57,11 +57,11 @@ interface NuxtStoreInput<
   A,
   S extends { [key: string]: Partial<NuxtStore> }
 > {
-  state: T
-  getters?: G
-  mutations?: M
-  actions?: A
-  modules?: S
+  state: T;
+  getters?: G;
+  mutations?: M;
+  actions?: A;
+  modules?: S;
 }
 
 type MergedStoreType<T extends NuxtStore> = StateType<T['state']> &
@@ -79,11 +79,11 @@ interface Dispatch<T extends Record<string, () => any>> {
     action: P,
     payload: StoreParameter<T[P]>,
     options?: DispatchOptions
-  ): ReturnType<T[P]>
+  ): ReturnType<T[P]>;
   <P extends keyof T>(
     action: StoreParameter<T[P]> extends never ? P : never,
     options?: DispatchOptions
-  ): ReturnType<T[P]>
+  ): ReturnType<T[P]>;
 }
 
 interface Commit<T extends Record<string, () => any>> {
@@ -91,20 +91,20 @@ interface Commit<T extends Record<string, () => any>> {
     mutation: P,
     payload: StoreParameter<T[P]>,
     options?: DispatchOptions
-  ): ReturnType<T[P]>
+  ): ReturnType<T[P]>;
   <P extends keyof T>(
     mutation: StoreParameter<T[P]> extends never ? P : never,
     options?: CommitOptions
-  ): ReturnType<T[P]>
+  ): ReturnType<T[P]>;
 }
 
 export type ActionContext<T extends Required<NuxtStore>> = {
-  state: StateType<T['state']>
-  getters: { [P in keyof T['getters']]: ReturnType<T['getters'][P]> }
-  commit: Commit<T['mutations']>
-  dispatch: Dispatch<T['actions']>
-  rootState: any
-  rootGetters: any
+  state: StateType<T['state']>;
+  getters: { [P in keyof T['getters']]: ReturnType<T['getters'][P]> };
+  commit: Commit<T['mutations']>;
+  dispatch: Dispatch<T['actions']>;
+  rootState: any;
+  rootGetters: any;
 }
 
 export const getStoreType = <T extends State, G, M, A, S extends NuxtModules>(
