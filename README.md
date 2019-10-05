@@ -125,9 +125,29 @@ export default class SampleComponent extends Vue {
 }
 ```
 
+## Notes
+
+### Usage with IE11
+
+You may need to transpile this module for usage with IE11.
+G
+`nuxt.config`:
+
+```ts
+...
+
+build: {
+  transpile: [
+    /nuxt-typed-vuex/
+  ],
+},
+```
+
 ## Key limitations and assumptions
 
-1. If you use the Vuex helper functions in your store, such as `GetterTree`, we will not be able to infer correct types. However, your store properties will be checked at the point you pass them into `getAccessorType` and you will get an error if (for example) you pass in a getter that doesn't match Vuex's type signature for a getter.
+1. You should not use the Vuex helper functions, such as `GetterTree`, in your store, as it interferes with type inference.
+
+   However, your store properties will be checked at the point you pass them into `getAccessorType` and you will get an error if (for example) you pass in a getter that doesn't match Vuex's type signature for a getter.
 
 2. This may require additional work for submodules split into separate `state.ts`, `actions.ts`, `mutations.ts` and `getters.ts`.
 
