@@ -6,6 +6,8 @@ This module provides a store accessor and helper type methods so you can access 
 
 **Note**: This has been developed to suit my needs but additional use cases and contributions are very welcome.
 
+![Image showing autocomplete on this.$accessor](/docs/images/screenshot1.png)
+
 ## Usage
 
 Add module to your `nuxt.config`:
@@ -130,7 +132,7 @@ export default class SampleComponent extends Vue {
 ### Usage with IE11
 
 You may need to transpile this module for usage with IE11.
-G
+
 `nuxt.config`:
 
 ```ts
