@@ -6,7 +6,7 @@ This module provides a store accessor and helper type methods so you can access 
 
 **Note**: This has been developed to suit my needs but additional use cases and contributions are very welcome.
 
-![Image showing autocomplete on this.$accessor](/docs/images/screenshot1.png)
+![Image showing autocomplete on this.$accessor](./docs/images/screenshot1.png)
 
 ## Usage
 
