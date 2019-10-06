@@ -195,7 +195,7 @@ export const getAccessorFromStore = (pattern: any) => {
     useAccessor(store, pattern._modules.root._rawModule)
 }
 
-export const getterTree = <S, T extends GetterTree<StateType<S>, {}>>(
+export const getterTree = <S, T extends GetterTree<StateType<S>, any>>(
   _state: S,
   tree: T
 ) => tree
@@ -208,7 +208,7 @@ export const mutationTree = <S, T extends MutationTree<StateType<S>>>(
 interface ActionHandler<T extends NuxtStore> {
   (
     this: Store<StateType<T['state']>>,
-    injectee: Omit<ActionContext<T>, 'dispatch' | 'rootGetters' | 'rootState'>,
+    injectee: Omit<ActionContext<T>, 'dispatch'>,
     payload?: any
   ): any;
 }
