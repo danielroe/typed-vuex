@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.5](https://github.com/danielroe/nuxt-typed-vuex/compare/v0.1.4...v0.1.5) (2019-10-06)
+
+
+### Bug Fixes
+
+* allow defining rootState & rootGetters ([fe484b2](https://github.com/danielroe/nuxt-typed-vuex/commit/fe484b2))
+
+
+### Features
+
+* add helper functions for use within store ([59bed72](https://github.com/danielroe/nuxt-typed-vuex/commit/59bed72))
+
 ### [0.1.4](https://github.com/danielroe/nuxt-typed-vuex/compare/v0.1.3...v0.1.4) (2019-10-05)
 
 
