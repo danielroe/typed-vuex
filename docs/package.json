@@ -1,0 +1,10 @@
+{
+  "private": true,
+  "scripts": {
+    "dev": "vuepress dev",
+    "build": "vuepress build && mv .vuepress/dist public"
+  },
+  "devDependencies": {
+    "vuepress": "^1.1.0"
+  }
+}
