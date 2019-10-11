@@ -1,0 +1,17 @@
+name: Docs
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v1
+      - name: Publish docs
+        run: yarn global add now && cd docs && now --prod
+        env:
+          NOW_TOKEN: ${{ secrets.NOW_TOKEN }}
