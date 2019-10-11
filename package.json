@@ -17,7 +17,7 @@
   "scripts": {
     "lint": "eslint --ext .js,.ts src",
     "build": "tsc",
-    "prepublish": "yarn build",
+    "prepare": "yarn build",
     "release": "yarn test && standard-version && git push --follow-tags && npm publish",
     "generate": "yarn build && yarn nuxt generate test/fixture",
     "test": "yarn lint && yarn generate && jest"
