@@ -3,7 +3,7 @@
 
 # Actions
 
-Actions are async functions that have access to the Vuex instance and are passed a context object.
+Actions are async functions that have access to the Vuex instance and are passed a context object and optional payload.
 
 This package provides a helper function to reduce boilerplate: `actionTree`. This function adds typings and returns the actions passed to it, without transforming them.
 
@@ -15,9 +15,12 @@ This package provides a helper function to reduce boilerplate: `actionTree`. Thi
 export const actions = {
   async resetEmail(
     this: Store<RootState>,
-    { commit }: ActionContext<RootState, RootState>,
+    { state, commit }: ActionContext<RootState, RootState>,
     payload: string
   ) {
+    // Typed
+    state.email
+
     // Not typed - avoid
     commit('initialiseStore')
 
@@ -31,9 +34,11 @@ export const actions = {
 export const actions = actionTree(
   { state, getters, mutations },
   {
-    async resetEmail({ commit, dispatch }) {
+    async resetEmail({ commit, dispatch, getters, state }) {
       // Typed
       commit('initialiseStore')
+      let a = getters.email
+      let b = state._email
 
       // Not typed
       dispatch('resetEmail')
