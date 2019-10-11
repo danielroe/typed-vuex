@@ -23,16 +23,16 @@
     "test": "yarn lint && yarn generate && jest"
   },
   "devDependencies": {
-    "@babel/core": "^7.6.2",
+    "@babel/core": "^7.6.4",
     "@babel/plugin-transform-runtime": "^7.6.2",
-    "@babel/preset-env": "^7.6.2",
-    "@nuxtjs/eslint-config": "^1.1.2",
+    "@babel/preset-env": "^7.6.3",
     "@babel/preset-typescript": "^7.6.0",
-    "@nuxt/typescript-build": "^0.3.0",
-    "@nuxt/typescript-runtime": "^0.2.0",
+    "@nuxt/typescript-build": "^0.3.1",
+    "@nuxt/typescript-runtime": "^0.2.1",
+    "@nuxtjs/eslint-config": "^1.1.2",
     "@types/jest": "^24.0.18",
-    "@typescript-eslint/eslint-plugin": "^2.3.1",
-    "@typescript-eslint/parser": "^2.3.1",
+    "@typescript-eslint/eslint-plugin": "^2.3.3",
+    "@typescript-eslint/parser": "^2.3.3",
     "babel-eslint": "^10.0.3",
     "babel-jest": "^24.9.0",
     "codecov": "^3.5.0",
@@ -47,6 +47,10 @@
     "jest": "^24.9.0",
     "nuxt-edge": "latest",
     "standard-version": "^7.0.0",
-    "typescript": "^3.6.3"
+    "typescript": "^3.6.4"
+  },
+  "dependencies": {
+    "@nuxt/types": "*",
+    "vuex": "*"
   }
 }
