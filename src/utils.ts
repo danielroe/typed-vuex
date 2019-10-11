@@ -29,8 +29,8 @@ type MutationsTransformer<T extends Record<string, any>> = {
 type ActionTransformer<T extends Record<string, any>> = {
   [P in keyof T]: MergedFunctionProcessor<T[P], DispatchOptions>
 }
-type ModuleTransformer<T> = T extends NuxtModules
-  ? { [P in keyof T]: MergedStoreType<T[P] & BlankStore> }
+type ModuleTransformer<T, O = string> = T extends NuxtModules
+  ? { [P in keyof T]: MergedStoreType<T[P] & BlankStore, O> }
   : {}
 
 interface BlankStore {
@@ -63,11 +63,13 @@ interface NuxtStoreInput<
   modules?: S;
 }
 
-type MergedStoreType<T extends NuxtStore> = StateType<T['state']> &
-  GettersTransformer<T['getters']> &
-  MutationsTransformer<T['mutations']> &
-  ActionTransformer<T['actions']> &
-  ModuleTransformer<T['modules']>
+type MergedStoreType<T extends NuxtStore, K = string> = ('state' extends K
+  ? StateType<T['state']>
+  : {}) &
+  ('getters' extends K ? GettersTransformer<T['getters']> : {}) &
+  ('mutations' extends K ? MutationsTransformer<T['mutations']> : {}) &
+  ('actions' extends K ? ActionTransformer<T['actions']> : {}) &
+  ('modules' extends K ? ModuleTransformer<T['modules']> : {})
 
 type StoreParameter<T extends () => any> = Parameters<T>[1] extends undefined
   ? never
@@ -106,11 +108,23 @@ export type ActionContext<T extends Required<NuxtStore>> = {
   rootGetters: any;
 }
 
+export type RootStateHelper<T extends Required<NuxtStore>> = StateType<
+  T['state']
+> &
+  ModuleTransformer<T['modules'], 'state'>
+
+export type RootGettersHelper<
+  T extends Required<NuxtStore>
+> = GettersTransformer<T['getters']> &
+  ModuleTransformer<T['modules'], 'getters'>
+
 export const getStoreType = <T extends State, G, M, A, S extends NuxtModules>(
   store: NuxtStoreInput<T, G, M, A, S>
 ) => {
   return {
     actionContext: {} as ActionContext<typeof store & BlankStore>,
+    rootState: {} as RootStateHelper<typeof store & BlankStore>,
+    rootGetters: {} as RootGettersHelper<typeof store & BlankStore>,
     storeInstance: {} as ActionContext<typeof store & BlankStore> &
       Omit<Store<StateType<T>>, 'dispatch' | 'commit' | 'state' | 'getters'>,
   }
@@ -168,9 +182,9 @@ const createAccessor = <T extends State, G, M, A, S extends NuxtModules>(
 
 export const useAccessor = <
   T extends State,
-  G extends GetterTree<StateType<T>, StateType<T>>,
+  G extends GetterTree<StateType<T>, any>,
   M extends MutationTree<StateType<T>>,
-  A extends ActionTree<StateType<T>, StateType<T>>,
+  A extends ActionTree<StateType<T>, any>,
   S extends NuxtModules
 >(
   store: Store<StateType<T>>,
@@ -219,7 +233,7 @@ interface ModifiedActionTree<T extends NuxtStore> {
 
 export const actionTree = <
   S extends State,
-  G extends GetterTree<StateType<S>, {}>,
+  G extends GetterTree<StateType<S>, any>,
   M extends MutationTree<StateType<S>>,
   T extends ModifiedActionTree<Required<NuxtStoreInput<S, G, M, {}, {}>>>
 >(
