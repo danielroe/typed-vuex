@@ -33,4 +33,4 @@ export const getters = getterTree(state, {
 
 **Note**
 
-1. Even if you do not use the `getterTree` helper function, make sure not to use the `GetterTree` type provided by Vuex. This will interfere with type inference. You won't lose out by omitting it, as Typescript will complain if you pass an improperly formed action into [the `getAccessorType` function](/setup.html).
+1. Even if you do not use the `getterTree` helper function, make sure not to use the `GetterTree` type provided by Vuex. This will interfere with type inference. You won't lose out by omitting it, as Typescript will complain if you pass an improperly formed getter into [the `getAccessorType` function](/setup.html#add-type-definitions).

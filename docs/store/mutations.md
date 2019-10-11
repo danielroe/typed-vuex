@@ -37,6 +37,6 @@ export const getters = mutationTree(state, {
 
 **Note**
 
-1. Even if you do not use the `mutationTree` helper function, make sure not to use the `MutationTree` type provided by Vuex. This will interfere with type inference. You won't lose out by omitting it, as Typescript will complain if you pass an improperly formed mutation into [the `getAccessorType` function](/setup.html).
+1. Even if you do not use the `mutationTree` helper function, make sure not to use the `MutationTree` type provided by Vuex. This will interfere with type inference. You won't lose out by omitting it, as Typescript will complain if you pass an improperly formed mutation into [the `getAccessorType` function](/setup.html#add-type-definitions).
 
 2. This package does not support [object-style commits](https://vuex.vuejs.org/guide/mutations.html#object-style-commit).
