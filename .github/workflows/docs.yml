@@ -12,6 +12,6 @@ jobs:
     steps:
       - uses: actions/checkout@v1
       - name: Publish docs
-        run: cd docs && now --prod
+        run: cd docs && now --token $NOW_TOKEN --prod
         env:
           NOW_TOKEN: ${{ secrets.NOW_TOKEN }}
