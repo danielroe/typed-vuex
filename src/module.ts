@@ -14,8 +14,8 @@ export default async function nuxtTypedVuex(this: {
     src: path.resolve(__dirname, './plugin.js'),
     fileName: 'nuxt-typed-vuex.js',
     options: {
-      libDir,
-      buildDir,
+      utils: path.join(libDir, 'utils'),
+      store: path.join(buildDir || '', 'store'),
     },
   })
 }

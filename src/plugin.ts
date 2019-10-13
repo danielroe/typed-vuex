@@ -2,9 +2,9 @@ import { InjectKey } from 'vue/types/options'
 import { Context } from '@nuxt/types'
 
 // eslint-disable-next-line
-const { createStore } = require('<%= options.buildDir %>/store')
+const { createStore } = require('<%= options.store %>')
 // eslint-disable-next-line
-const { getAccessorFromStore } = require('<%= options.libDir %>/utils')
+const { getAccessorFromStore } = require('<%= options.utils %>')
 
 type Inject = (name: InjectKey, property: unknown) => void
 const storeAccessor = getAccessorFromStore(createStore())
