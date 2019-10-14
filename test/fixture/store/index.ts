@@ -16,6 +16,7 @@ type RootState = ReturnType<typeof state>
 
 export const getters = {
   email: (state: RootState) => state.email,
+  fullEmail: (state: RootState) => state.email,
 }
 
 export const mutations = mutationTree(state, {
