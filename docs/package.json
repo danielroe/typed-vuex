@@ -5,6 +5,6 @@
     "build": "vuepress build && mv .vuepress/dist public"
   },
   "devDependencies": {
-    "vuepress": "^1.1.0"
+    "vuepress": "^1.2.0"
   }
 }
