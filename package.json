@@ -10,6 +10,15 @@
       "url": "https://github.com/danielroe"
     }
   ],
+  "keywords": [
+    "vuex",
+    "nuxt",
+    "typescript",
+    "vue",
+    "vuejs",
+    "nuxtjs",
+    "nuxt-module"
+  ],
   "files": [
     "lib"
   ],
