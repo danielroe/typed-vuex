@@ -5,7 +5,7 @@
 
 ## Why another package?
 
-Typing vanilla Vuex is complicated. Most people choose a class-based approach with Typescript decorators. However, this can cause issues, including:
+Typing vanilla Vuex is complicated. Many people choose a class-based approach with Typescript decorators. However, this can cause issues, including:
 
 - incompatibilities with Nuxt
 - not being able to access `this.$axios` or the app/store instance from within actions
