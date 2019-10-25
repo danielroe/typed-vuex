@@ -28,6 +28,7 @@ module.exports = {
             '/store/actions',
           ],
         },
+        '/example',
       ],
     },
   },
