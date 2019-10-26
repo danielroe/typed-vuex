@@ -25,7 +25,7 @@
 
    **Note**: `buildModules` require Nuxt 2.10+. If you are using an older version, add `nuxt-typed-vuex` to `modules` instead.
 
-3. **Optional**: If you are targeting IE11 you may need to transpile the module. If so, add the following to your `nuxt.config`:
+3. You will need to transpile this module, by adding the following to your `nuxt.config`:
 
    ```ts
    build: {
