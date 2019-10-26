@@ -22,7 +22,8 @@
   "files": [
     "lib"
   ],
-  "main": "lib/module.js",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
   "scripts": {
     "lint": "eslint --ext .js,.ts src",
     "build": "tsc",

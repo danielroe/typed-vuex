@@ -1,6 +1,6 @@
 import path from 'path'
 import { Configuration } from '@nuxt/types'
-import normalize from "normalize-path";
+import normalize from 'normalize-path'
 
 export default async function nuxtTypedVuex(this: {
   options: Configuration;
