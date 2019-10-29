@@ -62,8 +62,10 @@
     "typescript": "^3.6.4"
   },
   "dependencies": {
+    "normalize-path": "^3.0.0"
+  },
+  "peerDependencies": {
     "@nuxt/types": "*",
-    "normalize-path": "^3.0.0",
     "vuex": "*"
   }
 }
