@@ -45,7 +45,7 @@ Make sure you define types correctly following [these instructions](/setup.html)
 
 ## Using the accessor
 
-### Within components
+### Components, `fetch` and `asyncData`
 
 `components/sampleComponent.vue`
 
@@ -54,8 +54,12 @@ import { Component, Vue } from 'nuxt-property-decorator'
 
 @Component({
   fetch({ app: { $accessor } }) {
-    // Accessing within fetch or asyncData
     $accessor.fetchItems()
+  },
+  asyncData({ app: { $accessor } }) {
+    return {
+      myEmail: $accessor.email,
+    }
   },
 })
 export default class SampleComponent extends Vue {
