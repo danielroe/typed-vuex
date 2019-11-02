@@ -34,6 +34,7 @@ type ModuleTransformer<T, O = string> = T extends NuxtModules
   : {}
 
 interface BlankStore {
+  state: {};
   getters: {};
   mutations: {};
   actions: {};
@@ -47,7 +48,7 @@ interface NuxtStore {
   actions: Record<string, any>;
   modules: NuxtModules;
 }
-type NuxtModules = Record<string, Partial<NuxtStore> & { state: () => unknown }>
+type NuxtModules = Record<string, Partial<NuxtStore>>
 
 interface NuxtStoreInput<
   T extends State,
@@ -137,14 +138,14 @@ export const getAccessorType = <
   A extends ActionTree<StateType<T>, any>,
   S extends NuxtModules
 >(
-  store: NuxtStoreInput<T, G, M, A, S>
+  store: Partial<NuxtStoreInput<T, G, M, A, S>>
 ) => {
   return {} as MergedStoreType<typeof store & BlankStore>
 }
 
 const createAccessor = <T extends State, G, M, A, S extends NuxtModules>(
-  store: Store<StateType<T>>,
-  { getters, state, mutations, actions }: NuxtStoreInput<T, G, M, A, S>,
+  store: Store<any>,
+  { getters, state, mutations, actions }: Partial<NuxtStoreInput<T, G, M, A, S>>,
   namespace = ''
 ) => {
   const namespacedPath = namespace ? `${namespace}/` : ''
@@ -187,8 +188,8 @@ export const useAccessor = <
   A extends ActionTree<StateType<T>, any>,
   S extends NuxtModules
 >(
-  store: Store<StateType<T>>,
-  input: Required<NuxtStoreInput<T, G, M, A, S>>
+  store: Store<any>,
+  input: Partial<NuxtStoreInput<T, G, M, A, S>>
 ) => {
   const accessor = createAccessor(store, input)
   Object.keys(input.modules || {}).forEach(namespace => {
