@@ -24,7 +24,7 @@ export const mutations = {
 
 import { mutationTree } from 'nuxt-typed-vuex'
 
-export const getters = mutationTree(state, {
+export const mutations = mutationTree(state, {
   setEmail(state, newValue: string) {
     state.email = newValue
   },
