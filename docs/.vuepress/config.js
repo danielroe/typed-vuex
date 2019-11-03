@@ -19,7 +19,7 @@ module.exports = {
           children: [
             '/accessor/accessor',
             '/accessor/dynamic-modules',
-            '/accessor/customisation',
+            '/accessor/customization',
           ],
         },
         {
