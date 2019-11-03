@@ -35,21 +35,21 @@ import { Component, Vue } from 'nuxt-property-decorator'
 import { useAccessor, getAccessorType } from 'nuxt-typed-vuex'
 import dynamicModule from '~/modules/dynamic-module'
 
+const accessorType = getAccessorType(dynamicModule)
+
 @Component
 export default class MyComponent extends Vue {
   accessor: typeof accessorType | null = null
 
-  mounted() {
+  beforeCreated() {
     // make sure the namespaces match!
     this.$store.registerModule('dynamicModule', dynamicModule, {
       preserveState: false,
     })
-    const accessor = useAccessor(this.$store, {
-      modules: { dynamicModule },
-    })
+    const accessor = useAccessor(this.$store, dynamicModule, 'dynamicModule')
 
     // this works and is typed
-    accessor.dynamicModule.addEmail('my@email.com')
+    accessor.addEmail('my@email.com')
 
     // but you might want to save the accessor for use elsewhere in your component
     this.accessor = accessor
@@ -58,7 +58,7 @@ export default class MyComponent extends Vue {
   anotherMethod() {
     // ... such as here
     if (this.accessor) {
-      this.accessor.dynamicModule.addEmail('my@email.com')
+      this.accessor.addEmail('my@email.com')
     }
   }
 }
