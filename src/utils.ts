@@ -127,7 +127,7 @@ export const getStoreType = <T extends State, G, M, A, S extends NuxtModules>(
     rootState: {} as RootStateHelper<typeof store & BlankStore>,
     rootGetters: {} as RootGettersHelper<typeof store & BlankStore>,
     storeInstance: {} as ActionContext<typeof store & BlankStore> &
-      Omit<Store<StateType<T>>, 'dispatch' | 'commit' | 'state' | 'getters'>,
+      Exclude<Store<StateType<T>>, ActionContext<any>>,
   }
 }
 
