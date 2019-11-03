@@ -20,17 +20,21 @@
     "nuxt-module"
   ],
   "files": [
-    "lib"
+    "lib",
+    "lib/utils.d.ts"
   ],
   "main": "lib/index.js",
-  "types": "lib/index.d.ts",
+  "types": "lib/utils.d.ts",
   "scripts": {
     "lint": "eslint --ext .js,.ts src",
     "build": "tsc",
     "prepare": "yarn build",
     "release": "yarn test && standard-version && git push --follow-tags && npm publish",
     "generate": "yarn build && yarn nuxt generate test/fixture",
-    "test": "yarn lint && yarn generate && jest"
+    "test": "yarn lint && yarn generate && jest && tsc --noImplicitAny --noEmit test/accessor.test.ts"
+  },
+  "tsd": {
+    "directory": "test/tsd"
   },
   "devDependencies": {
     "@babel/core": "^7.6.4",
@@ -59,6 +63,7 @@
     "nuxt-edge": "latest",
     "standard-version": "^7.0.0",
     "ts-loader": "^6.2.1",
+    "tsd": "^0.10.0",
     "typescript": "^3.6.4"
   },
   "dependencies": {
