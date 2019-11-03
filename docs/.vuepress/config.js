@@ -16,7 +16,11 @@ module.exports = {
         {
           title: 'Accessor',
           collapsable: false,
-          children: ['/accessor/accessor', '/accessor/customisation'],
+          children: [
+            '/accessor/accessor',
+            '/accessor/dynamic-modules',
+            '/accessor/customisation',
+          ],
         },
         {
           title: 'Store',
