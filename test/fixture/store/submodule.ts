@@ -31,3 +31,17 @@ export const actions = actionTree(
     },
   }
 )
+
+export const modules = {
+  foo: {
+    namespaced: true,
+    state: {
+      foo: 'bar'
+    },
+    mutations: mutationTree({ foo: 'bar' }, {
+      setFoo(state, payload: string) {
+        state.foo = payload
+      }
+    })
+  }
+}

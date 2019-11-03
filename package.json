@@ -62,9 +62,11 @@
     "typescript": "^3.6.4"
   },
   "dependencies": {
+    "lodash.get": "^4.4.2",
     "normalize-path": "^3.0.0"
   },
   "peerDependencies": {
+    "@types/lodash.get": "^4.4.6",
     "@nuxt/types": "*",
     "vuex": "*"
   }

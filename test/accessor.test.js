@@ -56,5 +56,8 @@ describe.only('accessor', () => {
     expect(accessor.submodule.fullName).toEqual('John Baker')
     accessor.submodule.setName('Jordan Lawrence')
     expect(accessor.submodule.firstName).toEqual('Jordan')
+    expect(accessor.submodule.foo.foo).toEqual('bar')
+    accessor.submodule.foo.setFoo('baz')
+    expect(accessor.submodule.foo.foo).toEqual('baz')
   })
 })

@@ -6,6 +6,7 @@ import {
   DispatchOptions,
   CommitOptions,
 } from 'vuex'
+import get from 'lodash.get'
 
 type Not<T, M> = T extends M ? never : T
 
@@ -145,11 +146,18 @@ export const getAccessorType = <
 
 const createAccessor = <T extends State, G, M, A, S extends NuxtModules>(
   store: Store<any>,
-  { getters, state, mutations, actions }: Partial<NuxtStoreInput<T, G, M, A, S>>,
+  { getters, state, mutations, actions, modules }: Partial<NuxtStoreInput<T, G, M, A, S>>,
   namespace = ''
 ) => {
   const namespacedPath = namespace ? `${namespace}/` : ''
   const accessor: Record<string, any> = {}
+
+  if (modules) {
+    Object.keys(modules).forEach(key => {
+      accessor[key] = createAccessor(store, modules[key], namespacedPath + key)
+    })
+  }
+
   Object.keys(getters || {}).forEach(getter => {
     Object.defineProperty(accessor, getter, {
       get: () => store.getters[`${namespacedPath}${getter}`],
@@ -159,9 +167,9 @@ const createAccessor = <T extends State, G, M, A, S extends NuxtModules>(
     state ? (typeof state === 'function' ? state() : state) : {}
   ).forEach(prop => {
     if (!Object.getOwnPropertyNames(accessor).includes(prop)) {
-      if (namespace) {
+      if (namespacedPath) {
         Object.defineProperty(accessor, prop, {
-          get: () => (store.state as any)[namespace][prop],
+          get: () => get(store.state, (namespacedPath + prop).split('/').join('.'))
         })
       } else {
         Object.defineProperty(accessor, prop, {
@@ -189,16 +197,10 @@ export const useAccessor = <
   S extends NuxtModules
 >(
   store: Store<any>,
-  input: Partial<NuxtStoreInput<T, G, M, A, S>>
+  input: Partial<NuxtStoreInput<T, G, M, A, S>>,
+  namespace?: string
 ) => {
-  const accessor = createAccessor(store, input)
-  Object.keys(input.modules || {}).forEach(namespace => {
-    accessor[namespace] = createAccessor(
-      store,
-      (input.modules as any)[namespace],
-      namespace
-    )
-  })
+  const accessor = createAccessor(store, input, namespace)
 
   const storeType = getAccessorType(input)
 

@@ -6,6 +6,9 @@ Object {
   "resetEmail": [Function],
   "setEmail": [Function],
   "submodule": Object {
+    "foo": Object {
+      "setFoo": [Function],
+    },
     "initialise": [Function],
     "setFirstName": [Function],
     "setLastName": [Function],
@@ -31,6 +34,17 @@ Object {
       },
       "getters": Object {
         "fullName": [Function],
+      },
+      "modules": Object {
+        "foo": Object {
+          "mutations": Object {
+            "setFoo": [Function],
+          },
+          "namespaced": true,
+          "state": Object {
+            "foo": "bar",
+          },
+        },
       },
       "mutations": Object {
         "setFirstName": [Function],
