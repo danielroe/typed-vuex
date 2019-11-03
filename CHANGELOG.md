@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.9](https://github.com/danielroe/nuxt-typed-vuex/compare/v0.1.8...v0.1.9) (2019-11-03)
+
+
+### Bug Fixes
+
+* require @nuxt/types and vuex as peer deps ([c1ebc33](https://github.com/danielroe/nuxt-typed-vuex/commit/c1ebc33))
+
+
+### Features
+
+* add example codesandbox ([a6b89b1](https://github.com/danielroe/nuxt-typed-vuex/commit/a6b89b1))
+* allow simpler usage of useAccessor ([9cb8cd2](https://github.com/danielroe/nuxt-typed-vuex/commit/9cb8cd2)), closes [#13](https://github.com/danielroe/nuxt-typed-vuex/issues/13)
+
 ### [0.1.8](https://github.com/danielroe/nuxt-typed-vuex/compare/v0.1.7...v0.1.8) (2019-10-13)
 
 ### [0.1.7](https://github.com/danielroe/nuxt-typed-vuex/compare/v0.1.6...v0.1.7) (2019-10-13)
