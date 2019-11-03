@@ -30,6 +30,18 @@ const pattern = {
   },
 }
 
+const submoduleBehaviour = (submodule) => {
+    expect(submodule.firstName).toEqual('')
+    submodule.setFirstName('Nina')
+    expect(submodule.firstName).toEqual('Nina')
+    submodule.setLastName('Willis')
+    expect(submodule.fullName).toEqual('Nina Willis')
+    submodule.initialise()
+    expect(submodule.fullName).toEqual('John Baker')
+    submodule.setName('Jordan Lawrence')
+    expect(submodule.firstName).toEqual('Jordan')
+}
+
 describe.only('accessor', () => {
   let store
   let accessor
@@ -53,53 +65,21 @@ describe.only('accessor', () => {
     expect(accessor.fullEmail).toEqual('a@a.com')
   })
   test('accessor submodule state, getter, mutation and actions work', async () => {
-    expect(accessor.submodule.firstName).toEqual('')
-    accessor.submodule.setFirstName('Nina')
-    expect(accessor.submodule.firstName).toEqual('Nina')
-    accessor.submodule.setLastName('Willis')
-    expect(accessor.submodule.fullName).toEqual('Nina Willis')
-    accessor.submodule.initialise()
-    expect(accessor.submodule.fullName).toEqual('John Baker')
-    accessor.submodule.setName('Jordan Lawrence')
-    expect(accessor.submodule.firstName).toEqual('Jordan')
+    submoduleBehaviour(accessor.submodule)
   })
   test('nested modules work', async () => {
-    expect(accessor.submodule.nestedSubmodule.firstName).toEqual('')
-    accessor.submodule.nestedSubmodule.setFirstName('Nina')
-    expect(accessor.submodule.nestedSubmodule.firstName).toEqual('Nina')
-    accessor.submodule.nestedSubmodule.setLastName('Willis')
-    expect(accessor.submodule.nestedSubmodule.fullName).toEqual('Nina Willis')
-    accessor.submodule.nestedSubmodule.initialise()
-    expect(accessor.submodule.nestedSubmodule.fullName).toEqual('John Baker')
-    accessor.submodule.nestedSubmodule.setName('Jordan Lawrence')
-    expect(accessor.submodule.nestedSubmodule.firstName).toEqual('Jordan')
+    submoduleBehaviour(accessor.submodule.nestedSubmodule)
   })
   test('dynamic modules work', async () => {
     store.registerModule('submodule', submodule)
     const dynamicAccessor = useAccessor(store, { modules: { submodule } })
 
-    expect(dynamicAccessor.submodule.firstName).toEqual('')
-    dynamicAccessor.submodule.setFirstName('Nina')
-    expect(dynamicAccessor.submodule.firstName).toEqual('Nina')
-    dynamicAccessor.submodule.setLastName('Willis')
-    expect(dynamicAccessor.submodule.fullName).toEqual('Nina Willis')
-    dynamicAccessor.submodule.initialise()
-    expect(dynamicAccessor.submodule.fullName).toEqual('John Baker')
-    dynamicAccessor.submodule.setName('Jordan Lawrence')
-    expect(dynamicAccessor.submodule.firstName).toEqual('Jordan')
+    submoduleBehaviour(dynamicAccessor.submodule)
   })
   test('dynamic module helper function works', async () => {
     store.registerModule('submodule', submodule)
     const dynamicAccessor = useAccessor(store, submodule, 'submodule')
 
-    expect(dynamicAccessor.firstName).toEqual('')
-    dynamicAccessor.setFirstName('Nina')
-    expect(dynamicAccessor.firstName).toEqual('Nina')
-    dynamicAccessor.setLastName('Willis')
-    expect(dynamicAccessor.fullName).toEqual('Nina Willis')
-    dynamicAccessor.initialise()
-    expect(dynamicAccessor.fullName).toEqual('John Baker')
-    dynamicAccessor.setName('Jordan Lawrence')
-    expect(dynamicAccessor.firstName).toEqual('Jordan')
+    submoduleBehaviour(dynamicAccessor)
   })
 })
