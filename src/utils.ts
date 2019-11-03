@@ -143,6 +143,14 @@ export const getAccessorType = <
   return {} as MergedStoreType<typeof store & BlankStore>
 }
 
+const getNestedState = (parent: any, namespaces: string[] ): any => {
+  if (!parent[namespaces[0]]) {
+    return parent
+  } else {
+    return getNestedState(parent[namespaces[0]], namespaces.slice(1))
+  }
+}
+
 const createAccessor = <T extends State, G, M, A, S extends NuxtModules>(
   store: Store<any>,
   { getters, state, mutations, actions }: Partial<NuxtStoreInput<T, G, M, A, S>>,
@@ -159,15 +167,11 @@ const createAccessor = <T extends State, G, M, A, S extends NuxtModules>(
     state ? (typeof state === 'function' ? state() : state) : {}
   ).forEach(prop => {
     if (!Object.getOwnPropertyNames(accessor).includes(prop)) {
-      if (namespace) {
-        Object.defineProperty(accessor, prop, {
-          get: () => (store.state as any)[namespace][prop],
-        })
-      } else {
-        Object.defineProperty(accessor, prop, {
-          get: () => (store.state as any)[prop],
-        })
-      }
+      const namespaces = namespacedPath.split('/')
+      const state = getNestedState(store.state, namespaces)
+      Object.defineProperty(accessor, prop, {
+        get: () => state[prop],
+      })
     }
   })
   Object.keys(mutations || {}).forEach(mutation => {
@@ -189,14 +193,16 @@ export const useAccessor = <
   S extends NuxtModules
 >(
   store: Store<any>,
-  input: Partial<NuxtStoreInput<T, G, M, A, S>>
+  input: Partial<NuxtStoreInput<T, G, M, A, S>>,
+  namespace?: string,
 ) => {
-  const accessor = createAccessor(store, input)
-  Object.keys(input.modules || {}).forEach(namespace => {
-    accessor[namespace] = createAccessor(
+  const accessor = createAccessor(store, input, namespace)
+  Object.keys(input.modules || {}).forEach(moduleNamespace => {
+    const nestedNamespace = namespace ? `${namespace}/${moduleNamespace}` : moduleNamespace
+    accessor[moduleNamespace] = useAccessor(
       store,
-      (input.modules as any)[namespace],
-      namespace
+      (input.modules as any)[moduleNamespace],
+      nestedNamespace
     )
   })
 

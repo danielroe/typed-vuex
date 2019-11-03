@@ -20,8 +20,26 @@ const pattern = {
     submodule: {
       ...submodule,
       namespaced: true,
+      modules: {
+        nestedSubmodule: {
+          ...submodule,
+          namespaced: true,
+        }
+      }
     },
   },
+}
+
+const submoduleBehaviour = (submodule) => {
+    expect(submodule.firstName).toEqual('')
+    submodule.setFirstName('Nina')
+    expect(submodule.firstName).toEqual('Nina')
+    submodule.setLastName('Willis')
+    expect(submodule.fullName).toEqual('Nina Willis')
+    submodule.initialise()
+    expect(submodule.fullName).toEqual('John Baker')
+    submodule.setName('Jordan Lawrence')
+    expect(submodule.firstName).toEqual('Jordan')
 }
 
 describe.only('accessor', () => {
@@ -47,14 +65,21 @@ describe.only('accessor', () => {
     expect(accessor.fullEmail).toEqual('a@a.com')
   })
   test('accessor submodule state, getter, mutation and actions work', async () => {
-    expect(accessor.submodule.firstName).toEqual('')
-    accessor.submodule.setFirstName('Nina')
-    expect(accessor.submodule.firstName).toEqual('Nina')
-    accessor.submodule.setLastName('Willis')
-    expect(accessor.submodule.fullName).toEqual('Nina Willis')
-    accessor.submodule.initialise()
-    expect(accessor.submodule.fullName).toEqual('John Baker')
-    accessor.submodule.setName('Jordan Lawrence')
-    expect(accessor.submodule.firstName).toEqual('Jordan')
+    submoduleBehaviour(accessor.submodule)
+  })
+  test('nested modules work', async () => {
+    submoduleBehaviour(accessor.submodule.nestedSubmodule)
+  })
+  test('dynamic modules work', async () => {
+    store.registerModule('submodule', submodule)
+    const dynamicAccessor = useAccessor(store, { modules: { submodule } })
+
+    submoduleBehaviour(dynamicAccessor.submodule)
+  })
+  test('dynamic module helper function works', async () => {
+    store.registerModule('submodule', submodule)
+    const dynamicAccessor = useAccessor(store, submodule, 'submodule')
+
+    submoduleBehaviour(dynamicAccessor)
   })
 })
