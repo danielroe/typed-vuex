@@ -20,6 +20,12 @@ const pattern = {
     submodule: {
       ...submodule,
       namespaced: true,
+      modules: {
+        nestedSubmodule: {
+          ...submodule,
+          namespaced: true,
+        }
+      }
     },
   },
 }
@@ -56,5 +62,16 @@ describe.only('accessor', () => {
     expect(accessor.submodule.fullName).toEqual('John Baker')
     accessor.submodule.setName('Jordan Lawrence')
     expect(accessor.submodule.firstName).toEqual('Jordan')
+  })
+  test('nested modules work', async () => {
+    expect(accessor.submodule.nestedSubmodule.firstName).toEqual('')
+    accessor.submodule.nestedSubmodule.setFirstName('Nina')
+    expect(accessor.submodule.nestedSubmodule.firstName).toEqual('Nina')
+    accessor.submodule.nestedSubmodule.setLastName('Willis')
+    expect(accessor.submodule.nestedSubmodule.fullName).toEqual('Nina Willis')
+    accessor.submodule.nestedSubmodule.initialise()
+    expect(accessor.submodule.nestedSubmodule.fullName).toEqual('John Baker')
+    accessor.submodule.nestedSubmodule.setName('Jordan Lawrence')
+    expect(accessor.submodule.nestedSubmodule.firstName).toEqual('Jordan')
   })
 })

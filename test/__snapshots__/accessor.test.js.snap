@@ -7,6 +7,12 @@ Object {
   "setEmail": [Function],
   "submodule": Object {
     "initialise": [Function],
+    "nestedSubmodule": Object {
+      "initialise": [Function],
+      "setFirstName": [Function],
+      "setLastName": [Function],
+      "setName": [Function],
+    },
     "setFirstName": [Function],
     "setLastName": [Function],
     "setName": [Function],
@@ -31,6 +37,23 @@ Object {
       },
       "getters": Object {
         "fullName": [Function],
+      },
+      "modules": Object {
+        "nestedSubmodule": Object {
+          "actions": Object {
+            "initialise": [Function],
+            "setName": [Function],
+          },
+          "getters": Object {
+            "fullName": [Function],
+          },
+          "mutations": Object {
+            "setFirstName": [Function],
+            "setLastName": [Function],
+          },
+          "namespaced": true,
+          "state": [Function],
+        },
       },
       "mutations": Object {
         "setFirstName": [Function],
