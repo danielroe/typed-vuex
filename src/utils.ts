@@ -168,9 +168,12 @@ const createAccessor = <T extends State, G, M, A, S extends NuxtModules>(
       get: () => store.getters[`${namespacedPath}${getter}`],
     })
   })
-  Object.keys(
-    state ? (typeof state === 'function' ? state() : state) : {}
-  ).forEach(prop => {
+  const evaluatedState = state
+    ? typeof state === 'function'
+      ? state()
+      : state
+    : {}
+  Object.keys(evaluatedState).forEach(prop => {
     if (!Object.getOwnPropertyNames(accessor).includes(prop)) {
       const namespaces = namespacedPath.split('/')
       const state = getNestedState(store.state, namespaces)
