@@ -124,3 +124,22 @@ export default class SampleComponent extends Vue {
   }
 }
 ```
+
+## Usage within the store
+
+You can use the accessor within the store or a store module.
+
+```ts
+import { actionTree } from 'nuxt-typed-vuex'
+import { accessor } from '.'
+
+const actions = actionTree(
+  { state, getters, mutations },
+  {
+    async resetEmail({ commit }) {
+      accessor.submodule.initialise()
+      commit('setEmail', 'a@a.com')
+    },
+  }
+)
+```

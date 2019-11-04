@@ -32,6 +32,10 @@ export default async ({ store }: Context, inject: Inject) => {
 }
 ```
 
+::: warning
+If you are using a custom accessor in a Nuxt project, bear in mind that `useAccessor` used on its own will treat modules as non-namespaced unless they include `namespaced: true`.
+:::
+
 ## Typing your custom accessor
 
 You can use the helper function `getAccessorType` to access the type of the accessor you've generated - by passing it the exact same object that `useAccessor` receives.
