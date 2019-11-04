@@ -8,6 +8,12 @@ import Vuex, {
   StoreOptions,
 } from 'vuex'
 
+declare module 'vue' {
+  interface VueConstructor {
+    $accessor?: any;
+  }
+}
+
 export class TypedStore<S> extends Store<S> {
   $accessor: VueConstructor['$accessor']
 }
