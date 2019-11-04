@@ -3,8 +3,6 @@ import Vuex, {
   Store,
   GetterTree,
   MutationTree,
-  ModuleTree,
-  Plugin,
   DispatchOptions,
   CommitOptions,
   StoreOptions,
@@ -154,7 +152,7 @@ export const getAccessorType = <
   return {} as MergedStoreType<typeof store & BlankStore>
 }
 
-const getNestedState = (parent: any, namespaces: string[] ): any => {
+const getNestedState = (parent: any, namespaces: string[]): any => {
   if (!parent[namespaces[0]]) {
     return parent
   } else {
@@ -164,7 +162,12 @@ const getNestedState = (parent: any, namespaces: string[] ): any => {
 
 const createAccessor = <T extends State, G, M, A, S extends NuxtModules>(
   store: UnifiedStore<any>,
-  { getters, state, mutations, actions }: Partial<NuxtStoreInput<T, G, M, A, S>>,
+  {
+    getters,
+    state,
+    mutations,
+    actions,
+  }: Partial<NuxtStoreInput<T, G, M, A, S>>,
   namespace = ''
 ) => {
   const namespacedPath = namespace ? `${namespace}/` : ''
@@ -209,7 +212,9 @@ export const useAccessor = <
 ) => {
   const accessor = createAccessor(store, input, namespace)
   Object.keys(input.modules || {}).forEach(moduleNamespace => {
-    const nestedNamespace = namespace ? `${namespace}/${moduleNamespace}` : moduleNamespace
+    const nestedNamespace = namespace
+      ? `${namespace}/${moduleNamespace}`
+      : moduleNamespace
     accessor[moduleNamespace] = useAccessor(
       store,
       (input.modules as any)[moduleNamespace],
@@ -266,7 +271,5 @@ export const createStore = <S>(
   return new VuexModule.Store((options as unknown) as StoreOptions<S>)
 }
 
-export const registerStoreAccessor = (
-  VuexModule: typeof Vuex,
-  accessor: any
-) => (VuexModule.Store as typeof TypedStore).prototype.$accessor = accessor
+export const registerStoreAccessor = (VuexModule: typeof Vuex, accessor: any) =>
+  ((VuexModule.Store as typeof TypedStore).prototype.$accessor = accessor)
