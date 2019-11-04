@@ -11,7 +11,7 @@ module.exports = {
         {
           title: 'Setup',
           collapsable: false,
-          children: ['/', '/setup'],
+          children: ['/', '/setup', '/using-without-nuxt'],
         },
         {
           title: 'Accessor',
