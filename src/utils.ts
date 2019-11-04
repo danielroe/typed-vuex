@@ -1,26 +1,11 @@
-import { VueConstructor } from 'vue'
 import Vuex, {
   Store,
   GetterTree,
+  ActionTree,
   MutationTree,
   DispatchOptions,
   CommitOptions,
-  StoreOptions,
 } from 'vuex'
-
-declare module 'vue' {
-  interface VueConstructor {
-    $accessor?: any;
-  }
-}
-
-export class TypedStore<S> extends Store<S> {
-  $accessor: VueConstructor['$accessor']
-}
-type UnifiedStore<S> = TypedStore<S> | Store<S>
-export type TypedStoreOptions<S> = Omit<StoreOptions<S>, 'actions'> & {
-  actions?: ModifiedActionTree<any>;
-}
 
 type Not<T, M> = T extends M ? never : T
 
@@ -150,7 +135,7 @@ export const getAccessorType = <
   T extends State,
   G extends GetterTree<StateType<T>, any>,
   M extends MutationTree<StateType<T>>,
-  A extends ModifiedActionTree<Partial<NuxtStoreInput<T, G, M, A, S>> & BlankStore>,
+  A extends ActionTree<StateType<T>, any>,
   S extends NuxtModules
 >(
   store: Partial<NuxtStoreInput<T, G, M, A, S>>
@@ -167,7 +152,7 @@ const getNestedState = (parent: any, namespaces: string[]): any => {
 }
 
 const createAccessor = <T extends State, G, M, A, S extends NuxtModules>(
-  store: UnifiedStore<any>,
+  store: Store<any>,
   {
     getters,
     state,
@@ -209,10 +194,10 @@ export const useAccessor = <
   T extends State,
   G extends GetterTree<StateType<T>, any>,
   M extends MutationTree<StateType<T>>,
-  A extends ModifiedActionTree<any>,
+  A extends ActionTree<StateType<T>, any>,
   S extends NuxtModules
 >(
-  store: UnifiedStore<any>,
+  store: Store<any>,
   input: Partial<NuxtStoreInput<T, G, M, A, S>>,
   namespace?: string
 ) => {
@@ -250,7 +235,7 @@ export const mutationTree = <S, T extends MutationTree<StateType<S>>>(
 
 interface ActionHandler<T extends NuxtStore> {
   (
-    this: TypedStore<StateType<T['state']>>,
+    this: Store<StateType<T['state']>>,
     injectee: Omit<ActionContext<T>, 'dispatch'>,
     payload?: any
   ): any;
@@ -258,6 +243,14 @@ interface ActionHandler<T extends NuxtStore> {
 
 interface ModifiedActionTree<T extends NuxtStore> {
   [key: string]: ActionHandler<T>;
+}
+
+interface NormalisedActionHandler<T extends ActionHandler<any>> {
+  (this: Store<any>, ...args: Parameters<T>): ReturnType<T>;
+}
+
+type NormalisedActionTree<T extends ModifiedActionTree<any>> = {
+  [P in keyof T]: NormalisedActionHandler<T[P]>
 }
 
 export const actionTree = <
@@ -268,14 +261,10 @@ export const actionTree = <
 >(
   _store: NuxtStoreInput<S, G, M, {}, {}>,
   tree: T
-) => tree
+) => tree as NormalisedActionTree<T>
 
-export const createStore = <S>(
-  VuexModule: typeof Vuex,
-  options: TypedStoreOptions<S>
-) => {
-  return new VuexModule.Store((options as unknown) as StoreOptions<S>)
+class TypedStore<S> extends Store<S> {
+  $accessor: unknown
 }
-
 export const registerStoreAccessor = (VuexModule: typeof Vuex, accessor: any) =>
   ((VuexModule.Store as typeof TypedStore).prototype.$accessor = accessor)
