@@ -1,8 +1,8 @@
 import Vuex, {
   Store,
   GetterTree,
-  ActionTree,
   MutationTree,
+  ActionTree,
   DispatchOptions,
   CommitOptions,
 } from 'vuex'
@@ -202,7 +202,7 @@ export const useAccessor = <
 >(
   store: Store<any>,
   input: Partial<NuxtStoreInput<T, G, M, A, S>>,
-  namespace?: string
+  namespace?: string,
 ) => {
   const accessor = createAccessor(store, input, namespace)
   Object.keys(input.modules || {}).forEach(moduleNamespace => {
