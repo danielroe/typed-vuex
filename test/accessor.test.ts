@@ -1,12 +1,7 @@
-import  { useAccessor, getAccessorType  } from '../'
+import { useAccessor, getAccessorType } from '../'
 import Vuex, { Store } from 'vuex'
 import Vue from 'vue'
-import {
-  getters,
-  state,
-  actions,
-  mutations,
-} from './fixture/store'
+import { getters, state, actions, mutations } from './fixture/store'
 
 import * as submodule from './fixture/store/submodule'
 
@@ -23,8 +18,8 @@ const pattern = {
         nestedSubmodule: {
           ...submodule,
           namespaced: true,
-        }
-      }
+        },
+      },
     },
   },
 }
@@ -33,16 +28,16 @@ const accessorType = getAccessorType(pattern)
 const submoduleAccessorType = getAccessorType(submodule)
 
 const submoduleBehaviour = (accessor: typeof submoduleAccessorType) => {
-    expect(accessor.firstName).toEqual('')
-    accessor.setFirstName('Nina')
-    expect(accessor.firstName).toEqual('Nina')
-    accessor.setLastName('Willis')
-    expect(accessor.fullName).toEqual('Nina Willis')
-    
-    accessor.initialise()
-    expect(accessor.fullName).toEqual('John Baker')
-    accessor.setName('Jordan Lawrence')
-    expect(accessor.firstName).toEqual('Jordan')
+  expect(accessor.firstName).toEqual('')
+  accessor.setFirstName('Nina')
+  expect(accessor.firstName).toEqual('Nina')
+  accessor.setLastName('Willis')
+  expect(accessor.fullName).toEqual('Nina Willis')
+
+  accessor.initialise()
+  expect(accessor.fullName).toEqual('John Baker')
+  accessor.setName('Jordan Lawrence')
+  expect(accessor.firstName).toEqual('Jordan')
 }
 
 describe.only('accessor', () => {
@@ -78,7 +73,9 @@ describe.only('accessor', () => {
   })
   test('dynamic modules work', async () => {
     store.registerModule('submodule', submodule)
-    const dynamicAccessor = useAccessor(store, { modules: { submodule } })
+    const dynamicAccessor = useAccessor(store, {
+      modules: { submodule: { ...submodule, namespaced: true } },
+    })
 
     submoduleBehaviour(dynamicAccessor.submodule)
   })

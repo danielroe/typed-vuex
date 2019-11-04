@@ -1,4 +1,4 @@
-import Vuex, {
+import {
   Store,
   GetterTree,
   MutationTree,
@@ -209,10 +209,11 @@ export const useAccessor = <
     const nestedNamespace = namespace
       ? `${namespace}/${moduleNamespace}`
       : moduleNamespace
+    const namespaced = (input.modules as any)[moduleNamespace].namespaced
     accessor[moduleNamespace] = useAccessor(
       store,
       (input.modules as any)[moduleNamespace],
-      nestedNamespace
+      namespaced ? nestedNamespace : ''
     )
   })
 
@@ -265,9 +266,3 @@ export const actionTree = <
   _store: NuxtStoreInput<S, G, M, {}, {}>,
   tree: T
 ) => tree as NormalisedActionTree<T>
-
-class TypedStore<S> extends Store<S> {
-  $accessor: unknown
-}
-export const registerStoreAccessor = (VuexModule: typeof Vuex, accessor: any) =>
-  ((VuexModule.Store as typeof TypedStore).prototype.$accessor = accessor)
