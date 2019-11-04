@@ -6,7 +6,7 @@
 If you would like to benefit from a typed accessor to your store, but you're not using Nuxt, you can still use `nuxt-typed-vuex`.
 
 ::: warning
-Many of this project's default settings are based on Nuxt - for example, modules are currently always expected to be namespaced.
+Many of this project's default settings are based on Nuxt, so please file an issue if you experience any problems.
 :::
 
 ## Setup
