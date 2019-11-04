@@ -31,6 +31,8 @@ export const actions = {
 
 // Helper function
 
+import { actionTree } from 'nuxt-typed-vuex'
+
 export const actions = actionTree(
   { state, getters, mutations },
   {
