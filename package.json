@@ -31,7 +31,7 @@
     "prepare": "yarn build",
     "release": "yarn test && standard-version && git push --follow-tags && npm publish",
     "generate": "yarn build && yarn nuxt generate test/fixture",
-    "test": "yarn lint && yarn generate && jest && tsc --noImplicitAny --noEmit test/accessor.test.ts"
+    "test": "yarn lint && yarn generate && jest && tsc --noImplicitAny --noEmit test/accessor.test.ts && yarn tsd"
   },
   "tsd": {
     "directory": "test/tsd"
@@ -70,7 +70,9 @@
     "normalize-path": "^3.0.0"
   },
   "peerDependencies": {
-    "@nuxt/types": "*",
     "vuex": "*"
+  },
+  "optionalDependencies": {
+    "@nuxt/types": "*"
   }
 }

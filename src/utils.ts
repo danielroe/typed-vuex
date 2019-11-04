@@ -57,6 +57,7 @@ interface NuxtStoreInput<
   A,
   S extends { [key: string]: Partial<NuxtStore> }
 > {
+  namespaced?: boolean;
   state: T;
   getters?: G;
   mutations?: M;
@@ -143,7 +144,7 @@ export const getAccessorType = <
   return {} as MergedStoreType<typeof store & BlankStore>
 }
 
-const getNestedState = (parent: any, namespaces: string[] ): any => {
+const getNestedState = (parent: any, namespaces: string[]): any => {
   if (!parent[namespaces[0]]) {
     return parent
   } else {
@@ -153,21 +154,30 @@ const getNestedState = (parent: any, namespaces: string[] ): any => {
 
 const createAccessor = <T extends State, G, M, A, S extends NuxtModules>(
   store: Store<any>,
-  { getters, state, mutations, actions }: Partial<NuxtStoreInput<T, G, M, A, S>>,
+  {
+    getters,
+    state,
+    mutations,
+    actions,
+    namespaced,
+  }: Partial<NuxtStoreInput<T, G, M, A, S>>,
   namespace = ''
 ) => {
-  const namespacedPath = namespace ? `${namespace}/` : ''
+  const namespacedPath = namespace && namespaced ? `${namespace}/` : ''
   const accessor: Record<string, any> = {}
   Object.keys(getters || {}).forEach(getter => {
     Object.defineProperty(accessor, getter, {
       get: () => store.getters[`${namespacedPath}${getter}`],
     })
   })
-  Object.keys(
-    state ? (typeof state === 'function' ? state() : state) : {}
-  ).forEach(prop => {
+  const evaluatedState = state
+    ? typeof state === 'function'
+      ? state()
+      : state
+    : {}
+  Object.keys(evaluatedState).forEach(prop => {
     if (!Object.getOwnPropertyNames(accessor).includes(prop)) {
-      const namespaces = namespacedPath.split('/')
+      const namespaces = namespace.split('/')
       const state = getNestedState(store.state, namespaces)
       Object.defineProperty(accessor, prop, {
         get: () => state[prop],
@@ -198,7 +208,9 @@ export const useAccessor = <
 ) => {
   const accessor = createAccessor(store, input, namespace)
   Object.keys(input.modules || {}).forEach(moduleNamespace => {
-    const nestedNamespace = namespace ? `${namespace}/${moduleNamespace}` : moduleNamespace
+    const nestedNamespace = namespace
+      ? `${namespace}/${moduleNamespace}`
+      : moduleNamespace
     accessor[moduleNamespace] = useAccessor(
       store,
       (input.modules as any)[moduleNamespace],
@@ -238,6 +250,14 @@ interface ModifiedActionTree<T extends NuxtStore> {
   [key: string]: ActionHandler<T>;
 }
 
+interface NormalisedActionHandler<T extends ActionHandler<any>> {
+  (this: Store<any>, ...args: Parameters<T>): ReturnType<T>;
+}
+
+type NormalisedActionTree<T extends ModifiedActionTree<any>> = {
+  [P in keyof T]: NormalisedActionHandler<T[P]>
+}
+
 export const actionTree = <
   S extends State,
   G extends GetterTree<StateType<S>, any>,
@@ -246,4 +266,4 @@ export const actionTree = <
 >(
   _store: NuxtStoreInput<S, G, M, {}, {}>,
   tree: T
-) => tree
+) => tree as NormalisedActionTree<T>
