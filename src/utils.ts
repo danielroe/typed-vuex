@@ -1,4 +1,4 @@
-import { VueConstructor } from 'vue/types/vue'
+import { VueConstructor } from 'vue'
 import Vuex, {
   Store,
   GetterTree,
@@ -150,7 +150,7 @@ export const getAccessorType = <
   T extends State,
   G extends GetterTree<StateType<T>, any>,
   M extends MutationTree<StateType<T>>,
-  A extends ModifiedActionTree<any>,
+  A extends ModifiedActionTree<Partial<NuxtStoreInput<T, G, M, A, S>> & BlankStore>,
   S extends NuxtModules
 >(
   store: Partial<NuxtStoreInput<T, G, M, A, S>>
