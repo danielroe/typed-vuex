@@ -57,6 +57,7 @@ interface NuxtStoreInput<
   A,
   S extends { [key: string]: Partial<NuxtStore> }
 > {
+  namespaced?: boolean;
   state: T;
   getters?: G;
   mutations?: M;
@@ -158,10 +159,11 @@ const createAccessor = <T extends State, G, M, A, S extends NuxtModules>(
     state,
     mutations,
     actions,
+    namespaced,
   }: Partial<NuxtStoreInput<T, G, M, A, S>>,
   namespace = ''
 ) => {
-  const namespacedPath = namespace ? `${namespace}/` : ''
+  const namespacedPath = namespace && namespaced ? `${namespace}/` : ''
   const accessor: Record<string, any> = {}
   Object.keys(getters || {}).forEach(getter => {
     Object.defineProperty(accessor, getter, {
@@ -175,7 +177,7 @@ const createAccessor = <T extends State, G, M, A, S extends NuxtModules>(
     : {}
   Object.keys(evaluatedState).forEach(prop => {
     if (!Object.getOwnPropertyNames(accessor).includes(prop)) {
-      const namespaces = namespacedPath.split('/')
+      const namespaces = namespace.split('/')
       const state = getNestedState(store.state, namespaces)
       Object.defineProperty(accessor, prop, {
         get: () => state[prop],
@@ -209,11 +211,10 @@ export const useAccessor = <
     const nestedNamespace = namespace
       ? `${namespace}/${moduleNamespace}`
       : moduleNamespace
-    const namespaced = (input.modules as any)[moduleNamespace].namespaced
     accessor[moduleNamespace] = useAccessor(
       store,
       (input.modules as any)[moduleNamespace],
-      namespaced ? nestedNamespace : ''
+      nestedNamespace
     )
   })
 

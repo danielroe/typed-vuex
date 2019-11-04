@@ -68,10 +68,30 @@ describe.only('accessor', () => {
   test('accessor submodule state, getter, mutation and actions work', async () => {
     submoduleBehaviour(accessor.submodule)
   })
+  test('namespaced modules work', async () => {
+    const nonNamespacedPattern = {
+      getters,
+      state,
+      actions,
+      mutations,
+      modules: {
+        submodule: {
+          ...submodule,
+          namespaced: false,
+        },
+      },
+    }
+    const nonNamespacedStore = new Store(nonNamespacedPattern)
+    const nonNamespacedAccessor = useAccessor(
+      nonNamespacedStore,
+      nonNamespacedPattern
+    )
+    submoduleBehaviour(nonNamespacedAccessor.submodule)
+  })
   test('nested modules work', async () => {
     submoduleBehaviour(accessor.submodule.nestedSubmodule)
   })
-  test('dynamic modules work', async () => {
+  test('namespaced dynamic modules work', async () => {
     store.registerModule('submodule', submodule)
     const dynamicAccessor = useAccessor(store, {
       modules: { submodule: { ...submodule, namespaced: true } },
