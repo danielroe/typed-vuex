@@ -39,10 +39,10 @@
   "devDependencies": {
     "@babel/core": "^7.7.0",
     "@babel/plugin-transform-runtime": "^7.6.2",
-    "@babel/preset-env": "^7.7.0",
+    "@babel/preset-env": "^7.7.1",
     "@babel/preset-typescript": "^7.7.0",
-    "@nuxt/typescript-build": "^0.3.3",
-    "@nuxt/typescript-runtime": "^0.2.3",
+    "@nuxt/typescript-build": "^0.3.4",
+    "@nuxt/typescript-runtime": "^0.2.4",
     "@nuxtjs/eslint-config": "^1.1.2",
     "@types/jest": "^24.0.21",
     "@types/normalize-path": "^3.0.0",
