@@ -64,7 +64,7 @@
     "standard-version": "^7.0.0",
     "ts-loader": "^6.2.1",
     "tsd": "^0.10.0",
-    "typescript": "^3.6.4"
+    "typescript": "^3.7.2"
   },
   "dependencies": {
     "normalize-path": "^3.0.0"
