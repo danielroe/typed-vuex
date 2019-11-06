@@ -8,9 +8,6 @@
 <a href="https://standardjs.com">
     <img alt="" src="https://img.shields.io/badge/code_style-standard-brightgreen.svg?style=flat-square">
 </a>
-<a href="https://packagephobia.now.sh/result?p=nuxt-typed-vuex">
-    <img alt="" src="https://packagephobia.now.sh/badge?p=nuxt-typed-vuex&style=flat-square">
-</a>
 <a href="https://npmjs.com/package/nuxt-typed-vuex">
     <img alt="" src="https://img.shields.io/npm/v/nuxt-typed-vuex/latest.svg?style=flat-square">
 </a>
