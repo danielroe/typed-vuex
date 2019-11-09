@@ -32,7 +32,11 @@ module.exports = {
             '/store/actions',
           ],
         },
-        '/example',
+        {
+          title: 'Examples',
+          collapsable: false,
+          children: ['/examples/build', '/examples/runtime', '/examples/vue'],
+        },
       ],
     },
   },
