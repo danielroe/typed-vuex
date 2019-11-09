@@ -14,6 +14,13 @@
 <a href="https://bundlephobia.com/result?p=nuxt-typed-vuex">
     <img alt="" src="https://flat.badgen.net/bundlephobia/minzip/nuxt-typed-vuex">
 </a>
+<a href="https://lgtm.com/projects/g/danielroe/nuxt-typed-vuex">
+    <img alt="" src="https://flat.badgen.net/lgtm/alerts/g/danielroe/nuxt-typed-vuex">
+</a>
+<a href="https://lgtm.com/projects/g/danielroe/nuxt-typed-vuex">
+    <img alt="" src="https://flat.badgen.net/lgtm/grade/g/danielroe/nuxt-typed-vuex">
+</a>
+
 <a href="https://npmjs.com/package/nuxt-typed-vuex">
     <img alt="" src="https://img.shields.io/npm/dt/nuxt-typed-vuex.svg?style=flat-square">
 </a>
