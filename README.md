@@ -11,6 +11,9 @@
 <a href="https://npmjs.com/package/nuxt-typed-vuex">
     <img alt="" src="https://img.shields.io/npm/v/nuxt-typed-vuex/latest.svg?style=flat-square">
 </a>
+<a href="https://bundlephobia.com/result?p=nuxt-typed-vuex">
+    <img alt="" src="https://flat.badgen.net/bundlephobia/minzip/nuxt-typed-vuex">
+</a>
 <a href="https://npmjs.com/package/nuxt-typed-vuex">
     <img alt="" src="https://img.shields.io/npm/dt/nuxt-typed-vuex.svg?style=flat-square">
 </a>
