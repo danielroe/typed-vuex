@@ -44,7 +44,7 @@
     "@nuxt/typescript-build": "^0.3.4",
     "@nuxt/typescript-runtime": "^0.2.4",
     "@nuxtjs/eslint-config": "^1.1.2",
-    "@types/jest": "^24.0.22",
+    "@types/jest": "^24.0.23",
     "@types/normalize-path": "^3.0.0",
     "@typescript-eslint/eslint-plugin": "^2.7.0",
     "@typescript-eslint/parser": "^2.7.0",
