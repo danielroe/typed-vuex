@@ -92,17 +92,20 @@ describe.only('accessor', () => {
     submoduleBehaviour(accessor.submodule.nestedSubmodule)
   })
   test('namespaced dynamic modules work', async () => {
-    store.registerModule('submodule', submodule)
+    store.registerModule('dynamicSubmodule', { ...submodule, namespaced: true })
     const dynamicAccessor = useAccessor(store, {
-      modules: { submodule: { ...submodule, namespaced: true } },
+      modules: { dynamicSubmodule: { ...submodule, namespaced: true } },
     })
 
-    submoduleBehaviour(dynamicAccessor.submodule)
+    submoduleBehaviour(dynamicAccessor.dynamicSubmodule)
+
+    store.unregisterModule('dynamicSubmodule')
   })
   test('dynamic module helper function works', async () => {
-    store.registerModule('submodule', submodule)
-    const dynamicAccessor = useAccessor(store, submodule, 'submodule')
+    store.registerModule('dynamicSubmodule', submodule)
+    const dynamicAccessor = useAccessor(store, submodule, 'dynamicSubmodule')
 
     submoduleBehaviour(dynamicAccessor)
+    store.unregisterModule('dynamicSubmodule')
   })
 })
