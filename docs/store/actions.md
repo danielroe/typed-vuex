@@ -11,6 +11,7 @@ This package provides a helper function to reduce boilerplate: `actionTree`. Thi
 
 ```ts
 // Vanilla
+import { Context } from '@nuxt/types'
 
 export const actions = {
   async resetEmail(
@@ -27,11 +28,18 @@ export const actions = {
     // Typed
     this.app.$accessor.initialiseStore()
   },
+  async nuxtServerInit(
+    _vuexContext: ActionContext<RootState, RootState>,
+    nuxtContext: Context
+  ) {
+    console.log(nuxtContext.req)
+  },
 }
 
 // Helper function
 
 import { actionTree } from 'nuxt-typed-vuex'
+import { Context } from '@nuxt/types'
 
 export const actions = actionTree(
   { state, getters, mutations },
@@ -47,6 +55,9 @@ export const actions = actionTree(
 
       // Typed
       this.app.$accessor.resetEmail()
+    },
+    async nuxtServerInit(_vuexContext, nuxtContext: Context) {
+      console.log(nuxtContext.req)
     },
   }
 )
