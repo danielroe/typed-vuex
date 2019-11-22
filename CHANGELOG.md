@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.12](https://github.com/danielroe/nuxt-typed-vuex/compare/v0.1.11...v0.1.12) (2019-11-22)
+
+
+### Bug Fixes
+
+* allow any kind of dispatch ([75f4637](https://github.com/danielroe/nuxt-typed-vuex/commit/75f463723d54949a98100c21481e5bae5f6d7a87))
+
 ### [0.1.11](https://github.com/danielroe/nuxt-typed-vuex/compare/v0.1.10...v0.1.11) (2019-11-22)
 
 
