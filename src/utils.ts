@@ -241,7 +241,7 @@ export const mutationTree = <S, T extends MutationTree<StateType<S>>>(
 interface ActionHandler<T extends NuxtStore> {
   (
     this: Store<StateType<T['state']>>,
-    injectee: Omit<ActionContext<T>, 'dispatch'>,
+    injectee: ActionContext<T>,
     payload?: any
   ): any;
 }
