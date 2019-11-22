@@ -3,6 +3,7 @@ import {
   GetterTree,
   MutationTree,
   ActionTree,
+  Dispatch as VuexDispatch,
   DispatchOptions,
   CommitOptions,
 } from 'vuex'
@@ -105,7 +106,7 @@ export type ActionContext<T extends Required<NuxtStore>> = {
   state: StateType<T['state']>;
   getters: { [P in keyof T['getters']]: ReturnType<T['getters'][P]> };
   commit: Commit<T['mutations']>;
-  dispatch: Dispatch<T['actions']>;
+  dispatch: VuexDispatch;
   rootState: any;
   rootGetters: any;
 }
