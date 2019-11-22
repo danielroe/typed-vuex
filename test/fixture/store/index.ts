@@ -4,7 +4,7 @@ import {
   getAccessorType,
   mutationTree,
   actionTree,
-} from './../../../lib/utils'
+} from './../../../src/utils'
 
 import * as submodule from './submodule'
 
