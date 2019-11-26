@@ -19,7 +19,9 @@ type MergedFunctionProcessor<T extends () => any, O> = Parameters<
   T
 >[1] extends undefined
   ? (options?: O) => ReturnType<T>
-  : (payload: Parameters<T>[1], options?: O) => ReturnType<T>
+  : Parameters<T>[1] extends NonNullable<Parameters<T>[1]>
+    ? (payload: Parameters<T>[1], options?: O) => ReturnType<T>
+    : (payload?: Parameters<T>[1], options?: O) => ReturnType<T>
 
 type GettersTransformer<T extends Record<string, any>> = Readonly<
   { [P in keyof T]: ReturnType<T[P]> }
