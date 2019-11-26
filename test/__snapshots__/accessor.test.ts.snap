@@ -4,6 +4,7 @@ exports[`accessor accessor object exists 1`] = `
 Object {
   "initialiseStore": [Function],
   "resetEmail": [Function],
+  "resetEmailWithOptionalPayload": [Function],
   "setEmail": [Function],
   "submodule": Object {
     "initialise": [Function],
@@ -24,6 +25,7 @@ exports[`accessor store exists 1`] = `
 Object {
   "actions": Object {
     "resetEmail": [Function],
+    "resetEmailWithOptionalPayload": [Function],
   },
   "getters": Object {
     "email": [Function],

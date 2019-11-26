@@ -35,6 +35,9 @@ export const actions = actionTree(
     async resetEmail({ commit }) {
       commit('setEmail', 'a@a.com')
     },
+    async resetEmailWithOptionalPayload({ commit }, optionalPayload?: string) {
+      commit('setEmail', optionalPayload || 'a@a.com')
+    },
   }
 )
 
