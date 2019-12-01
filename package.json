@@ -63,7 +63,7 @@
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-standard": "^4.0.1",
     "jest": "^24.9.0",
-    "nuxt-edge": "2.10.3-26228174.5567d737",
+    "nuxt-edge": "latest",
     "standard-version": "^7.0.1",
     "ts-loader": "^6.2.1",
     "tsd": "^0.11.0",
