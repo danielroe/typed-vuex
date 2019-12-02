@@ -1,19 +1,31 @@
 name: CI
 
-on:
-  push:
-    branches:
-      - master
-      - release/*
-  pull_request:
-    branches:
-      - master
+on: [push, pull_request]
 
 jobs:
   test:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node: [8, 10, 12]
+        nuxt: [2.8, 2.9, 2.10]
 
     steps:
       - uses: actions/checkout@v1
+
+      - uses: actions/cache@v1
+        id: cache
+        with:
+          path: "node_modules"
+          key: ${{ matrix.node }}-${{ matrix.nuxt }}-${{ hashFiles('yarn.lock') }}
+
+      - uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node }}
+
+      - name: Install dependencies
+        if: steps.cache.outputs.cache-hit != 'true'
+        run: yarn && yarn add nuxt@${{ matrix.nuxt }}
+
       - name: Test project
-        run: yarn && yarn test
+        run: yarn test

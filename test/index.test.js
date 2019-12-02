@@ -1,7 +1,7 @@
 const path = require('path')
 const fs = require('fs')
 
-const { Nuxt, Builder } = require('nuxt-edge')
+const { Nuxt, Builder } = require('nuxt')
 
 function walkDir(dir, callback) {
   fs.readdirSync(dir).forEach(f => {
