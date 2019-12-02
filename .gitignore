@@ -84,5 +84,3 @@ sw.*
 
 lib/*
 !lib/.gitkeep
-
-yarn.lock
