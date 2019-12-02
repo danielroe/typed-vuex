@@ -3,12 +3,11 @@ name: CI
 on: [push, pull_request]
 
 jobs:
-  test:
+  compatibility:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node: [8, 10, 12]
-        nuxt: [2.8, 2.9, 2.10]
+        nuxt: [2.9, 2.10]
 
     steps:
       - uses: actions/checkout@v1
@@ -17,15 +16,30 @@ jobs:
         id: cache
         with:
           path: "node_modules"
-          key: ${{ matrix.node }}-${{ matrix.nuxt }}-${{ hashFiles('yarn.lock') }}
-
-      - uses: actions/setup-node@v1
-        with:
-          node-version: ${{ matrix.node }}
+          key: ${{ runner.os }}-${{ matrix.nuxt }}-${{ hashFiles('yarn.lock') }}
 
       - name: Install dependencies
         if: steps.cache.outputs.cache-hit != 'true'
         run: yarn && yarn add nuxt@${{ matrix.nuxt }}
+
+      - name: Test project
+        run: yarn test
+
+  latest:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v1
+
+      - uses: actions/cache@v1
+        id: cache
+        with:
+          path: "node_modules"
+          key: ${{ runner.os }}-${{ hashFiles('yarn.lock') }}
+
+      - name: Install dependencies
+        if: steps.cache.outputs.cache-hit != 'true'
+        run: yarn
 
       - name: Test project
         run: yarn test
