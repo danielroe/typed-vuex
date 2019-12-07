@@ -11,24 +11,27 @@
 </style>
 
 <script>
-export default {
+import Vue from 'vue'
+
+export default Vue.extend({
   asyncData() {
     return {
-      date: Date.now()
-    };
+      date: Date.now(),
+    }
   },
   mounted() {
+    this.$accessor.testNuxtTyping()
     this.int = setInterval(() => {
-      this.date = Date.now();
-    }, 1000);
+      this.date = Date.now()
+    }, 1000)
   },
   computed: {
     computedDate() {
-      return new Date(this.date);
-    }
+      return new Date(this.date)
+    },
   },
   beforeDestroy() {
-    clearInterval(this.int);
-  }
-};
+    clearInterval(this.int)
+  },
+})
 </script>

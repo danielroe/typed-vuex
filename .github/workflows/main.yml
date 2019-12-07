@@ -6,7 +6,7 @@ on:
       - master
   pull_request:
     branches:
-      - '*'
+      - "*"
 
 jobs:
   compatibility:
@@ -49,3 +49,8 @@ jobs:
 
       - name: Test project
         run: yarn test
+
+      - name: Coverage
+        run: yarn codecov
+        env:
+          CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}

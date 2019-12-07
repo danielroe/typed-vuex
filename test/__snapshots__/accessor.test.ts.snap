@@ -1,5 +1,26 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`accessor accessor can be generated from store object 1`] = `
+Object {
+  "initialiseStore": [Function],
+  "resetEmail": [Function],
+  "resetEmailWithOptionalPayload": [Function],
+  "setEmail": [Function],
+  "submodule": Object {
+    "initialise": [Function],
+    "nestedSubmodule": Object {
+      "initialise": [Function],
+      "setFirstName": [Function],
+      "setLastName": [Function],
+      "setName": [Function],
+    },
+    "setFirstName": [Function],
+    "setLastName": [Function],
+    "setName": [Function],
+  },
+}
+`;
+
 exports[`accessor accessor object exists 1`] = `
 Object {
   "initialiseStore": [Function],
@@ -20,6 +41,10 @@ Object {
   },
 }
 `;
+
+exports[`accessor accessor works with state object 1`] = `""`;
+
+exports[`accessor accessor works with state object 2`] = `"test1@email.com"`;
 
 exports[`accessor store exists 1`] = `
 Object {
