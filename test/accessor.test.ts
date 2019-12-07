@@ -1,4 +1,4 @@
-import { useAccessor, getAccessorType } from '../'
+import { useAccessor, getAccessorType, getAccessorFromStore } from '../'
 import Vuex, { Store } from 'vuex'
 import Vue from 'vue'
 import { getters, state, actions, mutations } from './fixture/store'
@@ -54,6 +54,25 @@ describe.only('accessor', () => {
   })
   test('accessor object exists', async () => {
     expect(accessor).toMatchSnapshot()
+  })
+  test('accessor can be generated from store object', async () => {
+    const accessorFromStore = getAccessorFromStore(store)(store)
+    expect(accessorFromStore).toMatchSnapshot()
+  })
+  test('accessor works with state object', async () => {
+    const stateAccessor = useAccessor(store, {
+      state: {
+        email: 'this does not matter',
+      },
+      mutations: {
+        setEmail(state, newValue: string) {
+          ;(state as any).email = newValue
+        },
+      },
+    })
+    expect(stateAccessor.email).toMatchSnapshot()
+    stateAccessor.setEmail('test1@email.com')
+    expect(stateAccessor.email).toMatchSnapshot()
   })
   test('accessor state, getter, mutation and actions work', async () => {
     expect(accessor.fullEmail).toEqual('')
