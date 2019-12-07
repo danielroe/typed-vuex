@@ -1,28 +1,29 @@
 <h1 align="center" >🏦 Nuxt Typed Vuex</h1>
-<p align="center">A vanilla, strongly-typed store for Nuxt</p>
+<p align="center">A strongly-typed store accessor for vanilla Vuex</p>
 
 <p align="center">
-<a href="https://david-dm.org/danielroe/nuxt-typed-vuex">
-    <img alt="" src="https://david-dm.org/danielroe/nuxt-typed-vuex/status.svg?style=flat-square">
-</a>
-<a href="https://standardjs.com">
-    <img alt="" src="https://img.shields.io/badge/code_style-standard-brightgreen.svg?style=flat-square">
-</a>
 <a href="https://npmjs.com/package/nuxt-typed-vuex">
     <img alt="" src="https://img.shields.io/npm/v/nuxt-typed-vuex/latest.svg?style=flat-square">
 </a>
 <a href="https://bundlephobia.com/result?p=nuxt-typed-vuex">
-    <img alt="" src="https://flat.badgen.net/bundlephobia/minzip/nuxt-typed-vuex">
+    <img alt="" src="https://img.shields.io/bundlephobia/minzip/nuxt-typed-vuex?style=flat-square">
 </a>
-<a href="https://lgtm.com/projects/g/danielroe/nuxt-typed-vuex">
-    <img alt="" src="https://flat.badgen.net/lgtm/alerts/g/danielroe/nuxt-typed-vuex">
-</a>
-<a href="https://lgtm.com/projects/g/danielroe/nuxt-typed-vuex">
-    <img alt="" src="https://flat.badgen.net/lgtm/grade/g/danielroe/nuxt-typed-vuex">
-</a>
-
 <a href="https://npmjs.com/package/nuxt-typed-vuex">
     <img alt="" src="https://img.shields.io/npm/dt/nuxt-typed-vuex.svg?style=flat-square">
+</a>
+</p>
+<p align="center">
+<a href="https://david-dm.org/danielroe/nuxt-typed-vuex">
+    <img alt="" src="https://img.shields.io/david/danielroe/nuxt-typed-vuex.svg?style=flat-square">
+</a>
+<a href="https://lgtm.com/projects/g/danielroe/nuxt-typed-vuex">
+    <img alt="" src="https://img.shields.io/lgtm/alerts/github/danielroe/nuxt-typed-vuex?style=flat-square">
+</a>
+<a href="https://lgtm.com/projects/g/danielroe/nuxt-typed-vuex">
+    <img alt="" src="https://img.shields.io/lgtm/grade/javascript/github/danielroe/nuxt-typed-vuex?style=flat-square">
+</a>
+<a href="https://codecov.io/gh/danielroe/nuxt-typed-vuex">
+    <img alt="" src="https://img.shields.io/codecov/c/github/danielroe/nuxt-typed-vuex.svg?style=flat-square">
 </a>
 </p>
 
