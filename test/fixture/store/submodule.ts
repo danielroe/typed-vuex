@@ -1,4 +1,11 @@
-import { getterTree, mutationTree, actionTree } from './../../../lib/utils'
+import {
+  getterTree,
+  mutationTree,
+  actionTree,
+  useAccessor,
+} from './../../../lib/utils'
+import { pattern } from '.'
+
 export const state = () => ({
   firstName: '',
   lastName: '',
@@ -21,7 +28,8 @@ export const actions = actionTree(
   { state, getters, mutations },
   {
     initialise({ commit }) {
-      commit('setFirstName', 'John')
+      const accessor = useAccessor(this, pattern)
+      commit('setFirstName', 'John' + accessor.email.split('@')[0])
       commit('setLastName', 'Baker')
     },
     setName({ commit }, newName: string) {

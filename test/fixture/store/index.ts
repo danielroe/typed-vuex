@@ -4,7 +4,7 @@ import {
   getAccessorType,
   mutationTree,
   actionTree,
-} from './../../../src/utils'
+} from './../../../lib/utils'
 
 import * as submodule from './submodule'
 
@@ -43,14 +43,7 @@ export const actions = actionTree(
 
 export const plugins: Plugin<RootState>[] = []
 
-export const storeType = getStoreType({
-  actions,
-  getters,
-  mutations,
-  state,
-})
-
-export const accessorType = getAccessorType({
+export const pattern = {
   actions,
   getters,
   mutations,
@@ -58,4 +51,8 @@ export const accessorType = getAccessorType({
   modules: {
     submodule,
   },
-})
+}
+
+export const storeType = getStoreType(pattern)
+
+export const accessorType = getAccessorType(pattern)

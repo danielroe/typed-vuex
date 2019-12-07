@@ -11,12 +11,10 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "baseUrl": ".",
-    "typeRoots": ["./@types", "./node_modules/@types", "./node_modules"],
     "types": ["@types/node", "@nuxt/types", "@types/webpack-env"],
     "esModuleInterop": true,
     "paths": {
-      "~/*": ["./*"],
-      "@/*": ["./*"]
+      "~/*": ["./*"]
     },
     "allowJs": true
   }
