@@ -31,11 +31,6 @@ jobs:
       - name: Test project
         run: yarn test
 
-      - name: Coverage
-        run: yarn codecov
-        env:
-          CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
-
   latest:
     runs-on: ubuntu-latest
 
