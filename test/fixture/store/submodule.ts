@@ -1,9 +1,4 @@
-import {
-  getterTree,
-  mutationTree,
-  actionTree,
-  useAccessor,
-} from './../../../lib/utils'
+import { getterTree, mutationTree, actionTree, useAccessor } from './../../..'
 import { pattern } from '.'
 
 export const state = () => ({

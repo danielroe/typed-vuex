@@ -7,7 +7,7 @@ module.exports = {
   dev: false,
 
   generate: {
-    dir: path.resolve(__dirname, 'dist')
+    dir: path.resolve(__dirname, 'dist'),
   },
 
   buildModules: ['@nuxt/typescript-build'],
@@ -16,6 +16,6 @@ module.exports = {
 
   manifest: {
     name: 'Test Project Name',
-    description: 'Test Project Description'
-  }
+    description: 'Test Project Description',
+  },
 }

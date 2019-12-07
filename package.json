@@ -30,8 +30,7 @@
     "build": "tsc",
     "prepare": "yarn build",
     "release": "yarn test && standard-version && git push --follow-tags && npm publish",
-    "generate": "yarn build && yarn nuxt generate test/fixture",
-    "test": "yarn lint && yarn generate && jest && tsc --noImplicitAny --noEmit test/accessor.test.ts && yarn tsd"
+    "test": "yarn build && yarn lint && jest && tsc --noImplicitAny --noEmit test/accessor.test.ts && yarn tsd"
   },
   "tsd": {
     "directory": "test/tsd",

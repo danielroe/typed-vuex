@@ -1,4 +1,4 @@
-import { actionTree } from './../../../lib/utils'
+import { actionTree } from './../../..'
 
 export const state = () => ({
   n: '',
