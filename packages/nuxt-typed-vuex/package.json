@@ -45,9 +45,6 @@
   "dependencies": {
     "normalize-path": "^3.0.0",
     "typed-vuex": "0.1.14-alpha.0",
-    "vuex": "*"
-  },
-  "optionalDependencies": {
-    "@nuxt/types": "*"
+    "@nuxt/types": ">0.3.0"
   }
 }

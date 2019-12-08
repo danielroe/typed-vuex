@@ -42,6 +42,6 @@
     "vue": "latest"
   },
   "dependencies": {
-    "vuex": "*"
+    "vuex": "^3.0.0"
   }
 }
