@@ -1,6 +1,6 @@
 {
   "name": "nuxt-typed-vuex",
-  "version": "0.1.13",
+  "version": "0.1.14-alpha.0",
   "description": "A typed store accessor for Nuxt.",
   "repository": "danielroe/nuxt-typed-vuex",
   "license": "MIT",
@@ -44,7 +44,7 @@
   },
   "dependencies": {
     "normalize-path": "^3.0.0",
-    "typed-vuex": "^0.1.13",
+    "typed-vuex": "0.1.14-alpha.0",
     "vuex": "*"
   },
   "optionalDependencies": {

@@ -1,6 +1,6 @@
 {
   "name": "typed-vuex",
-  "version": "0.1.13",
+  "version": "0.1.14-alpha.0",
   "description": "A typed store accessor for Vuex.",
   "repository": "danielroe/nuxt-typed-vuex",
   "license": "MIT",
