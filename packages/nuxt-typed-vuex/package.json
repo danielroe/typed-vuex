@@ -20,16 +20,14 @@
     "nuxt-module"
   ],
   "files": [
-    "lib",
-    "lib/utils.d.ts"
+    "lib"
   ],
   "main": "lib/index.js",
-  "types": "lib/utils.d.ts",
+  "types": "lib/index.d.ts",
   "scripts": {
     "build": "yarn clean && yarn compile",
     "compile": "tsc",
-    "clean": "rm -rf lib",
-    "test:types": "tsc --noImplicitAny --noEmit test/accessor.test.ts && yarn tsd"
+    "clean": "rm -rf lib test/fixture/.nuxt test/fixture/dist"
   },
   "tsd": {
     "directory": "test/tsd",
@@ -46,6 +44,7 @@
   },
   "dependencies": {
     "normalize-path": "^3.0.0",
+    "typed-vuex": "^0.1.13",
     "vuex": "*"
   },
   "optionalDependencies": {

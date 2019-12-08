@@ -25,9 +25,7 @@ describe.only('nuxt module', () => {
       addPlugin,
     })
     expect(addPlugin).toHaveBeenCalled()
-    ;['utils', 'store'].forEach(option => {
-      expect(Object.keys(addPlugin.mock.calls[0][0].options).includes(option))
-    })
+    expect(addPlugin.mock.calls[0][0].options.store).toBeDefined()
     expect(path.resolve(addPlugin.mock.calls[0][0].src)).toBeDefined()
   })
 })

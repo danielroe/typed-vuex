@@ -60,7 +60,7 @@ interface ModifiedActionTree<T extends NuxtStore> {
   [key: string]: ActionHandler<T>
 }
 
-interface NormalisedActionHandler<T extends ActionHandler<any>> {
+export interface NormalisedActionHandler<T extends ActionHandler<any>> {
   (this: Store<any>, ...args: Parameters<T>): ReturnType<T>
 }
 

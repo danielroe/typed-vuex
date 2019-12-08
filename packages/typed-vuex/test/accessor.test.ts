@@ -1,9 +1,9 @@
 import { useAccessor, getAccessorType, getAccessorFromStore } from '../'
 import Vuex, { Store } from 'vuex'
 import Vue from 'vue'
-import { getters, state, actions, mutations } from './fixture/store'
+import { getters, state, actions, mutations } from './fixture'
 
-import * as submodule from './fixture/store/submodule'
+import * as submodule from './fixture/submodule'
 
 const pattern = {
   getters,
@@ -37,7 +37,9 @@ const submoduleBehaviour = (accessor: typeof submoduleAccessorType) => {
   accessor.initialise()
   expect(accessor.fullName).toEqual('John Baker')
   accessor.setName('Jordan Lawrence')
-  expect(accessor.firstName).toEqual('Jordan')
+  expect(accessor.lastName).toEqual('Lawrence')
+  accessor.setName('George')
+  expect(accessor.firstName).toEqual('George')
 }
 
 describe.only('accessor', () => {
@@ -76,6 +78,11 @@ describe.only('accessor', () => {
   })
   test('accessor state, getter, mutation and actions work', async () => {
     expect(accessor.fullEmail).toEqual('')
+    expect(accessor.initialiseStore()).toBeUndefined()
+    accessor.resetEmailWithOptionalPayload('j@j.com')
+    expect(accessor.fullEmail).toEqual('j@j.com')
+    accessor.resetEmailWithOptionalPayload()
+    expect(accessor.fullEmail).toEqual('a@a.com')
 
     accessor.setEmail('john@j.com')
     expect(accessor.email).toEqual('john@j.com')
