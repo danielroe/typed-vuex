@@ -22,6 +22,7 @@
     "@types/jest": "latest",
     "codecov": "latest",
     "eslint": "latest",
+    "husky": "latest",
     "jest": "latest",
     "lerna": "latest",
     "typescript": "~3.7",
