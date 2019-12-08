@@ -22,7 +22,7 @@ export const mutations = {
 
 // Helper function
 
-import { mutationTree } from 'nuxt-typed-vuex'
+import { mutationTree } from 'typed-vuex'
 
 export const mutations = mutationTree(state, {
   setEmail(state, newValue: string) {
@@ -35,8 +35,10 @@ export const mutations = mutationTree(state, {
 })
 ```
 
-**Note**
+::: tip
 
 1. Even if you do not use the `mutationTree` helper function, make sure not to use the `MutationTree` type provided by Vuex. This will interfere with type inference. You won't lose out by omitting it, as Typescript will complain if you pass an improperly formed mutation into [the `getAccessorType` function](/setup.html#add-type-definitions).
 
 2. This package does not support [object-style commits](https://vuex.vuejs.org/guide/mutations.html#object-style-commit).
+
+:::

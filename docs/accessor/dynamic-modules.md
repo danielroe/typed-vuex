@@ -3,7 +3,7 @@
 
 # Dynamic modules
 
-You can also use `nuxt-typed-vuex` with dynamic modules.
+You can also use `typed-vuex` with dynamic modules.
 
 ## Sample module
 
@@ -32,7 +32,7 @@ You might want to use the store
 ```ts
 import { Component, Vue } from 'nuxt-property-decorator'
 
-import { useAccessor, getAccessorType } from 'nuxt-typed-vuex'
+import { useAccessor, getAccessorType } from 'typed-vuex'
 import dynamicModule from '~/modules/dynamic-module'
 
 const accessorType = getAccessorType(dynamicModule)

@@ -10,7 +10,7 @@ You might choose to customise the accessor function using the helper function `u
 `~/plugins/custom-store-accessor.ts`
 
 ```ts
-import { useAccessor } from 'nuxt-typed-vuex'
+import { useAccessor } from 'typed-vuex'
 import { InjectKey } from 'vue/types/options'
 import { Context } from '@nuxt/types'
 
@@ -43,7 +43,7 @@ You can use the helper function `getAccessorType` to access the type of the acce
 It gets compiled down to `() => {}` so there is no performance hit.
 
 ```ts
-import { getAccessorType } from 'nuxt-typed-vuex'
+import { getAccessorType } from 'typed-vuex'
 
 import * as store from '~/store'
 import * as submodule from '~/store/submodule'
