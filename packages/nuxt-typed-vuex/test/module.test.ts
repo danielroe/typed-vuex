@@ -1,4 +1,4 @@
-import nuxtModule from '../lib/index'
+import nuxtModule from 'nuxt-typed-vuex'
 import path from 'path'
 
 describe.only('nuxt module', () => {

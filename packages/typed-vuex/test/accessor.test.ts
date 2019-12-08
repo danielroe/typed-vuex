@@ -1,8 +1,8 @@
-import { useAccessor, getAccessorType, getAccessorFromStore } from '../'
+import { useAccessor, getAccessorType, getAccessorFromStore } from 'typed-vuex'
 import Vuex, { Store } from 'vuex'
 import Vue from 'vue'
-import { getters, state, actions, mutations } from './fixture'
 
+import { getters, state, actions, mutations } from './fixture'
 import * as submodule from './fixture/submodule'
 
 const pattern = {
