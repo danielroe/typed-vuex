@@ -1,0 +1,9 @@
+{
+  "name": "typed-vuex",
+  "version": "0.1.13",
+  "description": "A typed store accessor for Vuex.",
+  "main": "lib/index.js",
+  "repository": "https://github.com/danielroe/nuxt-typed-vuex",
+  "author": "Daniel Roe",
+  "license": "MIT"
+}

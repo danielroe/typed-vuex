@@ -26,7 +26,7 @@ jobs:
 
       - name: Install dependencies
         if: steps.cache.outputs.cache-hit != 'true'
-        run: yarn && yarn add nuxt@${{ matrix.nuxt }}
+        run: yarn && yarn workspace nuxt-typed-vuex add nuxt@${{ matrix.nuxt }}
 
       - name: Test project
         run: yarn test

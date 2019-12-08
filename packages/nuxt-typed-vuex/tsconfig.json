@@ -1,0 +1,9 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "rootDir": "src",
+    "outDir": "lib",
+    "lib": ["esnext", "dom"]
+  },
+  "exclude": ["node_modules", "lib", "test"]
+}
