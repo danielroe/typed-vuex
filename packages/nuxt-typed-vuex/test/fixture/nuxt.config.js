@@ -12,7 +12,7 @@ module.exports = {
 
   buildModules: ['@nuxt/typescript-build'],
 
-  modules: [require.resolve('../..')],
+  modules: ['nuxt-typed-vuex'],
 
   manifest: {
     name: 'Test Project Name',

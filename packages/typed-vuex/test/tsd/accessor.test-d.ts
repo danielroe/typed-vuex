@@ -1,10 +1,10 @@
 import { DispatchOptions, CommitOptions } from 'vuex'
 import { expectType, expectError } from 'tsd'
 
-import { getAccessorType } from '../../lib/utils'
-import { getters, state, actions, mutations } from '../fixture/store'
+import { getAccessorType } from 'nuxt-typed-vuex'
+import { getters, state, actions, mutations } from '../fixture'
 
-import * as submodule from '../fixture/store/submodule'
+import * as submodule from '../fixture/submodule'
 
 const pattern = {
   getters,

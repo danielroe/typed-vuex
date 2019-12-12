@@ -7,7 +7,9 @@ A getter is a function that receives `state`, `getters`, `rootState` and `rootGe
 
 This package provides a helper function to reduce boilerplate: `getterTree`. This function adds typings and returns the getters passed to it, without transforming them.
 
-**Warning: `nuxt-typed-vuex` does not currently type-check anything but the state received.**
+::: warning
+`typed-vuex` does not currently type-check anything but the state received.
+:::
 
 ```ts
 // Vanilla
@@ -21,7 +23,7 @@ export const getters = {
 
 // Helper function
 
-import { getterTree } from 'nuxt-typed-vuex'
+import { getterTree } from 'typed-vuex'
 
 export const getters = getterTree(state, {
   // Type-checked
@@ -31,6 +33,8 @@ export const getters = getterTree(state, {
 })
 ```
 
-**Note**
+::: tip
 
-1. Even if you do not use the `getterTree` helper function, make sure not to use the `GetterTree` type provided by Vuex. This will interfere with type inference. You won't lose out by omitting it, as Typescript will complain if you pass an improperly formed getter into [the `getAccessorType` function](/setup.html#add-type-definitions).
+Even if you do not use the `getterTree` helper function, make sure not to use the `GetterTree` type provided by Vuex. This will interfere with type inference. You won't lose out by omitting it, as Typescript will complain if you pass an improperly formed getter into [the `getAccessorType` function](/setup.html#add-type-definitions).
+
+:::

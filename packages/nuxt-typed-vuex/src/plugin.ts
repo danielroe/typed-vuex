@@ -4,7 +4,7 @@ import { Context } from '@nuxt/types'
 // eslint-disable-next-line
 const { createStore } = require('<%= options.store %>')
 // eslint-disable-next-line
-const { getAccessorFromStore } = require('<%= options.utils %>')
+const { getAccessorFromStore } = require('typed-vuex')
 
 type Inject = (name: InjectKey, property: unknown) => void
 const storeAccessor = getAccessorFromStore(createStore())

@@ -3,12 +3,10 @@
 
 # Accessor
 
-This module injects a store accessor throughout your project (`$accessor`). This serves two purposes:
+The accessor serves two purposes:
 
-- It wraps the store so that it can be typed without conflicting with the default types for `$store`
+- It wraps the store so that it can be typed without conflicting with the default types for `$store` in a Nuxt project.
 - It allows us to avoid creating impossible type definitions for namespaced magic strings, like `commit('mysubmodule/mutation')`).
-
-**IMPORTANT**: The accessor injected by this module is not typed by default, so you will need to [add types](/setup.html).
 
 ## Structure
 
@@ -41,7 +39,7 @@ this.$accessor.submodule.id
 
 Adding types is simple. A helper function, `getAccessorType`, is provided, which compiles to nothing and only serves to return the correct type of the accessor so that it can be used where you see fit.
 
-Make sure you define types correctly following [these instructions](/setup.html).
+Make sure you define types correctly following [these instructions](/setup.html#add-type-definitions).
 
 ## Using the accessor
 

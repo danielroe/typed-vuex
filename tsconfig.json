@@ -1,8 +1,6 @@
 {
   "compilerOptions": {
-    "outDir": "lib",
     "strict": true,
-    "rootDir": "src",
     "sourceMap": true,
     "declaration": true,
     "target": "esnext",
@@ -10,6 +8,5 @@
     "moduleResolution": "node",
     "esModuleInterop": true,
     "lib": ["esnext", "dom"]
-  },
-  "exclude": ["node_modules", "lib", "test"]
+  }
 }

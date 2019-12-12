@@ -3,6 +3,11 @@
 
 # Introduction
 
+Nuxt Typed Vuex is made up of two packages:
+
+1. `typed-vuex` - a typed store accessor with helper functions, with no Nuxt dependencies
+2. `nuxt-typed-vuex` - a Nuxt module that auto-injects this accessor throughout your project
+
 ## Why another package?
 
 Typing vanilla Vuex is complicated. Many people choose a class-based approach with Typescript decorators. However, this can cause issues, including:

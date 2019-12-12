@@ -82,5 +82,5 @@ dist
 # Service worker
 sw.*
 
-lib/*
-!lib/.gitkeep
+packages/*/lib/*
+!packages/*/lib/.gitkeep

@@ -1,0 +1,24 @@
+{
+  "version": "independent",
+  "npmClient": "yarn",
+  "useWorkspaces": true,
+  "exact": true,
+  "packages": ["packages/*"],
+  "conventionalCommits": true,
+  "command": {
+    "version": {
+      "conventionalCommits": true
+    },
+    "release": {
+      "conventionalCommits": true
+    },
+    "publish": {
+      "npmClient": "npm",
+      "conventionalCommits": true,
+      "message": "chore(release): publish [skip-ci]"
+    },
+    "init": {
+      "exact": true
+    }
+  }
+}

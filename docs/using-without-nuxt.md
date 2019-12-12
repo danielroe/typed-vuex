@@ -1,9 +1,9 @@
 ---
 ---
 
-# Using without Nuxt
+# Getting started (Vue)
 
-If you would like to benefit from a typed accessor to your store, but you're not using Nuxt, you can still use `nuxt-typed-vuex`.
+If you would like to benefit from a typed accessor to your store, but you're not using Nuxt, you can still use `typed-vuex`.
 
 ::: warning
 Many of this project's default settings are based on Nuxt, so please file an issue if you experience any problems.
@@ -15,10 +15,10 @@ Many of this project's default settings are based on Nuxt, so please file an iss
 
    ```bash
    # yarn
-   yarn add nuxt-typed-vuex
+   yarn add typed-vuex
 
    # npm
-   npm i nuxt-typed-vuex
+   npm i typed-vuex
    ```
 
 2. Instantiate your accessor
@@ -34,7 +34,7 @@ Many of this project's default settings are based on Nuxt, so please file an iss
      getterTree,
      mutationTree,
      actionTree,
-   } from 'nuxt-typed-vuex'
+   } from 'typed-vuex'
 
    Vue.use(Vuex)
 
@@ -130,7 +130,7 @@ export default class SampleComponent extends Vue {
 You can use the accessor within the store or a store module.
 
 ```ts
-import { actionTree } from 'nuxt-typed-vuex'
+import { actionTree } from 'typed-vuex'
 import { accessor } from '.'
 
 const actions = actionTree(

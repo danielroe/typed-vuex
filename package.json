@@ -1,67 +1,32 @@
 {
-  "name": "nuxt-typed-vuex",
-  "version": "0.1.13",
-  "description": "A typed store accessor for Nuxt.",
-  "repository": "danielroe/nuxt-typed-vuex",
-  "license": "MIT",
-  "contributors": [
-    {
-      "name": "Daniel Roe <daniel@danielcroe.com>",
-      "url": "https://github.com/danielroe"
-    }
+  "private": true,
+  "workspaces": [
+    "packages/*"
   ],
-  "keywords": [
-    "vuex",
-    "nuxt",
-    "typescript",
-    "vue",
-    "vuejs",
-    "nuxtjs",
-    "nuxt-module"
-  ],
-  "files": [
-    "lib",
-    "lib/utils.d.ts"
-  ],
-  "main": "lib/index.js",
-  "types": "lib/utils.d.ts",
   "scripts": {
-    "lint": "eslint --ext .js,.ts src",
-    "build": "tsc",
-    "prepare": "yarn build",
-    "release": "yarn test && standard-version && git push --follow-tags && npm publish",
-    "test": "yarn build && yarn lint && jest && tsc --noImplicitAny --noEmit test/accessor.test.ts && yarn tsd"
-  },
-  "tsd": {
-    "directory": "test/tsd",
-    "compilerOptions": {
-      "rootDir": "."
-    }
+    "build": "lerna run build",
+    "lint": "eslint --ext .ts,.tsx,.js .",
+    "lint:fix": "yarn lint --fix",
+    "test:types": "lerna run test:types",
+    "test": "yarn lint && jest && yarn test:types"
   },
   "devDependencies": {
     "@babel/core": "^7.7.5",
     "@babel/plugin-transform-runtime": "^7.7.5",
     "@babel/preset-env": "^7.7.5",
     "@babel/preset-typescript": "^7.7.4",
-    "@nuxt/typescript-build": "^0.3.10",
-    "@types/jest": "^24.0.23",
-    "@types/normalize-path": "^3.0.0",
-    "@typescript-eslint/eslint-plugin": "^2.10.0",
-    "@typescript-eslint/parser": "^2.10.0",
-    "codecov": "^3.6.1",
-    "eslint": "^6.7.2",
-    "jest": "^24.9.0",
-    "nuxt": "latest",
     "standard-version": "^7.0.1",
-    "ts-loader": "^6.2.1",
-    "tsd": "^0.11.0",
-    "typescript": "~3.7"
-  },
-  "dependencies": {
-    "normalize-path": "^3.0.0",
-    "vuex": "*"
-  },
-  "optionalDependencies": {
-    "@nuxt/types": "*"
+    "@commitlint/cli": "latest",
+    "@commitlint/config-conventional": "latest",
+    "@nuxtjs/eslint-config-typescript": "latest",
+    "@types/jest": "latest",
+    "codecov": "latest",
+    "eslint": "latest",
+    "husky": "latest",
+    "jest": "latest",
+    "lerna": "latest",
+    "typescript": "~3.7",
+    "@typescript-eslint/eslint-plugin": "latest",
+    "@typescript-eslint/parser": "latest"
   }
 }

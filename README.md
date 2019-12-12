@@ -33,7 +33,7 @@
 
 ## Summary
 
-This module provides a store accessor and helper type methods so you can access your normal Nuxt store in a strongly typed way.
+This module provides a store accessor and helper type methods so you can access your vanilla Vuex store in a strongly typed way.
 
 ![Image showing autocomplete on this.$accessor](./docs/images/screenshot1.png)
 

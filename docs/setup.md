@@ -1,11 +1,11 @@
 ---
 ---
 
-# Getting started
+# Getting started (Nuxt)
 
 ## Install module
 
-1. Install package:
+1. Install Nuxt module:
 
    ```bash
    # yarn
@@ -15,6 +15,10 @@
    npm i nuxt-typed-vuex
    ```
 
+   ::: tip
+   This will also install `typed-vuex` in your project, which is where the store accessor lives. You can import its helper functions from either `nuxt-typed-vuex` or from `typed-vuex`.
+   :::
+
 2. Add module to your `nuxt.config`:
 
    ```ts
@@ -23,7 +27,9 @@
    ],
    ```
 
-   **Note**: `buildModules` require Nuxt 2.10+. If you are using an older version, add `nuxt-typed-vuex` to `modules` instead.
+   ::: tip
+   `buildModules` require Nuxt 2.10+. If you are using an older version, add `nuxt-typed-vuex` to `modules` instead.
+   :::
 
 3. You will need to transpile this module, by adding the following to your `nuxt.config`:
 
@@ -37,6 +43,8 @@
 
 ## Add type definitions
 
+The module will inject a store accessor throughout your project (`$accessor`). It is not typed by default, so you will need to add types.
+
 ### Defining the accessor type
 
 In your root store module, add the following code:
@@ -44,7 +52,7 @@ In your root store module, add the following code:
 `store/index.ts`
 
 ```ts
-import { getAccessorType } from 'nuxt-typed-vuex'
+import { getAccessorType } from 'typed-vuex'
 
 // Import all your submodules
 import * as submodule from '~/store/submodule'
@@ -65,7 +73,9 @@ export const accessorType = getAccessorType({
 })
 ```
 
-**Note**: This may look different if you split your modules into separate files for `state`, `actions`, `mutations` and `getters`.
+::: warning
+This may look different if you split your modules into separate files for `state`, `actions`, `mutations` and `getters`.
+:::
 
 ### Creating type definitions
 

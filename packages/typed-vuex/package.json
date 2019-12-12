@@ -1,0 +1,48 @@
+{
+  "name": "typed-vuex",
+  "version": "0.1.14-alpha.2",
+  "description": "A typed store accessor for Vuex.",
+  "repository": "danielroe/nuxt-typed-vuex",
+  "license": "MIT",
+  "contributors": [
+    {
+      "name": "Daniel Roe <daniel@danielcroe.com>",
+      "url": "https://github.com/danielroe"
+    }
+  ],
+  "keywords": [
+    "vuex",
+    "nuxt",
+    "typescript",
+    "vue",
+    "vuejs",
+    "nuxtjs",
+    "nuxt-module"
+  ],
+  "files": [
+    "lib/**/*",
+    "lib/index.d.ts",
+    "!**/*.map"
+  ],
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "scripts": {
+    "build": "yarn clean && yarn compile",
+    "compile": "tsc",
+    "clean": "rm -rf lib",
+    "test:types": "yarn tsd"
+  },
+  "tsd": {
+    "directory": "test/tsd",
+    "compilerOptions": {
+      "rootDir": "."
+    }
+  },
+  "devDependencies": {
+    "tsd": "^0.11.0",
+    "vue": "latest"
+  },
+  "dependencies": {
+    "vuex": "^3.0.0"
+  }
+}

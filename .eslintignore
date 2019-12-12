@@ -4,3 +4,6 @@
 
 # Contains Lodash templates
 **/plugin.js
+
+**/lib
+**/test

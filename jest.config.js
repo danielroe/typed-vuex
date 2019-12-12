@@ -1,7 +1,8 @@
 module.exports = {
+  verbose: true,
+  projects: ['<rootDir>/packages/*/jest.config.js'],
   testEnvironment: 'node',
   collectCoverage: true,
-  collectCoverageFrom: ['lib/*.js', '!lib/plugin.js'],
   coverageThreshold: {
     global: {
       branches: 100,

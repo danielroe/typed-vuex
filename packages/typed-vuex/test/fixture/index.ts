@@ -4,7 +4,7 @@ import {
   getAccessorType,
   mutationTree,
   actionTree,
-} from './../../..'
+} from 'nuxt-typed-vuex'
 
 import * as submodule from './submodule'
 
