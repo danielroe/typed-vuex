@@ -29,6 +29,8 @@ const accessorType = getAccessorType(pattern)
 const submoduleAccessorType = getAccessorType(submodule)
 
 expectType<string>(accessorType.fullEmail)
+expectType<string>(accessorType.submodule.fullName)
+expectType<string>(accessorType.submodule.lastName)
 interface CommitFunction {
   (payload: string, options?: CommitOptions): void
 }
