@@ -20,7 +20,8 @@
     "nuxt-module"
   ],
   "files": [
-    "lib"
+    "lib/**/*",
+    "!**/*.map"
   ],
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
