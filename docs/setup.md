@@ -36,7 +36,7 @@
    ```ts
    build: {
      transpile: [
-       /nuxt-typed-vuex/,
+       /typed-vuex/,
      ],
    },
    ```
