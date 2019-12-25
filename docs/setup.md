@@ -73,8 +73,26 @@ export const accessorType = getAccessorType({
 })
 ```
 
-::: warning
+::: tip
 This may look different if you split your modules into separate files for `state`, `actions`, `mutations` and `getters`.
+:::
+
+::: warning
+Typescript 3.7 has brought some limitations on type inference. Specifically, there is now an issue with an accessor type used in the same module that exports it. So if you wish to reference child modules from within your actions in `~/store/index.ts`, you may need to exclude those actions from the accessor type:
+
+```ts
+export const accessorType = getAccessorType({
+  state,
+  getters,
+  mutations,
+  // actions,
+  modules: {
+    // The key (submodule) needs to match the Nuxt namespace (e.g. ~/store/submodule.ts)
+    submodule,
+  },
+})
+```
+
 :::
 
 ### Creating type definitions
