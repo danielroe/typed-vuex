@@ -44,7 +44,7 @@
     "tsd": "^0.11.0"
   },
   "dependencies": {
-    "@nuxt/types": ">=0.3.0",
+    "@nuxt/types": ">=0.6.0",
     "normalize-path": "^3.0.0",
     "typed-vuex": "0.1.15"
   }
