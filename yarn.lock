@@ -1318,10 +1318,10 @@
     js-levenshtein "^1.1.3"
     semver "^5.5.0"
 
-"@babel/preset-env@^7.8.0":
-  version "7.8.0"
-  resolved "https://registry.yarnpkg.com/@babel/preset-env/-/preset-env-7.8.0.tgz#f0a0a353091cb2135e9aea21ed9c4563c51bd31f"
-  integrity sha512-g3wnth3Ct+ZvnaHcvb5PQyojqNj0whXTkO7hatXgz+lQ2FphOoXrG1JMIfeaHgDakGzx3LiNe0KsWO69xSVFDA==
+"@babel/preset-env@^7.8.2":
+  version "7.8.2"
+  resolved "https://registry.yarnpkg.com/@babel/preset-env/-/preset-env-7.8.2.tgz#dd55bd61f5d0bb1237915173c0e94aa350de3089"
+  integrity sha512-AF2YUl2bGsLWTtFL68upTTB7nDo05aEcKjHmXJE+aXRvsx5K+9yRsHQP3MjnTrLOWe/eFyUr93dfILROsKC4eg==
   dependencies:
     "@babel/compat-data" "^7.8.0"
     "@babel/helper-compilation-targets" "^7.8.0"
@@ -2688,7 +2688,31 @@
     serve-static "^1.14.1"
     server-destroy "^1.0.1"
 
-"@nuxt/types@0.6.0", "@nuxt/types@>=0.3.0":
+"@nuxt/types@0.6.1":
+  version "0.6.1"
+  resolved "https://registry.yarnpkg.com/@nuxt/types/-/types-0.6.1.tgz#f94601630367ba790e6ca320c30406a4e253599d"
+  integrity sha512-9qOjHgLfUSZOicDXbAh/jg9dSFDdE4MVVSQdMTtmwEpGUKLqawrUwkypRtn8jDcvAtf0EADo/1VunpuN5j7jTg==
+  dependencies:
+    "@types/autoprefixer" "^9.6.1"
+    "@types/babel__core" "^7.1.3"
+    "@types/compression" "^1.0.1"
+    "@types/connect" "^3.4.33"
+    "@types/etag" "^1.8.0"
+    "@types/file-loader" "^4.2.0"
+    "@types/html-minifier" "^3.5.3"
+    "@types/less" "^3.0.1"
+    "@types/node" "^12.12.24"
+    "@types/node-sass" "^4.11.0"
+    "@types/optimize-css-assets-webpack-plugin" "^5.0.1"
+    "@types/pug" "^2.0.4"
+    "@types/serve-static" "^1.13.3"
+    "@types/terser-webpack-plugin" "^2.2.0"
+    "@types/webpack" "^4.41.2"
+    "@types/webpack-bundle-analyzer" "^2.13.3"
+    "@types/webpack-dev-middleware" "^2.0.3"
+    "@types/webpack-hot-middleware" "^2.25.0"
+
+"@nuxt/types@>=0.3.0":
   version "0.6.0"
   resolved "https://registry.yarnpkg.com/@nuxt/types/-/types-0.6.0.tgz#f127c31d8c86cfbe522654da91704a98a2cb0fb3"
   integrity sha512-LJF95jLe4Ir/mrKJ5d2QC+t89xnXVM2EWagXx8YDM32RObIAHEU8jUQLPy4uvx1w3APDOMAtByG5V3vlRo7HwQ==
@@ -2712,12 +2736,12 @@
     "@types/webpack-dev-middleware" "^2.0.3"
     "@types/webpack-hot-middleware" "^2.25.0"
 
-"@nuxt/typescript-build@^0.5.5":
-  version "0.5.5"
-  resolved "https://registry.yarnpkg.com/@nuxt/typescript-build/-/typescript-build-0.5.5.tgz#5cb01380f567344339b016a88503fed2bd67b8bf"
-  integrity sha512-VB2PcS8XbW0nUn+AY9+JqbuBO3K3Ys9xoIG8s4uJ9vua/rwLRe4mS6jIoIhMVOoiPjoz8CNq7F3edOXsevSleA==
+"@nuxt/typescript-build@^0.5.6":
+  version "0.5.6"
+  resolved "https://registry.yarnpkg.com/@nuxt/typescript-build/-/typescript-build-0.5.6.tgz#5276de2ef06f2534ae50f7d3f987a9d6f9f4c405"
+  integrity sha512-4ut0vug0lSNHPrTdZj98XPNCyMm4D/V/NzuoGc9p6abwAfyLapRfWZRZeLDoLYBaW/uAtVRcch09KCw7nM6cIg==
   dependencies:
-    "@nuxt/types" "0.6.0"
+    "@nuxt/types" "0.6.1"
     consola "^2.11.3"
     fork-ts-checker-webpack-plugin "^3.1.1"
     ts-loader "^6.2.1"
@@ -3117,7 +3141,7 @@
   resolved "https://registry.yarnpkg.com/@types/node/-/node-13.1.4.tgz#4cfd90175a200ee9b02bd6b1cd19bc349741607e"
   integrity sha512-Lue/mlp2egZJoHXZr4LndxDAd7i/7SQYhV0EjWfb/a4/OZ6tuVwMCVPiwkU5nsEipxEf7hmkSU7Em5VQ8P5NGA==
 
-"@types/node@^12.0.2", "@types/node@^12.12.22":
+"@types/node@^12.0.2", "@types/node@^12.12.22", "@types/node@^12.12.24":
   version "12.12.24"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-12.12.24.tgz#d4606afd8cf6c609036b854360367d1b2c78931f"
   integrity sha512-1Ciqv9pqwVtW6FsIUKSZNB82E5Cu1I2bBTj1xuIHXLe/1zYLl3956Nbhg2MzSYHVfl9/rmanjbQIb7LibfCnug==
@@ -3245,6 +3269,18 @@
   version "4.41.1"
   resolved "https://registry.yarnpkg.com/@types/webpack/-/webpack-4.41.1.tgz#571f0e137ce698710dd2637f7d222811eb83e274"
   integrity sha512-n9fP8UrMxOi1wiM3oM+vMZHMJJ7WoQohqd63C20cmKOFkNEy9Q8hyZyDR6PWdvSYt3V3A7cwDq/kWxHlRYYZEg==
+  dependencies:
+    "@types/anymatch" "*"
+    "@types/node" "*"
+    "@types/tapable" "*"
+    "@types/uglify-js" "*"
+    "@types/webpack-sources" "*"
+    source-map "^0.6.0"
+
+"@types/webpack@^4.41.2":
+  version "4.41.2"
+  resolved "https://registry.yarnpkg.com/@types/webpack/-/webpack-4.41.2.tgz#c6faf0111de27afdffe1158dac559e447c273516"
+  integrity sha512-DNMQOfEvwzWRRyp6Wy9QVCgJ3gkelZsuBE2KUD318dg95s9DKGiT5CszmmV58hq8jk89I9NClre48AEy1MWAJA==
   dependencies:
     "@types/anymatch" "*"
     "@types/node" "*"
