@@ -49,9 +49,8 @@ const createAccessor = <T extends State, G, M, A, S extends NuxtModules>(
   Object.keys(evaluatedState).forEach(prop => {
     if (!Object.getOwnPropertyNames(accessor).includes(prop)) {
       const namespaces = namespace.split('/')
-      const state = getNestedState(store.state, namespaces)
       Object.defineProperty(accessor, prop, {
-        get: () => state[prop],
+        get: () => getNestedState(store.state, namespaces)[prop],
       })
     }
   })
