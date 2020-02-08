@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.16](https://github.com/danielroe/nuxt-typed-vuex/compare/typed-vuex@0.1.15...typed-vuex@0.1.16) (2020-02-08)
+
+
+### Bug Fixes
+
+* state lazy evaluation in accessor ([#75](https://github.com/danielroe/nuxt-typed-vuex/issues/75)) ([bae68f5](https://github.com/danielroe/nuxt-typed-vuex/commit/bae68f59dfd7f05511469569943a56a15583b9b9))
+
+
+
+
+
 ## [0.1.15](https://github.com/danielroe/nuxt-typed-vuex/compare/typed-vuex@0.1.14...typed-vuex@0.1.15) (2019-12-12)
 
 **Note:** Version bump only for package typed-vuex
