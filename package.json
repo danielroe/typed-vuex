@@ -26,6 +26,6 @@
     "husky": "latest",
     "jest": "latest",
     "lerna": "latest",
-    "typescript": "~3.7"
+    "typescript": "~3.8"
   }
 }
