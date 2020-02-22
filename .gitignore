@@ -84,3 +84,4 @@ sw.*
 
 packages/*/lib/*
 !packages/*/lib/.gitkeep
+.now
