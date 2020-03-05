@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.17](https://github.com/danielroe/nuxt-typed-vuex/compare/typed-vuex@0.1.16...typed-vuex@0.1.17) (2020-03-05)
+
+
+### Bug Fixes
+
+* move @nuxt/types and vuex to peerDeps ([4d6029e](https://github.com/danielroe/nuxt-typed-vuex/commit/4d6029ea582cc055010612b8427b4ae12fcd4fac))
+
+
+
+
+
 ## [0.1.16](https://github.com/danielroe/nuxt-typed-vuex/compare/typed-vuex@0.1.15...typed-vuex@0.1.16) (2020-02-08)
 
 
