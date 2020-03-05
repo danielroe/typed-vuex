@@ -42,7 +42,7 @@
     "tsd": "^0.11.0",
     "vue": "latest"
   },
-  "dependencies": {
+  "peerDependencies": {
     "vuex": "^3.0.0"
   }
 }
