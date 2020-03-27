@@ -9,6 +9,6 @@
   },
   "resolutions": {
     "serialize-javascript": ">=3.0.0",
-    "minimist": ">=1.2.2"
+    "minimist": ">=1.2.5"
   }
 }
