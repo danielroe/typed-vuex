@@ -1,7 +1,7 @@
 import nuxtModule from 'nuxt-typed-vuex'
 import path from 'path'
 
-describe.only('nuxt module', () => {
+describe('nuxt module', () => {
   it('exists', () => {
     expect(nuxtModule).toBeDefined()
   })

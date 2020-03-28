@@ -42,7 +42,7 @@ const submoduleBehaviour = (accessor: typeof submoduleAccessorType) => {
   expect(accessor.firstName).toEqual('George')
 }
 
-describe.only('accessor', () => {
+describe('accessor', () => {
   let store: Store<any>
   let accessor: typeof accessorType
 
