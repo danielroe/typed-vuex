@@ -37,7 +37,7 @@
     }
   },
   "devDependencies": {
-    "@nuxt/typescript-build": "^0.6.2",
+    "@nuxt/typescript-build": "^0.6.5",
     "@types/normalize-path": "^3.0.0",
     "nuxt": "latest",
     "ts-loader": "^6.2.2",
