@@ -1,0 +1,23 @@
+{
+  "name": "nuxt-typed-vuex-example",
+  "version": "1.0.0",
+  "description": "Example project for nuxt-typed-vuex.",
+  "author": "Daniel Roe",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate",
+    "now-build": "nuxt generate"
+  },
+  "dependencies": {
+    "@vue/composition-api": "0.5.0",
+    "nuxt": "2.12.2"
+  },
+  "devDependencies": {
+    "@nuxt/typescript-build": "0.6.1",
+    "nuxt-typed-vuex": "0.1.17",
+    "vue-property-decorator": "8.4.1"
+  }
+}

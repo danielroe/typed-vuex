@@ -12,6 +12,9 @@
       >
         LIVE EDIT
       </a>
+      <a v-if="link" class="button" :href="link">
+        LIVE SITE
+      </a>
       <a
         class="button"
         :href="
@@ -25,21 +28,24 @@
 </template>
 
 <script>
-import Vue from "vue";
+import Vue from 'vue'
 
 export default Vue.extend({
   props: {
     name: {
       type: String,
-      required: true
-    }
+      required: true,
+    },
+    link: {
+      type: String,
+    },
   },
   computed: {
     repository() {
-      return this.name;
-    }
-  }
-});
+      return this.name
+    },
+  },
+})
 </script>
 
 <style scoped>

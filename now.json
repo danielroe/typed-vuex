@@ -1,0 +1,21 @@
+{
+  "builds": [
+    {
+      "src": "docs/package.json",
+      "use": "@now/static-build"
+    },
+    {
+      "src": "examples/nuxt-ts/package.json",
+      "use": "@now/static-build"
+    },
+    {
+      "src": "examples/nuxt/package.json",
+      "use": "@now/static-build"
+    },
+    {
+      "src": "examples/vue/package.json",
+      "use": "@now/static-build"
+    }
+  ],
+  "routes": [{ "handle": "filesystem" }, { "src": "/(.*)", "dest": "/docs/$1" }]
+}

@@ -3,4 +3,4 @@
 
 # Without Nuxt
 
-<Example name="danielroe/nuxt-typed-vuex-vue-example" />
+<Example name="danielroe/nuxt-typed-vuex/tree/master/examples/vue" />

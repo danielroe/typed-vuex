@@ -1,6 +1,8 @@
 module.exports = {
   title: '🏦 Nuxt Typed Vuex',
   description: 'Vanilla, strongly-typed store accessor',
+  evergreen: true,
+  dest: 'dist',
   themeConfig: {
     repo: 'danielroe/nuxt-typed-vuex',
     editLinks: true,
