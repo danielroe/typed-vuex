@@ -8,7 +8,7 @@
     "vuepress": "^1.5.0"
   },
   "resolutions": {
-    "serialize-javascript": ">=3.0.0",
+    "serialize-javascript": ">=4.0.0",
     "minimist": ">=1.2.5"
   }
 }
