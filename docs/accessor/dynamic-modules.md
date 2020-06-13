@@ -30,17 +30,17 @@ You might want to use the store
 `~/components/my-component.vue`:
 
 ```ts
-import { Component, Vue } from 'nuxt-property-decorator'
+import Vue from 'vue
 
 import { useAccessor, getAccessorType } from 'typed-vuex'
 import dynamicModule from '~/modules/dynamic-module'
 
 const accessorType = getAccessorType(dynamicModule)
 
-@Component
-export default class MyComponent extends Vue {
-  accessor: typeof accessorType | null = null
-
+export default Vue.extend({
+  data: () => ({
+    accessor: null as typeof accessorType | null,
+  }),
   beforeCreated() {
     // make sure the namespaces match!
     this.$store.registerModule('dynamicModule', dynamicModule, {
@@ -53,13 +53,14 @@ export default class MyComponent extends Vue {
 
     // but you might want to save the accessor for use elsewhere in your component
     this.accessor = accessor
-  }
-
-  anotherMethod() {
-    // ... such as here
-    if (this.accessor) {
-      this.accessor.addEmail('my@email.com')
+  },
+  methods: {
+    anotherMethod() {
+      // ... such as here
+      if (this.accessor) {
+        this.accessor.addEmail('my@email.com')
+      }
     }
   }
-}
+})
 ```

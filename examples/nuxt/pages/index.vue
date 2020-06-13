@@ -12,34 +12,33 @@
 </template>
 
 <script>
-import { Vue, Component } from 'vue-property-decorator'
+import Vue from 'vue'
 import Logo from '~/components/Logo.vue'
 
-@Component({
+export default Vue.extend({
   components: {
     Logo,
   },
-})
-export default class HomePage extends Vue {
-  get email() {
-    return this.$accessor.email
-  }
-
-  setEmail() {
-    this.$accessor.setEmail('test@email.com')
-  }
-
-  get firstName() {
-    return this.$accessor.submodule.firstName
-  }
-
+  computed: {
+    email() {
+      return this.$accessor.email
+    },
+    firstName() {
+      return this.$accessor.submodule.firstName
+    },
+  },
+  methods: {
+    setEmail() {
+      this.$accessor.setEmail('test@email.com')
+    },
+  },
   mounted() {
     setTimeout(() => {
       console.log('setting first name')
       this.$accessor.submodule.setFirstName('John')
     }, 500)
-  }
-}
+  },
+})
 </script>
 
 <style>

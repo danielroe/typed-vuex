@@ -48,9 +48,9 @@ Make sure you define types correctly following [these instructions](/setup.html#
 `components/sampleComponent.vue`
 
 ```ts
-import { Component, Vue } from 'nuxt-property-decorator'
+import Vue from 'vue'
 
-@Component({
+export default Vue.extend({
   fetch({ app: { $accessor } }) {
     $accessor.fetchItems()
   },
@@ -59,18 +59,19 @@ import { Component, Vue } from 'nuxt-property-decorator'
       myEmail: $accessor.email,
     }
   },
+  computed: {
+    email() {
+      // This (behind the scenes) returns this.$store.getters['email']
+      return this.$accessor.email
+    },
+  },
+  methods: {
+    resetEmail() {
+      // Executes this.$store.dispatch('submodule/resetEmail', 'new@email.com')
+      this.$accessor.submodule.resetEmail('new@email.com')
+    },
+  },
 })
-export default class SampleComponent extends Vue {
-  get email() {
-    // This (behind the scenes) returns this.$store.getters['email']
-    return this.$accessor.email
-  }
-
-  resetEmail() {
-    // Executes this.$store.dispatch('submodule/resetEmail', 'new@email.com')
-    this.$accessor.submodule.resetEmail('new@email.com')
-  }
-}
 ```
 
 ### Middleware
