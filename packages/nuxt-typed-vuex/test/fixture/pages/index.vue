@@ -20,7 +20,7 @@ export default Vue.extend({
     }
   },
   mounted() {
-    this.$accessor.testNuxtTyping()
+    this.$accessor.nuxt.testNuxtTyping()
     this.int = setInterval(() => {
       this.date = Date.now()
     }, 1000)

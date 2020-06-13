@@ -1,9 +1,4 @@
 {
-  "extends": [
-    "@nuxtjs"
-  ],
-  "ignoreDeps": [
-    "@nuxt/types",
-    "vuex"
-  ]
+  "extends": ["@nuxtjs"],
+  "ignoreDeps": ["@types/jest", "jest"]
 }

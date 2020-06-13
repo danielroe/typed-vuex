@@ -11,7 +11,7 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "baseUrl": ".",
-    "types": ["@types/node", "@nuxt/types", "@types/webpack-env"],
+    "types": ["node", "@nuxt/types", "webpack-env"],
     "esModuleInterop": true,
     "paths": {
       "~/*": ["./*"]
