@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.19](https://github.com/danielroe/nuxt-typed-vuex/compare/nuxt-typed-vuex@0.1.18...nuxt-typed-vuex@0.1.19) (2020-06-13)
+
+**Note:** Version bump only for package nuxt-typed-vuex
+
+
+
+
+
 ## [0.1.18](https://github.com/danielroe/nuxt-typed-vuex/compare/nuxt-typed-vuex@0.1.17...nuxt-typed-vuex@0.1.18) (2020-04-20)
 
 **Note:** Version bump only for package nuxt-typed-vuex
