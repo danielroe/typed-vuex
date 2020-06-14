@@ -5,7 +5,7 @@
     "build": "vuepress build"
   },
   "devDependencies": {
-    "vuepress": "^1.5.1"
+    "vuepress": "^1.5.2"
   },
   "resolutions": {
     "serialize-javascript": ">=4.0.0",
