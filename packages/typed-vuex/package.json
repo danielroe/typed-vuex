@@ -42,6 +42,6 @@
     "vue": "latest"
   },
   "peerDependencies": {
-    "vuex": "^3.4.0"
+    "vuex": "^3.5.1"
   }
 }
