@@ -12,7 +12,7 @@
       <div class="row"><button @click="setEmail">Set email</button></div>
       <div class="links">
         <a
-          href="https://nuxt-typed-vuex.danielcroe.com/"
+          href="https://nuxt-typed-vuex.roe.dev/"
           target="_blank"
           class="button--green"
         >
@@ -31,21 +31,21 @@
 </template>
 
 <script>
-import { Vue, Component } from "vue-property-decorator";
-import Logo from "~/components/Logo.vue";
+import { Vue, Component } from 'vue-property-decorator'
+import Logo from '~/components/Logo.vue'
 
 @Component({
   components: {
-    Logo
-  }
+    Logo,
+  },
 })
 export default class HomePage extends Vue {
   get email() {
-    return this.$accessor.email;
+    return this.$accessor.email
   }
 
   setEmail() {
-    this.$accessor.setEmail("test@email.com");
+    this.$accessor.setEmail('test@email.com')
   }
 }
 </script>
@@ -61,8 +61,8 @@ export default class HomePage extends Vue {
 }
 
 .title {
-  font-family: "Quicksand", "Source Sans Pro", -apple-system, BlinkMacSystemFont,
-    "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
+    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   display: block;
   font-weight: 300;
   font-size: 100px;

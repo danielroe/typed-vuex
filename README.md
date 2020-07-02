@@ -28,7 +28,7 @@
 </p>
 
 <p align="center">
-<a href="https://nuxt-typed-vuex.danielcroe.com">Read documentation</a>
+<a href="https://nuxt-typed-vuex.roe.dev">Read documentation</a>
 </p>
 
 ## Summary

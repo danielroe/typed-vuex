@@ -4,12 +4,11 @@
   "description": "A typed store accessor for Vuex.",
   "repository": "danielroe/nuxt-typed-vuex",
   "license": "MIT",
-  "contributors": [
-    {
-      "name": "Daniel Roe <daniel@danielcroe.com>",
-      "url": "https://github.com/danielroe"
-    }
-  ],
+  "author": {
+    "name": "Daniel Roe",
+    "email": "daniel@roe.dev",
+    "url": "https://github.com/danielroe"
+  },
   "keywords": [
     "vuex",
     "nuxt",
