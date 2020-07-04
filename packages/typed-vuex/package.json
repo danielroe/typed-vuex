@@ -38,7 +38,7 @@
     }
   },
   "devDependencies": {
-    "tsd": "^0.12.1",
+    "tsd": "^0.13.0",
     "vue": "latest"
   },
   "peerDependencies": {

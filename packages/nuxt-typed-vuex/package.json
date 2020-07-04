@@ -40,7 +40,7 @@
     "@types/normalize-path": "^3.0.0",
     "nuxt": "2.13.3",
     "ts-loader": "^7.0.5",
-    "tsd": "^0.12.1"
+    "tsd": "^0.13.0"
   },
   "dependencies": {
     "normalize-path": "^3.0.0",
