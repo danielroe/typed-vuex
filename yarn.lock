@@ -12987,10 +12987,10 @@ ts-loader@^7.0.5:
     micromatch "^4.0.0"
     semver "^6.0.0"
 
-tsd@^0.13.0:
-  version "0.13.0"
-  resolved "https://registry.yarnpkg.com/tsd/-/tsd-0.13.0.tgz#b0e651368552e36ab3046c90880011ed2de90054"
-  integrity sha512-eIj5LfYi+9YWWJHMLZz56RTLYMBfqmrS8nrsL0yj59NrkykMTQhgFemX+3Q9TKBkdQzb/XA0QdVgEOH6iMro+w==
+tsd@^0.13.1:
+  version "0.13.1"
+  resolved "https://registry.yarnpkg.com/tsd/-/tsd-0.13.1.tgz#d2a8baa80b8319dafea37fbeb29fef3cec86e92b"
+  integrity sha512-+UYM8LRG/M4H8ISTg2ow8SWi65PS7Os+4DUnyiQLbJysXBp2DEmws9SMgBH+m8zHcJZqUJQ+mtDWJXP1IAvB2A==
   dependencies:
     eslint-formatter-pretty "^4.0.0"
     globby "^11.0.1"
