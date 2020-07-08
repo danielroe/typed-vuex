@@ -39,7 +39,7 @@
     "@nuxt/typescript-build": "^1.0.3",
     "@types/normalize-path": "^3.0.0",
     "nuxt": "2.13.3",
-    "ts-loader": "^7.0.5",
+    "ts-loader": "^8.0.0",
     "tsd": "^0.13.1"
   },
   "dependencies": {
