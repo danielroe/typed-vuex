@@ -36,10 +36,11 @@
     }
   },
   "devDependencies": {
-    "@nuxt/typescript-build": "^1.0.3",
+    "@nuxt/typescript-build": "^2.0.0",
+    "@nuxt/types": "^2.0.0",
     "@types/normalize-path": "^3.0.0",
     "nuxt": "2.13.3",
-    "ts-loader": "^7.0.5",
+    "ts-loader": "^8.0.0",
     "tsd": "^0.13.1"
   },
   "dependencies": {
@@ -47,6 +48,6 @@
     "typed-vuex": "0.1.19"
   },
   "peerDependencies": {
-    "@nuxt/types": ">=0.7.9"
+    "@nuxt/types": "^2.0.0"
   }
 }
