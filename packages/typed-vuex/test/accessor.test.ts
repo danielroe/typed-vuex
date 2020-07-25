@@ -1,6 +1,5 @@
 import { useAccessor, getAccessorType, getAccessorFromStore } from 'typed-vuex'
-import Vuex, { Store } from 'vuex'
-import Vue from 'vue'
+import { createStore, Store } from 'vuex'
 
 import { getters, state, actions, mutations } from './fixture'
 import * as submodule from './fixture/submodule'
@@ -47,8 +46,7 @@ describe('accessor', () => {
   let accessor: typeof accessorType
 
   beforeEach(() => {
-    Vue.use(Vuex)
-    store = new Store(pattern)
+    store = createStore(pattern)
     accessor = useAccessor(store, pattern)
   })
   test('store exists', async () => {
