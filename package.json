@@ -1,5 +1,6 @@
 {
   "private": true,
+  "version": "0.1.19",
   "workspaces": [
     "packages/*"
   ],
@@ -18,6 +19,7 @@
     "@commitlint/cli": "^8",
     "@commitlint/config-conventional": "^8",
     "@nuxtjs/eslint-config-typescript": "3.0.0",
+    "@release-it/conventional-changelog": "^1.1.4",
     "@types/jest": "26.0.8",
     "@typescript-eslint/eslint-plugin": "3.7.1",
     "@typescript-eslint/parser": "3.7.1",
@@ -26,6 +28,8 @@
     "husky": "latest",
     "jest": "26.2.2",
     "lerna": "latest",
+    "release-it": "^13.6.6",
+    "release-it-yarn-workspaces": "^1.4.0",
     "typescript": "3.9.7"
   }
 }
