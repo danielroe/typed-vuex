@@ -1,3 +1,11 @@
+### [0.1.20](https://github.com/danielroe/nuxt-typed-vuex/compare/nuxt-typed-vuex@0.1.19...0.1.20) (2020-08-02)
+
+
+### Bug Fixes
+
+* move @nuxt/types and vuex to peerDeps ([4d6029e](https://github.com/danielroe/nuxt-typed-vuex/commit/4d6029ea582cc055010612b8427b4ae12fcd4fac))
+* state lazy evaluation in accessor ([#75](https://github.com/danielroe/nuxt-typed-vuex/issues/75)) ([bae68f5](https://github.com/danielroe/nuxt-typed-vuex/commit/bae68f59dfd7f05511469569943a56a15583b9b9))
+
 # Changelog
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
