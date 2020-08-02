@@ -1,9 +1,11 @@
 ---
+title: State
+description: 'Vanilla, strongly-typed store accessor.'
+category: Store
+position: 20
 ---
 
-# State
-
-It is strongly recommended to provide a state function (to avoid sharing state between requests) that returns the initial state of the store. (This is required if you are using Nuxt.)
+In order to use the accessor, you should define your state with a function that returns the initial state of the store.
 
 If there is any ambiguity in your initial object (of particular note are empty arrays), make sure to provide types as well.
 

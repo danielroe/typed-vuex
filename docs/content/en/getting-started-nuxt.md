@@ -1,23 +1,33 @@
 ---
+title: Getting started (Nuxt)
+description: 'Vanilla, strongly-typed store accessor.'
+category: Getting started
+position: 2
 ---
-
-# Getting started (Nuxt)
 
 ## Install module
 
 1. Install Nuxt module:
 
-   ```bash
-   # yarn
-   yarn add nuxt-typed-vuex
+  <code-group>
+    <code-block label="Yarn" active>
 
-   # npm
-   npm i nuxt-typed-vuex
-   ```
+    ```bash
+    yarn add nuxt-typed-vuex
+    ```
 
-   ::: tip
-   This will also install `typed-vuex` in your project, which is where the store accessor lives. You can import its helper functions from either `nuxt-typed-vuex` or from `typed-vuex`.
-   :::
+    </code-block>
+    <code-block label="NPM">
+
+    ```bash
+    npm install nuxt-typed-vuex --save
+    ```
+
+    </code-block>
+
+  </code-group>
+
+    <alert type="info">This will also install `typed-vuex` in your project, which is where the store accessor lives. You can import its helper functions from either `nuxt-typed-vuex` or from `typed-vuex`.</alert>
 
 2. Add module to your `nuxt.config`:
 
@@ -27,13 +37,15 @@
    ],
    ```
 
-   ::: tip
+   <alert type="info">
+
    `buildModules` require Nuxt 2.10+. If you are using an older version, add `nuxt-typed-vuex` to `modules` instead.
-   :::
+
+</alert>
 
 3. You will need to transpile this module, by adding the following to your `nuxt.config`:
 
-   ```ts
+   ```ts[nuxt.config.js]
    build: {
      transpile: [
        /typed-vuex/,
@@ -49,9 +61,7 @@ The module will inject a store accessor throughout your project (`$accessor`). I
 
 In your root store module, add the following code:
 
-`store/index.ts`
-
-```ts
+```ts[~store/index.ts]
 import { getAccessorType } from 'typed-vuex'
 
 // Import all your submodules
@@ -73,35 +83,13 @@ export const accessorType = getAccessorType({
 })
 ```
 
-::: tip
-This may look different if you split your modules into separate files for `state`, `actions`, `mutations` and `getters`.
-:::
-
-::: warning
-Typescript 3.7 has brought some limitations on type inference. Specifically, there is now an issue with an accessor type used in the same module that exports it. So if you wish to reference child modules from within your actions in `~/store/index.ts`, you may need to exclude those actions from the accessor type:
-
-```ts
-export const accessorType = getAccessorType({
-  state,
-  getters,
-  mutations,
-  // actions,
-  modules: {
-    // The key (submodule) needs to match the Nuxt namespace (e.g. ~/store/submodule.ts)
-    submodule,
-  },
-})
-```
-
-:::
+<alert type="info">This may look different if you split your modules into separate files for `state`, `actions`, `mutations` and `getters`.</alert>
 
 ### Creating type definitions
 
 Add the following type definitions to your project:
 
-`index.d.ts`
-
-```ts
+```ts[index.d.ts]
 import { accessorType } from '~/store'
 
 declare module 'vue/types/vue' {

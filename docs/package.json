@@ -1,14 +1,12 @@
 {
   "private": true,
   "scripts": {
-    "dev": "vuepress dev",
-    "build": "vuepress build"
+    "dev": "nuxt",
+    "generate": "nuxt generate",
+    "now-build": "yarn generate"
   },
   "devDependencies": {
-    "vuepress": "^1.5.2"
-  },
-  "resolutions": {
-    "serialize-javascript": ">=4.0.0",
-    "minimist": ">=1.2.5"
+    "@nuxt/content-theme-docs": "^0.2.0",
+    "nuxt": "^2.14.0"
   }
 }

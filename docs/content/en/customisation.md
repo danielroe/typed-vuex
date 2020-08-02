@@ -1,15 +1,15 @@
 ---
+title: Customisation
+description: 'Vanilla, strongly-typed store accessor.'
+category: Accessor
+position: 12
 ---
-
-# Customisation
 
 You might choose to customise the accessor function using the helper function `useAccessor`. You pass this an object with `state`, `actions`, `mutations`, etc. Child modules are within a `modules` property.
 
 ## Injecting a custom accessor
 
-`~/plugins/custom-store-accessor.ts`
-
-```ts
+```ts[~/plugins/custom-store-accessor.ts]
 import { useAccessor } from 'typed-vuex'
 import { InjectKey } from 'vue/types/options'
 import { Context } from '@nuxt/types'
@@ -32,9 +32,7 @@ export default async ({ store }: Context, inject: Inject) => {
 }
 ```
 
-::: warning
-If you are using a custom accessor in a Nuxt project, bear in mind that `useAccessor` used on its own will treat modules as non-namespaced unless they include `namespaced: true`.
-:::
+<alert>If you are using a custom accessor in a Nuxt project, bear in mind that `useAccessor` used on its own will treat modules as non-namespaced unless they include `namespaced: true`.</alert>
 
 ## Typing your custom accessor
 

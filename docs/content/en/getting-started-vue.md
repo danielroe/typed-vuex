@@ -1,31 +1,42 @@
 ---
+title: Getting started (Vue)
+description: 'Vanilla, strongly-typed store accessor.'
+category: Getting started
+position: 3
 ---
-
-# Getting started (Vue)
 
 If you would like to benefit from a typed accessor to your store, but you're not using Nuxt, you can still use `typed-vuex`.
 
-::: warning
+<alert>
+
 Many of this project's default settings are based on Nuxt, so please file an issue if you experience any problems.
-:::
+
+</alert>
 
 ## Setup
 
 1. Install package:
 
-   ```bash
-   # yarn
-   yarn add typed-vuex
+  <code-group>
+    <code-block label="Yarn" active>
 
-   # npm
-   npm i typed-vuex
-   ```
+    ```bash
+    yarn add typed-vuex
+    ```
+
+    </code-block>
+    <code-block label="NPM">
+
+    ```bash
+    npm install typed-vuex --save
+    ```
+
+    </code-block>
+  </code-group>
 
 2. Instantiate your accessor
 
-   `~/src/store/index.ts`:
-
-   ```ts
+   ```ts[~/src/store/index.ts]
    import Vue from 'vue'
    import Vuex from 'vuex'
 
@@ -86,9 +97,7 @@ Many of this project's default settings are based on Nuxt, so please file an iss
 
    If you've injected the accessor globally, you'll want to define its type:
 
-   `~/index.d.ts`:
-
-   ```ts
+   ```ts[~/index.d.ts]
    import Vue from 'vue'
    import { accessor } from './src/store'
 

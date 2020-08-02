@@ -1,12 +1,14 @@
 ---
+title: Introduction
+description: 'Vanilla, strongly-typed store accessor.'
+category: Accessor
+position: 10
 ---
-
-# Accessor
 
 The accessor serves two purposes:
 
 - It wraps the store so that it can be typed without conflicting with the default types for `$store` in a Nuxt project.
-- It allows us to avoid creating impossible type definitions for namespaced magic strings, like `commit('mysubmodule/mutation')`).
+- It allows us to avoid creating impossible type definitions for namespaced magic strings, like `commit('mysubmodule/mutation')`.
 
 ## Structure
 
@@ -45,9 +47,7 @@ Make sure you define types correctly following [these instructions](/setup.html#
 
 ### Components, `fetch` and `asyncData`
 
-`components/sampleComponent.vue`
-
-```ts
+```ts[~/components/sampleComponent.vue]
 import Vue from 'vue'
 
 export default Vue.extend({
@@ -76,9 +76,7 @@ export default Vue.extend({
 
 ### Middleware
 
-`middleware/test.ts`
-
-```ts
+```ts[~/middleware/test.ts]
 import { Context } from '@nuxt/types'
 
 export default ({ redirect, app: { $accessor } }: Context) => {

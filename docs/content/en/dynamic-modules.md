@@ -1,15 +1,15 @@
 ---
+title: Dynamic modules
+description: 'Vanilla, strongly-typed store accessor.'
+category: Accessor
+position: 11
 ---
-
-# Dynamic modules
 
 You can also use `typed-vuex` with dynamic modules.
 
 ## Sample module
 
-`~/modules/dynamic-module.ts`:
-
-```ts
+```ts[~/modules/dynamic-module.ts]
 export const namespaced = true
 
 export const state = () => ({
@@ -27,9 +27,7 @@ export const mutations = mutationTree(state, {
 
 You might want to use the store
 
-`~/components/my-component.vue`:
-
-```ts
+```ts[~/components/my-component.vue]
 import Vue from 'vue
 
 import { useAccessor, getAccessorType } from 'typed-vuex'
