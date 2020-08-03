@@ -1050,10 +1050,10 @@
     rc9 "^1.0.0"
     std-env "^2.2.1"
 
-"@nuxt/content-theme-docs@^0.2.0":
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/@nuxt/content-theme-docs/-/content-theme-docs-0.2.0.tgz#05294a429aebe43c32ad35fda43ad22895df5051"
-  integrity sha512-ekE51mg/6poKpisS4fpU2t198UMlX4IG75j+8KHri6H+i0Dodr5kg27IZdMnT1NGsJXJUjkyB88PtOCRpAVhkg==
+"@nuxt/content-theme-docs@^0.3.1":
+  version "0.3.1"
+  resolved "https://registry.yarnpkg.com/@nuxt/content-theme-docs/-/content-theme-docs-0.3.1.tgz#d6b477624b2212ee057473b64606e8402be6875b"
+  integrity sha512-aPQgw7WdZAHACpYfsbZ8QqbPBXgyVqqgf6NTALNzZKgNU/j6W7OkzdgU9f1pRB97x4pYmOg83maBz72M1FOqsA==
   dependencies:
     "@nuxt/content" "^1.5.3"
     "@nuxtjs/color-mode" "^1.0.2"
