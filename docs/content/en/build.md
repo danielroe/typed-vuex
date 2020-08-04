@@ -6,4 +6,4 @@ fullscreen: True
 position: 31
 ---
 
-<code-sandbox src="https://codesandbox.io/s/github/danielroe/nuxt-typed-vuex/tree/master/examples/nuxt?from-embed"></code-sandbox>
+<code-sandbox src="https://codesandbox.io/s/github/danielroe/nuxt-typed-vuex/tree/main/examples/nuxt?from-embed"></code-sandbox>
