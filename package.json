@@ -28,7 +28,7 @@
     "husky": "latest",
     "jest": "26.4.0",
     "lerna": "latest",
-    "release-it": "^13.6.7",
+    "release-it": "^13.6.8",
     "release-it-yarn-workspaces": "^1.4.0",
     "typescript": "3.9.7"
   }
