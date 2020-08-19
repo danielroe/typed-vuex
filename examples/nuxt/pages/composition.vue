@@ -5,21 +5,21 @@
 </template>
 
 <script lang="ts">
-import { createComponent, computed } from "@vue/composition-api";
+import { defineComponent, computed } from '@vue/composition-api'
 
-export default createComponent({
+export default defineComponent({
   setup(_props, { root }) {
-    const email = computed(() => root.$accessor.email);
+    const email = computed(() => root.$accessor.email)
     const setEmail = () => {
-      root.$accessor.setEmail("test@email.com");
-    };
+      root.$accessor.setEmail('test@email.com')
+    }
 
     return {
       email,
-      setEmail
-    };
-  }
-});
+      setEmail,
+    }
+  },
+})
 </script>
 
 <style lang="postcss" module>
