@@ -48,6 +48,6 @@
     "typed-vuex": "0.1.20"
   },
   "peerDependencies": {
-    "@nuxt/types": "^2.14.1"
+    "@nuxt/types": "^2.14.3"
   }
 }
