@@ -30,6 +30,6 @@
     "lerna": "latest",
     "release-it": "^13.6.8",
     "release-it-yarn-workspaces": "^1.4.0",
-    "typescript": "3.9.7"
+    "typescript": "4.0.2"
   }
 }
