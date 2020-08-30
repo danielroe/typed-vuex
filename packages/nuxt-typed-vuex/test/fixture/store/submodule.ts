@@ -1,9 +1,4 @@
-import {
-  getterTree,
-  mutationTree,
-  actionTree,
-  useAccessor,
-} from 'nuxt-typed-vuex'
+import { getterTree, mutationTree, actionTree, useAccessor } from '../../../src'
 import { pattern } from '.'
 
 export const state = () => ({

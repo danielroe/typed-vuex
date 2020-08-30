@@ -1,4 +1,4 @@
-import { actionTree } from 'nuxt-typed-vuex'
+import { actionTree } from '../../../src'
 
 export const state = () => ({
   n: '',

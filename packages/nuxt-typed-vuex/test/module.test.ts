@@ -1,4 +1,4 @@
-import nuxtModule from 'nuxt-typed-vuex'
+import nuxtModule from '../src'
 import path from 'path'
 
 describe('nuxt module', () => {

@@ -2,13 +2,6 @@
   "name": "nuxt-typed-vuex",
   "version": "0.1.20",
   "description": "A typed store accessor for Nuxt.",
-  "repository": "danielroe/nuxt-typed-vuex",
-  "license": "MIT",
-  "author": {
-    "name": "Daniel Roe",
-    "email": "daniel@roe.dev",
-    "url": "https://github.com/danielroe"
-  },
   "keywords": [
     "vuex",
     "nuxt",
@@ -18,22 +11,29 @@
     "nuxtjs",
     "nuxt-module"
   ],
+  "repository": "danielroe/nuxt-typed-vuex",
+  "license": "MIT",
+  "author": {
+    "name": "Daniel Roe",
+    "email": "daniel@roe.dev",
+    "url": "https://github.com/danielroe"
+  },
+  "main": "lib/index.js",
+  "module": "lib/index.es.js",
+  "types": "lib/index.d.ts",
   "files": [
     "lib/**/*",
+    "template/*",
     "!**/*.map"
   ],
-  "main": "lib/index.js",
-  "types": "lib/index.d.ts",
   "scripts": {
     "build": "yarn clean && yarn compile",
-    "compile": "tsc",
-    "clean": "rm -rf lib test/fixture/.nuxt test/fixture/dist"
+    "clean": "rm -rf lib test/fixture/.nuxt test/fixture/dist",
+    "compile": "siroc build"
   },
-  "tsd": {
-    "directory": "test/tsd",
-    "compilerOptions": {
-      "rootDir": "."
-    }
+  "dependencies": {
+    "normalize-path": "^3.0.0",
+    "typed-vuex": "0.1.20"
   },
   "devDependencies": {
     "@nuxt/types": "^2.14.3",
@@ -43,11 +43,13 @@
     "ts-loader": "^8.0.2",
     "tsd": "^0.13.1"
   },
-  "dependencies": {
-    "normalize-path": "^3.0.0",
-    "typed-vuex": "0.1.20"
-  },
   "peerDependencies": {
     "@nuxt/types": "^2.14.3"
+  },
+  "tsd": {
+    "directory": "test/tsd",
+    "compilerOptions": {
+      "rootDir": "."
+    }
   }
 }

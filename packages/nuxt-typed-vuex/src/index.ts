@@ -1,17 +1,15 @@
 import path from 'path'
-import { Configuration } from '@nuxt/types'
-import normalize from 'normalize-path'
 
-export default async function nuxtTypedVuex(this: {
-  options: Configuration
-  addPlugin: (options: any) => void
-}) {
+import normalize from 'normalize-path'
+import type { Module } from '@nuxt/types'
+
+const nuxtTypedVuex: Module = async function() {
   if (!this.options.store) {
     console.warn('You do not have a Nuxt store defined.')
   }
   const buildDir = this.options.buildDir || ''
   this.addPlugin({
-    src: path.resolve(__dirname, './plugin.js'),
+    src: path.resolve(__dirname, '../template/plugin.js'),
     fileName: 'nuxt-typed-vuex.js',
     options: {
       store: normalize(path.join(buildDir, 'store')),
@@ -19,7 +17,8 @@ export default async function nuxtTypedVuex(this: {
   })
 }
 
-// eslint-disable-next-line
-export const meta = require('../package.json')
+;(nuxtTypedVuex as any).meta = { name: 'nuxt-typed-vuex' }
 
 export * from 'typed-vuex'
+
+export default nuxtTypedVuex

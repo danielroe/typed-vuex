@@ -10,9 +10,7 @@ module.exports = {
     dir: path.resolve(__dirname, 'dist'),
   },
 
-  buildModules: ['@nuxt/typescript-build'],
-
-  modules: ['nuxt-typed-vuex'],
+  buildModules: ['@nuxt/typescript-build', '../../src'],
 
   manifest: {
     name: 'Test Project Name',
