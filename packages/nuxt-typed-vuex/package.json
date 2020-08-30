@@ -1,6 +1,6 @@
 {
   "name": "nuxt-typed-vuex",
-  "version": "0.1.20",
+  "version": "0.1.21",
   "description": "A typed store accessor for Nuxt.",
   "keywords": [
     "vuex",
@@ -33,7 +33,7 @@
   },
   "dependencies": {
     "normalize-path": "^3.0.0",
-    "typed-vuex": "0.1.20"
+    "typed-vuex": "0.1.21"
   },
   "devDependencies": {
     "@nuxt/types": "^2.14.3",

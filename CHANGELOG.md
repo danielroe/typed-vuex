@@ -1,3 +1,10 @@
+### [0.1.21](https://github.com/danielroe/nuxt-typed-vuex/compare/0.1.20...0.1.21) (2020-08-30)
+
+
+### Features
+
+* **nuxt-typed-vuex:** automatically transpile module ([35eb0a0](https://github.com/danielroe/nuxt-typed-vuex/commit/35eb0a0f221718e9f29e1f100a574f7c1e88bf1d))
+
 ### [0.1.20](https://github.com/danielroe/nuxt-typed-vuex/compare/nuxt-typed-vuex@0.1.19...0.1.20) (2020-08-02)
 
 ### Bug Fixes
