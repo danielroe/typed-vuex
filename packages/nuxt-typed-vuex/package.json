@@ -36,15 +36,15 @@
     "typed-vuex": "0.1.21"
   },
   "devDependencies": {
-    "@nuxt/types": "^2.14.3",
+    "@nuxt/types": "^2.14.4",
     "@nuxt/typescript-build": "^2.0.2",
     "@types/normalize-path": "^3.0.0",
-    "nuxt": "2.14.3",
-    "ts-loader": "^8.0.2",
+    "nuxt": "2.14.4",
+    "ts-loader": "^8.0.3",
     "tsd": "^0.13.1"
   },
   "peerDependencies": {
-    "@nuxt/types": "^2.14.3"
+    "@nuxt/types": "^2.14.4"
   },
   "tsd": {
     "directory": "test/tsd",
