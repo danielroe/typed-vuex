@@ -32,11 +32,12 @@ Many of this project's default settings are based on Nuxt, so please file an iss
     ```
 
     </code-block>
+
   </code-group>
 
 2. Instantiate your accessor
 
-   ```ts[~/src/store/index.ts]
+   ```ts{}[src/store/index.ts]
    import Vue from 'vue'
    import Vuex from 'vuex'
 
@@ -97,7 +98,7 @@ Many of this project's default settings are based on Nuxt, so please file an iss
 
    If you've injected the accessor globally, you'll want to define its type:
 
-   ```ts[~/index.d.ts]
+   ```ts{}[index.d.ts]
    import Vue from 'vue'
    import { accessor } from './src/store'
 

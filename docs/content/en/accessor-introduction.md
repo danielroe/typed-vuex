@@ -47,7 +47,7 @@ Make sure you define types correctly following [these instructions](/setup.html#
 
 ### Components, `fetch` and `asyncData`
 
-```ts[~/components/sampleComponent.vue]
+```ts{}[components/sampleComponent.vue]
 import Vue from 'vue'
 
 export default Vue.extend({
@@ -76,7 +76,7 @@ export default Vue.extend({
 
 ### Middleware
 
-```ts[~/middleware/test.ts]
+```ts{}[middleware/test.ts]
 import { Context } from '@nuxt/types'
 
 export default ({ redirect, app: { $accessor } }: Context) => {

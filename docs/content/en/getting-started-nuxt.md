@@ -41,11 +41,11 @@ position: 2
 
    `buildModules` require Nuxt 2.10+. If you are using an older version, add `nuxt-typed-vuex` to `modules` instead.
 
-</alert>
+    </alert>
 
 3. You will need to transpile this module, by adding the following to your `nuxt.config`:
 
-   ```ts[nuxt.config.js]
+   ```ts{}[nuxt.config.js]
    build: {
      transpile: [
        /typed-vuex/,
@@ -61,7 +61,7 @@ The module will inject a store accessor throughout your project (`$accessor`). I
 
 In your root store module, add the following code:
 
-```ts[~store/index.ts]
+```ts{}[store/index.ts]
 import { getAccessorType } from 'typed-vuex'
 
 // Import all your submodules
@@ -89,7 +89,7 @@ export const accessorType = getAccessorType({
 
 Add the following type definitions to your project:
 
-```ts[index.d.ts]
+```ts{}[index.d.ts]
 import { accessorType } from '~/store'
 
 declare module 'vue/types/vue' {

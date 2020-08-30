@@ -9,7 +9,7 @@ You can also use `typed-vuex` with dynamic modules.
 
 ## Sample module
 
-```ts[~/modules/dynamic-module.ts]
+```ts{}[modules/dynamic-module.ts]
 export const namespaced = true
 
 export const state = () => ({
@@ -27,7 +27,7 @@ export const mutations = mutationTree(state, {
 
 You might want to use the store
 
-```ts[~/components/my-component.vue]
+```ts{}[components/my-component.vue]
 import Vue from 'vue
 
 import { useAccessor, getAccessorType } from 'typed-vuex'
@@ -61,4 +61,5 @@ export default Vue.extend({
     }
   }
 })
+
 ```

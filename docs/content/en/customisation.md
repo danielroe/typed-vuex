@@ -9,7 +9,7 @@ You might choose to customise the accessor function using the helper function `u
 
 ## Injecting a custom accessor
 
-```ts[~/plugins/custom-store-accessor.ts]
+```ts{}[plugins/custom-store-accessor.ts]
 import { useAccessor } from 'typed-vuex'
 import { InjectKey } from 'vue/types/options'
 import { Context } from '@nuxt/types'
