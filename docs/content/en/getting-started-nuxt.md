@@ -43,16 +43,6 @@ position: 2
 
     </alert>
 
-3. You will need to transpile this module, by adding the following to your `nuxt.config`:
-
-   ```ts{}[nuxt.config.js]
-   build: {
-     transpile: [
-       /typed-vuex/,
-     ],
-   },
-   ```
-
 ## Add type definitions
 
 The module will inject a store accessor throughout your project (`$accessor`). It is not typed by default, so you will need to add types.

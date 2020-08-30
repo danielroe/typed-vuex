@@ -15,6 +15,9 @@ const nuxtTypedVuex: Module = async function() {
       store: normalize(path.join(buildDir, 'store')),
     },
   })
+
+  this.options.build.transpile = /* istanbul ignore next */ this.options.build.transpile || []
+  this.options.build.transpile.push(/typed-vuex/)
 }
 
 ;(nuxtTypedVuex as any).meta = { name: 'nuxt-typed-vuex' }
