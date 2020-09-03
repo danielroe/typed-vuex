@@ -19,7 +19,7 @@
     "@commitlint/cli": "^8",
     "@commitlint/config-conventional": "^8",
     "@nuxtjs/eslint-config-typescript": "3.0.0",
-    "@release-it/conventional-changelog": "^1.1.4",
+    "@release-it/conventional-changelog": "^2.0.0",
     "@types/jest": "26.0.10",
     "@typescript-eslint/eslint-plugin": "3.10.1",
     "@typescript-eslint/parser": "3.10.1",
