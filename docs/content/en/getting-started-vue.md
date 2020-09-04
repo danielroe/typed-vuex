@@ -50,9 +50,9 @@ Many of this project's default settings are based on Nuxt, so please file an iss
 
    Vue.use(Vuex)
 
-   const state = {
+   const state = () => ({
      email: '',
-   }
+   })
 
    const getters = getterTree(state, {
      email: state => state.email,
