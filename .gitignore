@@ -85,3 +85,11 @@ sw.*
 packages/*/lib/*
 !packages/*/lib/.gitkeep
 .now
+
+# https://yarnpkg.com/advanced/qa#which-files-should-be-gitignored
+.yarn/*
+!.yarn/releases
+!.yarn/plugins
+!.yarn/sdks
+!.yarn/versions
+.pnp.*
