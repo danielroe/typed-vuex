@@ -1190,7 +1190,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/preset-typescript@latest":
+"@babel/preset-typescript@npm:^7.10.4":
   version: 7.10.4
   resolution: "@babel/preset-typescript@npm:7.10.4"
   dependencies:
@@ -6272,7 +6272,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-codecov@latest:
+"codecov@npm:^3.7.2":
   version: 3.7.2
   resolution: "codecov@npm:3.7.2"
   dependencies:
@@ -10282,7 +10282,7 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-husky@latest:
+"husky@npm:^4.2.5":
   version: 4.2.5
   resolution: "husky@npm:4.2.5"
   dependencies:
@@ -12037,7 +12037,7 @@ husky@latest:
   languageName: node
   linkType: hard
 
-lerna@latest:
+"lerna@npm:^3.22.1":
   version: 3.22.1
   resolution: "lerna@npm:3.22.1"
   dependencies:
@@ -16527,7 +16527,7 @@ lerna@latest:
     "@babel/core": 7.11.6
     "@babel/plugin-transform-runtime": 7.11.5
     "@babel/preset-env": 7.11.5
-    "@babel/preset-typescript": latest
+    "@babel/preset-typescript": ^7.10.4
     "@commitlint/cli": ^8
     "@commitlint/config-conventional": ^8
     "@nuxtjs/eslint-config-typescript": 3.0.0
@@ -16535,11 +16535,11 @@ lerna@latest:
     "@types/jest": 26.0.13
     "@typescript-eslint/eslint-plugin": 4.0.1
     "@typescript-eslint/parser": 4.0.1
-    codecov: latest
+    codecov: ^3.7.2
     eslint: 7.8.1
-    husky: latest
+    husky: ^4.2.5
     jest: 26.4.2
-    lerna: latest
+    lerna: ^3.22.1
     release-it: ^14.0.1
     release-it-yarn-workspaces: ^1.4.0
     siroc: ^0.3.1
@@ -18346,7 +18346,7 @@ lerna@latest:
   resolution: "typed-vuex@workspace:packages/typed-vuex"
   dependencies:
     tsd: ^0.13.1
-    vue: latest
+    vue: ^2.6.12
   peerDependencies:
     vuex: ^3.5.1
   languageName: unknown
@@ -18959,7 +18959,7 @@ lerna@latest:
   languageName: node
   linkType: hard
 
-"vue@latest, vue@npm:^2.6.12":
+"vue@npm:^2.6.12":
   version: 2.6.12
   resolution: "vue@npm:2.6.12"
   checksum: 92ed547e55a4b27a2a45aa9ab7ff5999f891dc9754562a37226dd190b323d9f99daec892dd8bd39786e404e6e065d808e165b1a0c127ce8d45fd1bde79ec7312

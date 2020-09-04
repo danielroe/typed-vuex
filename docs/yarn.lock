@@ -1380,16 +1380,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@nuxt/content-theme-docs@npm:^0.5.3":
-  version: 0.5.3
-  resolution: "@nuxt/content-theme-docs@npm:0.5.3"
+"@nuxt/content-theme-docs@npm:^0.5.6":
+  version: 0.5.6
+  resolution: "@nuxt/content-theme-docs@npm:0.5.6"
   dependencies:
-    "@nuxt/content": ^1.7.0
-    "@nuxt/types": ^2.14.3
+    "@nuxt/content": ^1.8.1
+    "@nuxt/types": ^2.14.4
     "@nuxtjs/color-mode": ^1.0.3
     "@nuxtjs/google-fonts": ^1.0.0
-    "@nuxtjs/pwa": ^3.0.1
-    "@nuxtjs/tailwindcss": ^3.0.1
+    "@nuxtjs/pwa": ^3.0.2
+    "@nuxtjs/tailwindcss": ^3.0.2
     "@tailwindcss/typography": ^0.2.0
     clipboard: ^2.0.6
     defu: ^3.1.0
@@ -1398,17 +1398,17 @@ __metadata:
     nuxt-i18n: ^6.13.12
     prism-themes: ^1.4.0
     vue-scrollactive: ^0.9.3
-  checksum: ab4152e1d8fa88343edc3808409380d19bbb2d8854fe2d724d83c6cbab9e1ca62b166fb0c389c87e49414ee84c474fb5a6fa75e8a9a04a65b6279753b53a0ce8
+  checksum: 021ed8bf2564cece85f9edbdd165fc05424e2d80421f105c1c484a53169198f101a924d8d93c6e681b4c22460baf9a78f4c83062ff087b7c64c9738985596635
   languageName: node
   linkType: hard
 
-"@nuxt/content@npm:^1.7.0":
-  version: 1.7.0
-  resolution: "@nuxt/content@npm:1.7.0"
+"@nuxt/content@npm:^1.8.1":
+  version: 1.8.1
+  resolution: "@nuxt/content@npm:1.8.1"
   dependencies:
     "@lokidb/full-text-search": ^2.1.0
     "@lokidb/loki": ^2.1.0
-    "@nuxt/types": ^2.14.3
+    "@nuxt/types": ^2.14.4
     "@types/js-yaml": ^3.12.5
     "@types/xml2js": ^0.4.5
     change-case: ^4.1.1
@@ -1416,17 +1416,21 @@ __metadata:
     consola: ^2.15.0
     csvtojson: ^2.0.10
     defu: ^3.1.0
+    detab: ^2.0.3
     escape-html: ^1.0.3
     graceful-fs: ^4.2.4
     gray-matter: ^4.0.2
+    hasha: ^5.2.0
     hookable: ^4.1.2
     html-tags: ^3.1.0
     js-yaml: 3.14.0
+    mdast-util-to-hast: ^9.1.1
     mkdirp: ^1.0.4
     node-req: ^2.1.2
     node-res: ^5.0.1
     p-queue: 6.6.1
     prismjs: ^1.21.0
+    property-information: ^5.5.0
     rehype-raw: ^4.0.2
     rehype-sort-attribute-values: ^3.0.2
     rehype-sort-attributes: ^3.0.2
@@ -1438,9 +1442,10 @@ __metadata:
     remark-slug: ^6.0.0
     remark-squeeze-paragraphs: ^4.0.0
     unified: ^9.2.0
+    unist-builder: ^2.0.3
     ws: ^7.3.1
     xml2js: ^0.4.23
-  checksum: 1b621d74b7dae3fa0681eb284b8baa9a562865ab01d0941a8c867bb83f596bd7c6568fef0225f08e1ecaffacf776f593eb2036e8b420765345f1e0e6e146fd76
+  checksum: 7e3fa150d4b0277070c14a3b611c97ac59bff1846c7b9e74f3eb051d12aec1fbe3d7a9124e133ab1d0b8e7011e26c1bbbf218fd203902809595581ad4d332daa
   languageName: node
   linkType: hard
 
@@ -1595,7 +1600,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@nuxt/types@npm:^2.14.3":
+"@nuxt/types@npm:^2.14.4":
   version: 2.14.4
   resolution: "@nuxt/types@npm:2.14.4"
   dependencies:
@@ -1740,7 +1745,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@nuxtjs/pwa@npm:^3.0.1":
+"@nuxtjs/pwa@npm:^3.0.2":
   version: 3.0.2
   resolution: "@nuxtjs/pwa@npm:3.0.2"
   dependencies:
@@ -1754,7 +1759,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@nuxtjs/tailwindcss@npm:^3.0.1":
+"@nuxtjs/tailwindcss@npm:^3.0.2":
   version: 3.0.2
   resolution: "@nuxtjs/tailwindcss@npm:3.0.2"
   dependencies:
@@ -4741,7 +4746,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"detab@npm:^2.0.0":
+"detab@npm:^2.0.0, detab@npm:^2.0.3":
   version: 2.0.3
   resolution: "detab@npm:2.0.3"
   dependencies:
@@ -7668,6 +7673,22 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
+"mdast-util-to-hast@npm:^9.1.1":
+  version: 9.1.1
+  resolution: "mdast-util-to-hast@npm:9.1.1"
+  dependencies:
+    "@types/mdast": ^3.0.0
+    "@types/unist": ^2.0.3
+    mdast-util-definitions: ^3.0.0
+    mdurl: ^1.0.0
+    unist-builder: ^2.0.0
+    unist-util-generated: ^1.0.0
+    unist-util-position: ^3.0.0
+    unist-util-visit: ^2.0.0
+  checksum: 01137da2d9110de51c2377b12c173d0461b52f4b77b0551489feb8421c24e925dd0751f29c2eb5b7f8b0e891a2cc198c17f66c6f3b169087e8cd390207289517
+  languageName: node
+  linkType: hard
+
 "mdast-util-to-string@npm:^1.0.0":
   version: 1.1.0
   resolution: "mdast-util-to-string@npm:1.1.0"
@@ -9915,7 +9936,7 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
-"property-information@npm:^5.0.0, property-information@npm:^5.3.0":
+"property-information@npm:^5.0.0, property-information@npm:^5.3.0, property-information@npm:^5.5.0":
   version: 5.5.0
   resolution: "property-information@npm:5.5.0"
   dependencies:
@@ -10609,7 +10630,7 @@ fsevents@~2.1.2:
   version: 0.0.0-use.local
   resolution: "root-workspace-0b6124@workspace:."
   dependencies:
-    "@nuxt/content-theme-docs": ^0.5.3
+    "@nuxt/content-theme-docs": ^0.5.6
     nuxt: ^2.14.4
   languageName: unknown
   linkType: soft
@@ -11943,7 +11964,7 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
-"unist-builder@npm:^2.0.0":
+"unist-builder@npm:^2.0.0, unist-builder@npm:^2.0.3":
   version: 2.0.3
   resolution: "unist-builder@npm:2.0.3"
   checksum: 64f9231bac9050b65d8cb97bc64e93782f93551e4a6a4e75ff89f580fa92740520bbd9ec44b7917c29785d498a3f432c326c5f55bd44e8949b98f5f63b14ec44

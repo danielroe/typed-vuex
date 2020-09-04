@@ -34,7 +34,7 @@
   },
   "devDependencies": {
     "tsd": "^0.13.1",
-    "vue": "latest"
+    "vue": "^2.6.12"
   },
   "peerDependencies": {
     "vuex": "^3.5.1"
