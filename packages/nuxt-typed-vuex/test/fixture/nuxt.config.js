@@ -12,6 +12,14 @@ module.exports = {
 
   buildModules: ['@nuxt/typescript-build', '../../src'],
 
+  build: {
+    babel: {
+      presets(ctx, [preset, options]) {
+        options.corejs = 3
+      },
+    },
+  },
+
   manifest: {
     name: 'Test Project Name',
     description: 'Test Project Description',
