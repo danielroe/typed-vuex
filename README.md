@@ -35,9 +35,9 @@
 
 This module provides a store accessor and helper type methods so you can access your vanilla Vuex store in a strongly typed way.
 
-![Image showing autocomplete on this.$accessor](./docs/images/screenshot1.png)
+![Image showing autocomplete on this.$accessor](./docs/static/images/screenshot1.png)
 
-![Image showing autocomplete on commit within store](./docs/images/screenshot2.png)
+![Image showing autocomplete on commit within store](./docs/static/images/screenshot2.png)
 
 **Note**: This has been developed to suit my needs but additional use cases and contributions are very welcome.
 

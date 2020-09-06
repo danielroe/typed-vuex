@@ -1,4 +1,3 @@
 {
-  "extends": ["@nuxtjs"],
-  "ignoreDeps": ["@types/jest", "jest"]
+  "extends": ["@nuxtjs"]
 }
