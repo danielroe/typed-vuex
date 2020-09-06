@@ -1,18 +1,23 @@
-import path from 'path'
-
-import normalize from 'normalize-path'
 import type { Module } from '@nuxt/types'
 
+/**
+ * @private
+ */
 const nuxtTypedVuex: Module = async function() {
-  if (!this.options.store) {
-    console.warn('You do not have a Nuxt store defined.')
-  }
+  if (process.client || process.server) return
+
+  const { join, resolve }: typeof import('path') = process.client ? {} : require('path')
+  const normalize: typeof import('normalize-path') = process.client ? {} : require('normalize-path')
+  const consola: typeof import('consola').default = process.client ? {} : require('consola')
+  const logger = consola.withTag('nuxt-typed-vuex')
+
+  if (!this.options.store) logger.warn('You do not have a store defined.')
   const buildDir = this.options.buildDir || ''
   this.addPlugin({
-    src: path.resolve(__dirname, '../template/plugin.js'),
+    src: resolve(__dirname, '../template/plugin.js'),
     fileName: 'nuxt-typed-vuex.js',
     options: {
-      store: normalize(path.join(buildDir, 'store')),
+      store: normalize(join(buildDir, 'store')),
     },
   })
 

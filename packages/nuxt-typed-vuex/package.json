@@ -32,6 +32,7 @@
     "compile": "siroc build"
   },
   "dependencies": {
+    "consola": "^2.15.0",
     "normalize-path": "^3.0.0",
     "typed-vuex": "0.1.21"
   },
