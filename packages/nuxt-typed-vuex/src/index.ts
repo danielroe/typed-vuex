@@ -4,14 +4,13 @@ import type { Module } from '@nuxt/types'
  * @private
  */
 const nuxtTypedVuex: Module = async function() {
+  /* istanbul ignore if */
   if (process.client || process.server) return
 
-  const { join, resolve }: typeof import('path') = process.client ? {} : require('path')
-  const normalize: typeof import('normalize-path') = process.client ? {} : require('normalize-path')
-  const consola: typeof import('consola').default = process.client ? {} : require('consola')
-  const logger = consola.withTag('nuxt-typed-vuex')
+  const { join, resolve }: typeof import('path') = process.client ? /* istanbul ignore next */  {} : require('path')
+  const normalize: typeof import('normalize-path') = process.client ? /* istanbul ignore next */  {} : require('normalize-path')
 
-  if (!this.options.store) logger.warn('You do not have a store defined.')
+  if (!this.options.store) console.warn('You do not have a store defined.')
   const buildDir = this.options.buildDir || ''
   this.addPlugin({
     src: resolve(__dirname, '../template/plugin.js'),
@@ -21,6 +20,7 @@ const nuxtTypedVuex: Module = async function() {
     },
   })
 
+  this.options.build = this.options.build || {}
   this.options.build.transpile = /* istanbul ignore next */ this.options.build.transpile || []
   this.options.build.transpile.push(/typed-vuex/)
 }
