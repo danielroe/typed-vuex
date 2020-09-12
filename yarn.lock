@@ -25,7 +25,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/core@npm:7.11.6, @babel/core@npm:^7.1.0, @babel/core@npm:^7.11.4, @babel/core@npm:^7.7.5":
+"@babel/core@npm:7.11.6, @babel/core@npm:^7.1.0, @babel/core@npm:^7.11.6, @babel/core@npm:^7.7.5":
   version: 7.11.6
   resolution: "@babel/core@npm:7.11.6"
   dependencies:
@@ -989,7 +989,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/plugin-transform-runtime@npm:7.11.5, @babel/plugin-transform-runtime@npm:^7.11.0":
+"@babel/plugin-transform-runtime@npm:7.11.5, @babel/plugin-transform-runtime@npm:^7.11.5":
   version: 7.11.5
   resolution: "@babel/plugin-transform-runtime@npm:7.11.5"
   dependencies:
@@ -1097,7 +1097,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/preset-env@npm:7.11.5, @babel/preset-env@npm:^7.11.0":
+"@babel/preset-env@npm:7.11.5, @babel/preset-env@npm:^7.11.5":
   version: 7.11.5
   resolution: "@babel/preset-env@npm:7.11.5"
   dependencies:
@@ -2627,31 +2627,31 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@nuxt/babel-preset-app@npm:2.14.4":
-  version: 2.14.4
-  resolution: "@nuxt/babel-preset-app@npm:2.14.4"
+"@nuxt/babel-preset-app@npm:2.14.5":
+  version: 2.14.5
+  resolution: "@nuxt/babel-preset-app@npm:2.14.5"
   dependencies:
-    "@babel/core": ^7.11.4
+    "@babel/core": ^7.11.6
     "@babel/helper-compilation-targets": ^7.10.4
     "@babel/plugin-proposal-class-properties": ^7.10.4
     "@babel/plugin-proposal-decorators": ^7.10.5
-    "@babel/plugin-transform-runtime": ^7.11.0
-    "@babel/preset-env": ^7.11.0
+    "@babel/plugin-transform-runtime": ^7.11.5
+    "@babel/preset-env": ^7.11.5
     "@babel/runtime": ^7.11.2
     "@vue/babel-preset-jsx": ^1.1.2
     core-js: ^2.6.5
-  checksum: e310d1eb2b23232d19337c1b387cfb4f83b70960630f69c14b437ab083187d676ef40ea125bca38d04d2d55b7ba4b6b97ec336a528e01312a91742f730b2e959
+  checksum: 7b79077548d54cdf39db11b755e43505bd8b46a627a815b18cb5eeb75abd3d750347cde79cd9e4848ec6cb08f31f04a29ddb7ee8da97467a7a3bfff7b94f4f87
   languageName: node
   linkType: hard
 
-"@nuxt/builder@npm:2.14.4":
-  version: 2.14.4
-  resolution: "@nuxt/builder@npm:2.14.4"
+"@nuxt/builder@npm:2.14.5":
+  version: 2.14.5
+  resolution: "@nuxt/builder@npm:2.14.5"
   dependencies:
     "@nuxt/devalue": ^1.2.4
-    "@nuxt/utils": 2.14.4
-    "@nuxt/vue-app": 2.14.4
-    "@nuxt/webpack": 2.14.4
+    "@nuxt/utils": 2.14.5
+    "@nuxt/vue-app": 2.14.5
+    "@nuxt/webpack": 2.14.5
     chalk: ^3.0.0
     chokidar: ^3.4.2
     consola: ^2.15.0
@@ -2662,19 +2662,19 @@ __metadata:
     lodash: ^4.17.20
     pify: ^4.0.1
     semver: ^7.3.2
-    serialize-javascript: ^4.0.0
+    serialize-javascript: ^5.0.0
     upath: ^1.2.0
-  checksum: 6dd201c6485e1b9401ddfc4c4a5e7638855d3b3a408f92fbed035ec0c5db2589b8bf3480588104e132de6b478c070a2407a660773dfd23d8b2654ae1af137b06
+  checksum: 463e310d27836b86cb29734c0eeb5f006d494ea74d11ff2a0e2cecd6e10a8f1906e39f5b093ad055482229ec7e2380fa6322ad9b37f47e2a48cd3155c9b845f3
   languageName: node
   linkType: hard
 
-"@nuxt/cli@npm:2.14.4":
-  version: 2.14.4
-  resolution: "@nuxt/cli@npm:2.14.4"
+"@nuxt/cli@npm:2.14.5":
+  version: 2.14.5
+  resolution: "@nuxt/cli@npm:2.14.5"
   dependencies:
-    "@nuxt/config": 2.14.4
+    "@nuxt/config": 2.14.5
     "@nuxt/static": ^1.0.0
-    "@nuxt/utils": 2.14.4
+    "@nuxt/utils": 2.14.5
     boxen: ^4.2.0
     chalk: ^3.0.0
     compression: ^1.7.4
@@ -2689,15 +2689,15 @@ __metadata:
     globby: ^11.0.1
     hable: ^3.0.0
     minimist: ^1.2.5
-    opener: 1.5.1
-    pretty-bytes: ^5.3.0
+    opener: 1.5.2
+    pretty-bytes: ^5.4.1
     serve-static: ^1.14.1
     std-env: ^2.2.1
     upath: ^1.2.0
     wrap-ansi: ^6.2.0
   bin:
     nuxt-cli: bin/nuxt-cli.js
-  checksum: c9d019a28f87d809c0ff0c459152b1b5d50436518a674e9291c01a437a760f5aa8db7b655ff1a033ae710bd323d8ca8e1c6bd602de18917d2328e46f0dff2eee
+  checksum: 384d1ada0310c396c98bcaa9a26f71cfa32b6e4cf1227b5ec2551fa9dfe27f632c2cd24c04126102fe8b4ebb8be74cabdb28e183a171b986853dd33e4e852c7e
   languageName: node
   linkType: hard
 
@@ -2715,11 +2715,11 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@nuxt/config@npm:2.14.4":
-  version: 2.14.4
-  resolution: "@nuxt/config@npm:2.14.4"
+"@nuxt/config@npm:2.14.5":
+  version: 2.14.5
+  resolution: "@nuxt/config@npm:2.14.5"
   dependencies:
-    "@nuxt/utils": 2.14.4
+    "@nuxt/utils": 2.14.5
     consola: ^2.15.0
     create-require: ^1.0.2
     defu: ^2.0.4
@@ -2729,19 +2729,19 @@ __metadata:
     jiti: ^0.1.11
     rc9: ^1.0.0
     std-env: ^2.2.1
-  checksum: 2f4c36c1ddb23b77aa1c86ac7d76e2b9f182e51733ada18efe888efa9f005b6e45571a7bb372767d0705adcff296c175287d2f99cd32b0a714ccc3fad3edb282
+  checksum: 7bb710a4a5df3aeec4cc284bcd201bc606fdf9f695a725dcc4735192f5de30df94b64e3995ba510b04dfcb984e36889ff1002830c23f96b19c530ab5af9fb15b
   languageName: node
   linkType: hard
 
-"@nuxt/core@npm:2.14.4":
-  version: 2.14.4
-  resolution: "@nuxt/core@npm:2.14.4"
+"@nuxt/core@npm:2.14.5":
+  version: 2.14.5
+  resolution: "@nuxt/core@npm:2.14.5"
   dependencies:
-    "@nuxt/config": 2.14.4
+    "@nuxt/config": 2.14.5
     "@nuxt/devalue": ^1.2.4
-    "@nuxt/server": 2.14.4
-    "@nuxt/utils": 2.14.4
-    "@nuxt/vue-renderer": 2.14.4
+    "@nuxt/server": 2.14.5
+    "@nuxt/utils": 2.14.5
+    "@nuxt/vue-renderer": 2.14.5
     consola: ^2.15.0
     debug: ^4.1.1
     esm: ^3.2.25
@@ -2749,7 +2749,7 @@ __metadata:
     hable: ^3.0.0
     hash-sum: ^2.0.0
     std-env: ^2.2.1
-  checksum: 76b35e3da94be3ef2c4a31aabd6afb6ec694d2e3f89e39a93b34f8815f9e67d8d485999c90024d21e459bf090a9f2a93a4d3707a35ef229b6d12b25e447c697a
+  checksum: 08a269febb27b0688d64e4fb85506b7dd54a8c0db687bbdad1871a8c9d55c37d738e7afc2a31a9d1ca2a9104cd7a5c3799f55da0be3daff7dc1881e1d9486214
   languageName: node
   linkType: hard
 
@@ -2776,17 +2776,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@nuxt/generator@npm:2.14.4":
-  version: 2.14.4
-  resolution: "@nuxt/generator@npm:2.14.4"
+"@nuxt/generator@npm:2.14.5":
+  version: 2.14.5
+  resolution: "@nuxt/generator@npm:2.14.5"
   dependencies:
-    "@nuxt/utils": 2.14.4
+    "@nuxt/utils": 2.14.5
     chalk: ^3.0.0
     consola: ^2.15.0
     fs-extra: ^8.1.0
     html-minifier: ^4.0.0
     node-html-parser: ^1.2.20
-  checksum: 8c49bb3399040ec1c33df3ca76ee179aced6f4ef6be91920d0aa50d403d481193ba7ea8b9410c54b8c13eef89a9af6c78706a3c5cdfa0a5d1c556aefc59c4be5
+  checksum: bcd5b839f660e88c3a7c832e0768656f8e430abd3dd08921f5be00c913cc2e4204169ea328a2270a391b6088aa8768ef71f6df3fe5620fff24df7b652e385c5b
   languageName: node
   linkType: hard
 
@@ -2816,13 +2816,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@nuxt/server@npm:2.14.4":
-  version: 2.14.4
-  resolution: "@nuxt/server@npm:2.14.4"
+"@nuxt/server@npm:2.14.5":
+  version: 2.14.5
+  resolution: "@nuxt/server@npm:2.14.5"
   dependencies:
-    "@nuxt/config": 2.14.4
-    "@nuxt/utils": 2.14.4
-    "@nuxt/vue-renderer": 2.14.4
+    "@nuxt/config": 2.14.5
+    "@nuxt/utils": 2.14.5
+    "@nuxt/vue-renderer": 2.14.5
     "@nuxtjs/youch": ^4.2.3
     chalk: ^3.0.0
     compression: ^1.7.4
@@ -2838,7 +2838,7 @@ __metadata:
     serve-placeholder: ^1.2.2
     serve-static: ^1.14.1
     server-destroy: ^1.0.1
-  checksum: d22c2434b56ab0cda2ba0d476ecda272290a47d953fb06e4eaa11797eb353608d50bc21681d921bfd8eb091cf170ab0f4db147448355aeb7a24c7cd69e5c6c9d
+  checksum: 835f029b10eb5df8daddceb0f053dbdc5dd33cf52306d5a09d0302abd30cd9011604fba19baae9365d8410508118a0077fafb82cac9a30cf93331b64a4a4cf73
   languageName: node
   linkType: hard
 
@@ -2884,9 +2884,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@nuxt/types@npm:^2.14.4":
-  version: 2.14.4
-  resolution: "@nuxt/types@npm:2.14.4"
+"@nuxt/types@npm:^2.14.5":
+  version: 2.14.5
+  resolution: "@nuxt/types@npm:2.14.5"
   dependencies:
     "@types/autoprefixer": ^9.7.2
     "@types/babel__core": ^7.1.9
@@ -2896,17 +2896,17 @@ __metadata:
     "@types/file-loader": ^4.2.0
     "@types/html-minifier": ^4.0.0
     "@types/less": ^3.0.1
-    "@types/node": ^12.12.54
+    "@types/node": ^12.12.56
     "@types/node-sass": ^4.11.1
     "@types/optimize-css-assets-webpack-plugin": ^5.0.1
     "@types/pug": ^2.0.4
     "@types/serve-static": ^1.13.5
     "@types/terser-webpack-plugin": ^2.2.0
-    "@types/webpack": ^4.41.21
+    "@types/webpack": ^4.41.22
     "@types/webpack-bundle-analyzer": ^3.8.0
     "@types/webpack-dev-middleware": ^3.7.2
     "@types/webpack-hot-middleware": ^2.25.3
-  checksum: 4d39779879f85e1c46f8cb44e2052e00c9f89240a59e90bbe5a71595bdcaf13282534c1a3f1010f950afa6ba4699a978bb75dda07c28e604329e33d4c1cdcdb6
+  checksum: cbf6ecae74b2b0e3bce7dfe057a1a8ebd5b2bfbcfc5710523eb0449bacf9f1b05c453926eae1578e5a286e28b8e245cf75149f058bb1458634a67a8a0d67aa9d
   languageName: node
   linkType: hard
 
@@ -2924,27 +2924,27 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@nuxt/utils@npm:2.14.4":
-  version: 2.14.4
-  resolution: "@nuxt/utils@npm:2.14.4"
+"@nuxt/utils@npm:2.14.5":
+  version: 2.14.5
+  resolution: "@nuxt/utils@npm:2.14.5"
   dependencies:
     consola: ^2.15.0
     fs-extra: ^8.1.0
     hash-sum: ^2.0.0
     proper-lockfile: ^4.1.1
     semver: ^7.3.2
-    serialize-javascript: ^4.0.0
+    serialize-javascript: ^5.0.0
     signal-exit: ^3.0.3
     ua-parser-js: ^0.7.21
-  checksum: 7e778b6aa73343f317e238b090db7b191b960b1ecb419234e5ae570f3226dca09dd5b1a34b0ea868cdb556a6367a34232b60abe5931db88078813f519ae77c2b
+  checksum: 467b5014c65a4293dd6cefaca33ee9211fa2608c493fed84093b3a851205e1154fb1bd9f80174b97acc3264ea00b2ea90d7a89f1af2e8fa640f5a17e0a171483
   languageName: node
   linkType: hard
 
-"@nuxt/vue-app@npm:2.14.4":
-  version: 2.14.4
-  resolution: "@nuxt/vue-app@npm:2.14.4"
+"@nuxt/vue-app@npm:2.14.5":
+  version: 2.14.5
+  resolution: "@nuxt/vue-app@npm:2.14.5"
   dependencies:
-    node-fetch: ^2.6.0
+    node-fetch: ^2.6.1
     unfetch: ^4.1.0
     vue: ^2.6.12
     vue-client-only: ^2.0.0
@@ -2953,37 +2953,37 @@ __metadata:
     vue-router: ^3.4.3
     vue-template-compiler: ^2.6.12
     vuex: ^3.5.1
-  checksum: 5b1968822b2c14fa97fe9718d32612b199326626297e7fe962b93b6d0f689566f8cf087a130206f7b5ec45a38674ae03031756e05ae5e0c42cfacd514c1463a7
+  checksum: 08ffa885736e23d63b4343dedaec88b631bfe33d77c7d0719d51d920d35112970f6b7b1d2db4c7fe2bcdea1e97178d29c5437c17163c1d17b8ae643d1c5f7046
   languageName: node
   linkType: hard
 
-"@nuxt/vue-renderer@npm:2.14.4":
-  version: 2.14.4
-  resolution: "@nuxt/vue-renderer@npm:2.14.4"
+"@nuxt/vue-renderer@npm:2.14.5":
+  version: 2.14.5
+  resolution: "@nuxt/vue-renderer@npm:2.14.5"
   dependencies:
     "@nuxt/devalue": ^1.2.4
-    "@nuxt/utils": 2.14.4
+    "@nuxt/utils": 2.14.5
     consola: ^2.15.0
     fs-extra: ^8.1.0
     lru-cache: ^5.1.1
     vue: ^2.6.12
     vue-meta: ^2.4.0
     vue-server-renderer: ^2.6.12
-  checksum: 98067da87b21d37bd219f717028c90dbb348c4aebb74179471bc69d0f3c699bc80c283c76ce2260a4678304782f0563864a2b94036d24107aec631bd897635b7
+  checksum: 7ad42faa7727a538721b288a1edf2705afaa82e80d3d1b469577e6a2e9b0c727be32313def815d647834bbcfe431a0ca4f45e0d0fbb72704cb66a23b61edf1cf
   languageName: node
   linkType: hard
 
-"@nuxt/webpack@npm:2.14.4":
-  version: 2.14.4
-  resolution: "@nuxt/webpack@npm:2.14.4"
+"@nuxt/webpack@npm:2.14.5":
+  version: 2.14.5
+  resolution: "@nuxt/webpack@npm:2.14.5"
   dependencies:
-    "@babel/core": ^7.11.4
-    "@nuxt/babel-preset-app": 2.14.4
+    "@babel/core": ^7.11.6
+    "@nuxt/babel-preset-app": 2.14.5
     "@nuxt/friendly-errors-webpack-plugin": ^2.5.0
-    "@nuxt/utils": 2.14.4
+    "@nuxt/utils": 2.14.5
     babel-loader: ^8.1.0
     cache-loader: ^4.1.0
-    caniuse-lite: ^1.0.30001118
+    caniuse-lite: ^1.0.30001125
     chalk: ^3.0.0
     consola: ^2.15.0
     create-require: ^1.0.2
@@ -2995,9 +2995,9 @@ __metadata:
     glob: ^7.1.6
     hard-source-webpack-plugin: ^0.13.1
     hash-sum: ^2.0.0
-    html-webpack-plugin: ^4.3.0
+    html-webpack-plugin: ^4.4.1
     memory-fs: ^0.4.1
-    optimize-css-assets-webpack-plugin: ^5.0.3
+    optimize-css-assets-webpack-plugin: ^5.0.4
     pify: ^4.0.1
     postcss: ^7.0.32
     postcss-import: ^12.0.1
@@ -3019,7 +3019,7 @@ __metadata:
     webpack-hot-middleware: ^2.25.0
     webpack-node-externals: ^2.5.2
     webpackbar: ^4.0.0
-  checksum: 193b437456acc34908602586799582ead1c2b5a3eca57e52046516b3f7de463bd4986cd7a5d4df486b3d3f8906cd4445456e39885fa9fd5903441a33ccd4cf04
+  checksum: 47c0d7ea202b724859b01ad817d72c4e1c29949bda26976e1a7833b2d0c0c3dc2e368492a8ba28239641c94323030bee6db15b53153a7cc57eb9d23a5847fd0a
   languageName: node
   linkType: hard
 
@@ -3753,10 +3753,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:^12.12.54":
-  version: 12.12.55
-  resolution: "@types/node@npm:12.12.55"
-  checksum: 2ebf7e2ae6726975f96b27f17ce666b61478862c95e8b35f3e891582e4230e63ddc3c369dcb9625776a51359ee14ba6004222908af7720f3356311a302d4fbdb
+"@types/node@npm:^12.12.56":
+  version: 12.12.58
+  resolution: "@types/node@npm:12.12.58"
+  checksum: a9f00fdb41baedfc9fa059d29635de4baf4d30505cbb87f3505e05ec7d003320b4424d36fadc2384cb2001a0a660bed9d3d1da134b12e9c45fbd3c9b077611fb
   languageName: node
   linkType: hard
 
@@ -3942,7 +3942,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/webpack@npm:*, @types/webpack@npm:^4.41.21, @types/webpack@npm:^4.41.8":
+"@types/webpack@npm:*, @types/webpack@npm:^4.41.22, @types/webpack@npm:^4.41.8":
   version: 4.41.22
   resolution: "@types/webpack@npm:4.41.22"
   dependencies:
@@ -3972,12 +3972,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@typescript-eslint/eslint-plugin@npm:4.0.1":
-  version: 4.0.1
-  resolution: "@typescript-eslint/eslint-plugin@npm:4.0.1"
+"@typescript-eslint/eslint-plugin@npm:4.1.0":
+  version: 4.1.0
+  resolution: "@typescript-eslint/eslint-plugin@npm:4.1.0"
   dependencies:
-    "@typescript-eslint/experimental-utils": 4.0.1
-    "@typescript-eslint/scope-manager": 4.0.1
+    "@typescript-eslint/experimental-utils": 4.1.0
+    "@typescript-eslint/scope-manager": 4.1.0
     debug: ^4.1.1
     functional-red-black-tree: ^1.0.1
     regexpp: ^3.0.0
@@ -3989,7 +3989,7 @@ __metadata:
   peerDependenciesMeta:
     typescript:
       optional: true
-  checksum: aef4bd116db58cfcb98b2a0794b616a3f30e1a548c49aa5ffae04354b4496cef0f5d0162a2bd72af191c603d73a226b066234b2548a19e8b00500853cf209f3e
+  checksum: be6761b7331d73b0f2d6eba83305a70a63e986e0210c88987934ddfe7459c69bbb1f3563df2eb8205e876c8c891f3232b8e4faaad316e4a4f32dad1917667fc8
   languageName: node
   linkType: hard
 
@@ -4028,19 +4028,19 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@typescript-eslint/experimental-utils@npm:4.0.1":
-  version: 4.0.1
-  resolution: "@typescript-eslint/experimental-utils@npm:4.0.1"
+"@typescript-eslint/experimental-utils@npm:4.1.0":
+  version: 4.1.0
+  resolution: "@typescript-eslint/experimental-utils@npm:4.1.0"
   dependencies:
     "@types/json-schema": ^7.0.3
-    "@typescript-eslint/scope-manager": 4.0.1
-    "@typescript-eslint/types": 4.0.1
-    "@typescript-eslint/typescript-estree": 4.0.1
+    "@typescript-eslint/scope-manager": 4.1.0
+    "@typescript-eslint/types": 4.1.0
+    "@typescript-eslint/typescript-estree": 4.1.0
     eslint-scope: ^5.0.0
     eslint-utils: ^2.0.0
   peerDependencies:
     eslint: "*"
-  checksum: 6af430c0d5dbaea5ae26a27697d38a51e8708d090793855d18732aff95ff1d007048dee5564907a938c0c7b0b1d67c5c04a30625c6651cf4bcec6aa03c454ac7
+  checksum: 8e032ffc11eb92d3306a34593a61e67469bd83051ea134c52e2942c9e74ee5c23394ab381f9e9119933061e268b609855a5cc605b20e777f6fc8f0f15fe0e60e
   languageName: node
   linkType: hard
 
@@ -4058,20 +4058,20 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@typescript-eslint/parser@npm:4.0.1":
-  version: 4.0.1
-  resolution: "@typescript-eslint/parser@npm:4.0.1"
+"@typescript-eslint/parser@npm:4.1.0":
+  version: 4.1.0
+  resolution: "@typescript-eslint/parser@npm:4.1.0"
   dependencies:
-    "@typescript-eslint/scope-manager": 4.0.1
-    "@typescript-eslint/types": 4.0.1
-    "@typescript-eslint/typescript-estree": 4.0.1
+    "@typescript-eslint/scope-manager": 4.1.0
+    "@typescript-eslint/types": 4.1.0
+    "@typescript-eslint/typescript-estree": 4.1.0
     debug: ^4.1.1
   peerDependencies:
     eslint: ^5.0.0 || ^6.0.0 || ^7.0.0
   peerDependenciesMeta:
     typescript:
       optional: true
-  checksum: 9d6e73e588d3ad63dbfccfe74a8e4ddf601667f8d3947b7fff381548237303342b3b5195968dd56dae7ae7c91d54a5f35e8294a6343913d66000d56ccd28d878
+  checksum: aa7f277d2237a02060e8e08e414b6b8e7cd90eaf1c9da3b1acb1d275e2565c954f55970e3555a08037f312802fe402b03f0f83daeff88daac30a7b58ace77140
   languageName: node
   linkType: hard
 
@@ -4093,13 +4093,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@typescript-eslint/scope-manager@npm:4.0.1":
-  version: 4.0.1
-  resolution: "@typescript-eslint/scope-manager@npm:4.0.1"
+"@typescript-eslint/scope-manager@npm:4.1.0":
+  version: 4.1.0
+  resolution: "@typescript-eslint/scope-manager@npm:4.1.0"
   dependencies:
-    "@typescript-eslint/types": 4.0.1
-    "@typescript-eslint/visitor-keys": 4.0.1
-  checksum: 5c407cd12300c5ff8296a61d50a7d2d83439f46926b5edd72d3eaf62ee7640114174b8f798ae73187b513c02d0cb1777d51275117760a161382f6d576a14d042
+    "@typescript-eslint/types": 4.1.0
+    "@typescript-eslint/visitor-keys": 4.1.0
+  checksum: 2b04497a309e47db2d35f164602f1937086505c379a148e14ec2c804a853412909810b0fb1651c4971bca40f9c54ad84cb39abfb3315ed22813bf5440dd0c490
   languageName: node
   linkType: hard
 
@@ -4110,10 +4110,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@typescript-eslint/types@npm:4.0.1":
-  version: 4.0.1
-  resolution: "@typescript-eslint/types@npm:4.0.1"
-  checksum: 13593fe24e19c821ea82e855881c1c7d7704709f0fd023d16b135f01462ff81c1abc6dafcb53d4f858fd3156b5603dd33b37c5481b71edc0686ef2ca04b5bd0b
+"@typescript-eslint/types@npm:4.1.0":
+  version: 4.1.0
+  resolution: "@typescript-eslint/types@npm:4.1.0"
+  checksum: a03203c760ed3a6233ea75db9588b10cd2711b0e09b48e68f21ae8191717589e05a9ab47e7c8210c648b93efaa12560fdd6e1a4ab9f83aee7e1ad4c8abc00f4a
   languageName: node
   linkType: hard
 
@@ -4154,12 +4154,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@typescript-eslint/typescript-estree@npm:4.0.1":
-  version: 4.0.1
-  resolution: "@typescript-eslint/typescript-estree@npm:4.0.1"
+"@typescript-eslint/typescript-estree@npm:4.1.0":
+  version: 4.1.0
+  resolution: "@typescript-eslint/typescript-estree@npm:4.1.0"
   dependencies:
-    "@typescript-eslint/types": 4.0.1
-    "@typescript-eslint/visitor-keys": 4.0.1
+    "@typescript-eslint/types": 4.1.0
+    "@typescript-eslint/visitor-keys": 4.1.0
     debug: ^4.1.1
     globby: ^11.0.1
     is-glob: ^4.0.1
@@ -4169,7 +4169,7 @@ __metadata:
   peerDependenciesMeta:
     typescript:
       optional: true
-  checksum: 65746bb2a863f9dc5c82f003ffb39d69f1a3b56f145646ce48ffc4ceba61919aef34ea2a6f7ab0e4632d1b4e2c8d4edc0862d705ebb6b833a374e231f3865349
+  checksum: afeac4b1f0a0a0ffe443d4908ad10758382c222635397b46699c3c0000a77cdc634d48698ace47cd105f8a5bb1198a16e52fae62eedacf6d431481a262402c37
   languageName: node
   linkType: hard
 
@@ -4182,13 +4182,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@typescript-eslint/visitor-keys@npm:4.0.1":
-  version: 4.0.1
-  resolution: "@typescript-eslint/visitor-keys@npm:4.0.1"
+"@typescript-eslint/visitor-keys@npm:4.1.0":
+  version: 4.1.0
+  resolution: "@typescript-eslint/visitor-keys@npm:4.1.0"
   dependencies:
-    "@typescript-eslint/types": 4.0.1
+    "@typescript-eslint/types": 4.1.0
     eslint-visitor-keys: ^2.0.0
-  checksum: fe1b5e186e560f2d1eac02adb6513633157c01ef301266c4eba26a4eb331811d6e90ea6c7ab40ef7a253119042edac8d2200e753bec6c8b4bb2d041db33f8983
+  checksum: ed574594bae895dd7e83192facdfa40ebb1485455d0067e1580fdf4d2b5736349ae45d9e48ee0ca14691c1d9046da95e484b38fa716d107d3963f1d6129e1479
   languageName: node
   linkType: hard
 
@@ -5907,10 +5907,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"caniuse-lite@npm:^1.0.0, caniuse-lite@npm:^1.0.30000981, caniuse-lite@npm:^1.0.30001109, caniuse-lite@npm:^1.0.30001111, caniuse-lite@npm:^1.0.30001118":
-  version: 1.0.30001124
-  resolution: "caniuse-lite@npm:1.0.30001124"
-  checksum: 61f208bfd7dc7fce7355392288d26180c48f095df251bd3fb94db542edfdea804cf2646f2f05c7f2b5bd613c7d935214bb0c4e257ae9508829d00644b823ceff
+"caniuse-lite@npm:^1.0.0, caniuse-lite@npm:^1.0.30000981, caniuse-lite@npm:^1.0.30001109, caniuse-lite@npm:^1.0.30001111, caniuse-lite@npm:^1.0.30001125":
+  version: 1.0.30001125
+  resolution: "caniuse-lite@npm:1.0.30001125"
+  checksum: 1253f4fa1996d51c6fe4ccd659ae36a400476e9edb1427f956296f60265217b27e078f51d8820c40a8a6d7993d9530357f49ebd97be52c68ec44173814ba35fb
   languageName: node
   linkType: hard
 
@@ -6895,7 +6895,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"cosmiconfig@npm:7.0.0":
+"cosmiconfig@npm:7.0.0, cosmiconfig@npm:^7.0.0":
   version: 7.0.0
   resolution: "cosmiconfig@npm:7.0.0"
   dependencies:
@@ -8454,9 +8454,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint@npm:7.8.1":
-  version: 7.8.1
-  resolution: "eslint@npm:7.8.1"
+"eslint@npm:7.9.0":
+  version: 7.9.0
+  resolution: "eslint@npm:7.9.0"
   dependencies:
     "@babel/code-frame": ^7.0.0
     "@eslint/eslintrc": ^0.1.3
@@ -8497,7 +8497,7 @@ __metadata:
     v8-compile-cache: ^2.0.3
   bin:
     eslint: bin/eslint.js
-  checksum: 0168d826ab2ae1fd04b9da8e457268f37d3ce7d0d83cc8a5cc659c8091673a112c356a6261ab178964291e7babd6ff4cf1011a15c70eb4f03a493ed5681206f9
+  checksum: 295fe8c442b9e9cc677fa03c88a873ad74c1d06620f4600745de83e5d4d10d53898cd1e15276e3420c976f00469d1ea8bbc5a4157c1f198753cece98f8903f5c
   languageName: node
   linkType: hard
 
@@ -10097,7 +10097,7 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"html-webpack-plugin@npm:^4.3.0":
+"html-webpack-plugin@npm:^4.4.1":
   version: 4.4.1
   resolution: "html-webpack-plugin@npm:4.4.1"
   dependencies:
@@ -10255,14 +10255,14 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"husky@npm:^4.2.5":
-  version: 4.2.5
-  resolution: "husky@npm:4.2.5"
+"husky@npm:^4.3.0":
+  version: 4.3.0
+  resolution: "husky@npm:4.3.0"
   dependencies:
     chalk: ^4.0.0
     ci-info: ^2.0.0
     compare-versions: ^3.6.0
-    cosmiconfig: ^6.0.0
+    cosmiconfig: ^7.0.0
     find-versions: ^3.2.0
     opencollective-postinstall: ^2.0.2
     pkg-dir: ^4.2.0
@@ -10272,7 +10272,7 @@ fsevents@^1.2.7:
   bin:
     husky-run: bin/run.js
     husky-upgrade: lib/upgrader/bin.js
-  checksum: 9d03d38c66688ab61166b425aa70229665c93a2a6fbd0d7388923205622fe34c6cc4c251777337b0813a40891750a18d603eff8451a58d06953807535a8908ed
+  checksum: c212d9732de84cbd7c25d907b874f7844503f85e28c0512518cddbac9854c54f1c569e81c5b70387f1e3c27d35c2b43256c811cf06fdad066565c5fc178f33f7
   languageName: node
   linkType: hard
 
@@ -13166,10 +13166,10 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"node-fetch@npm:^2.2.0, node-fetch@npm:^2.3.0, node-fetch@npm:^2.5.0, node-fetch@npm:^2.6.0":
-  version: 2.6.0
-  resolution: "node-fetch@npm:2.6.0"
-  checksum: dd9f586a9f7ddb7dd94d2aba9cb693d32f5001e9850098512fbc8a4cbdd56838afa08ed0a6725b9fce9b01ec12b713e622cbfc16d92762d8b937b238330a632a
+"node-fetch@npm:^2.2.0, node-fetch@npm:^2.3.0, node-fetch@npm:^2.5.0, node-fetch@npm:^2.6.0, node-fetch@npm:^2.6.1":
+  version: 2.6.1
+  resolution: "node-fetch@npm:2.6.1"
+  checksum: cbb171635e538162b977eac5dfe7a1e07a9a02e991924377a6435502291e2f823d306b95aabc455caebf4a118ccf836868462bc70ccc3095af02bb9da61fda37
   languageName: node
   linkType: hard
 
@@ -13505,37 +13505,37 @@ fsevents@^1.2.7:
   version: 0.0.0-use.local
   resolution: "nuxt-typed-vuex@workspace:packages/nuxt-typed-vuex"
   dependencies:
-    "@nuxt/types": ^2.14.4
+    "@nuxt/types": ^2.14.5
     "@nuxt/typescript-build": ^2.0.3
     "@types/normalize-path": ^3.0.0
     consola: ^2.15.0
     normalize-path: ^3.0.0
-    nuxt: 2.14.4
+    nuxt: 2.14.5
     ts-loader: ^8.0.3
     tsd: ^0.13.1
     typed-vuex: 0.1.21
   peerDependencies:
-    "@nuxt/types": ^2.14.4
+    "@nuxt/types": ^2.14.5
   languageName: unknown
   linkType: soft
 
-"nuxt@npm:2.14.4":
-  version: 2.14.4
-  resolution: "nuxt@npm:2.14.4"
+"nuxt@npm:2.14.5":
+  version: 2.14.5
+  resolution: "nuxt@npm:2.14.5"
   dependencies:
-    "@nuxt/builder": 2.14.4
-    "@nuxt/cli": 2.14.4
+    "@nuxt/builder": 2.14.5
+    "@nuxt/cli": 2.14.5
     "@nuxt/components": ^1.1.0
-    "@nuxt/core": 2.14.4
-    "@nuxt/generator": 2.14.4
+    "@nuxt/core": 2.14.5
+    "@nuxt/generator": 2.14.5
     "@nuxt/loading-screen": ^2.0.2
     "@nuxt/opencollective": ^0.3.0
     "@nuxt/static": ^1.0.0
     "@nuxt/telemetry": ^1.2.3
-    "@nuxt/webpack": 2.14.4
+    "@nuxt/webpack": 2.14.5
   bin:
     nuxt: bin/nuxt.js
-  checksum: 9baa66900eb2cbbc5eaf592bd16b6de6c676bf65bb874a065a8f2c536ac6ec371a7dce20537dd658b761fb50a44352f69fd134776dfc5a749627ab6992f28ff0
+  checksum: 9adb42c9866e2ad254f4027cb2550f0a702948b88ab8c1157c297a3cea94efecc1dbd4a15100f53258b445c39559587699ea7f1a55eb5a15766c82941973ffa9
   languageName: node
   linkType: hard
 
@@ -13706,16 +13706,7 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"opener@npm:1.5.1":
-  version: 1.5.1
-  resolution: "opener@npm:1.5.1"
-  bin:
-    opener: bin/opener-bin.js
-  checksum: 055a1efdc206e1c8ac37ca1d62e16de84c7f6ae48883ac1898f1b8e9e9b918979fe747d439b249975c707b911073072ddc933fa1993d8a7345b729393466fbbf
-  languageName: node
-  linkType: hard
-
-"opener@npm:^1.5.1":
+"opener@npm:1.5.2, opener@npm:^1.5.1":
   version: 1.5.2
   resolution: "opener@npm:1.5.2"
   bin:
@@ -13724,7 +13715,7 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"optimize-css-assets-webpack-plugin@npm:^5.0.3":
+"optimize-css-assets-webpack-plugin@npm:^5.0.4":
   version: 5.0.4
   resolution: "optimize-css-assets-webpack-plugin@npm:5.0.4"
   dependencies:
@@ -15269,7 +15260,7 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"pretty-bytes@npm:^5.3.0":
+"pretty-bytes@npm:^5.4.1":
   version: 5.4.1
   resolution: "pretty-bytes@npm:5.4.1"
   checksum: da79e856b6fbdf2b3325837e5727a0b03be5c5a4854c17a60235aab6714c97060903913639c47559376e21a9dbf5ad7d958da1d512fdf568ee5c18d02cf2bd54
@@ -15998,9 +15989,9 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"release-it-yarn-workspaces@npm:^1.4.0":
-  version: 1.4.0
-  resolution: "release-it-yarn-workspaces@npm:1.4.0"
+"release-it-yarn-workspaces@npm:^1.5.0":
+  version: 1.5.0
+  resolution: "release-it-yarn-workspaces@npm:1.5.0"
   dependencies:
     detect-indent: ^6.0.0
     detect-newline: ^3.1.0
@@ -16008,7 +15999,7 @@ fsevents@^1.2.7:
     semver: ^7.1.3
     url-join: ^4.0.1
     walk-sync: ^2.0.2
-  checksum: cb6666bb181c6d81968ef608fdce69fa2c1612e3ae74983fe3e8cbb58df57e05d228659320b6e1b91a63de294eacea0826fb22494b1bbf52304d9a126666d414
+  checksum: 88ee6492a4186f67275ae0379a076f5db93995707151af8023c12d86e12802e5efe212108f96cb76dab9e523b676957899f5141a3f689957c1e20e8eb676fb42
   languageName: node
   linkType: hard
 
@@ -16469,15 +16460,15 @@ fsevents@^1.2.7:
     "@nuxtjs/eslint-config-typescript": 3.0.0
     "@release-it/conventional-changelog": ^2.0.0
     "@types/jest": 26.0.13
-    "@typescript-eslint/eslint-plugin": 4.0.1
-    "@typescript-eslint/parser": 4.0.1
+    "@typescript-eslint/eslint-plugin": 4.1.0
+    "@typescript-eslint/parser": 4.1.0
     codecov: ^3.7.2
-    eslint: 7.8.1
-    husky: ^4.2.5
+    eslint: 7.9.0
+    husky: ^4.3.0
     jest: 26.4.2
     lerna: ^3.22.1
     release-it: ^14.0.2
-    release-it-yarn-workspaces: ^1.4.0
+    release-it-yarn-workspaces: ^1.5.0
     siroc: ^0.3.1
     typescript: 4.0.2
   languageName: unknown
@@ -16724,6 +16715,15 @@ fsevents@^1.2.7:
   dependencies:
     randombytes: ^2.1.0
   checksum: f17305aaabab9ae443505d1bf477c13b09adb7031c397d18400bec16f43f788febdd3311ca6043fdebd1d446cfa70a5804ef7268da54351dec51080f56d52fa9
+  languageName: node
+  linkType: hard
+
+"serialize-javascript@npm:^5.0.0":
+  version: 5.0.1
+  resolution: "serialize-javascript@npm:5.0.1"
+  dependencies:
+    randombytes: ^2.1.0
+  checksum: 97eef70a33c75e690b0c6aa2ffe622ecdfc888d3f181a5cf129e5778228dcd100febabc0f41ff793199ee79acd14cbbad0c69f1348a3893580fe424c4718889b
   languageName: node
   linkType: hard
 
