@@ -1,3 +1,10 @@
+### [0.1.22](https://github.com/danielroe/nuxt-typed-vuex/compare/0.1.21...0.1.22) (2020-09-30)
+
+
+### Performance Improvements
+
+* increase tree-shakeability of module ([8b98e33](https://github.com/danielroe/nuxt-typed-vuex/commit/8b98e330c560c70468e536592773f2f2ada5555f))
+
 ### [0.1.21](https://github.com/danielroe/nuxt-typed-vuex/compare/0.1.20...0.1.21) (2020-08-30)
 
 
