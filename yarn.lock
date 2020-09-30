@@ -13554,7 +13554,7 @@ fsevents@^1.2.7:
     tsd: ^0.13.1
     typed-vuex: 0.1.21
   peerDependencies:
-    "@nuxt/types": ^2.14.5
+    "@nuxt/types": ^2.14.6
   languageName: unknown
   linkType: soft
 
