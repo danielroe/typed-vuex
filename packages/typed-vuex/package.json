@@ -11,7 +11,7 @@
     "nuxtjs",
     "nuxt-module"
   ],
-  "repository": "danielroe/nuxt-typed-vuex",
+  "repository": "danielroe/typed-vuex",
   "license": "MIT",
   "author": {
     "name": "Daniel Roe",

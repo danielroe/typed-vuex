@@ -2,24 +2,20 @@
   <div class="container">
     <div>
       <logo />
-      <h1 class="title">
-        nuxt-typed-vuex-example
-      </h1>
-      <h2 class="subtitle">
-        Example project for nuxt-typed-vuex.
-      </h2>
+      <h1 class="title">nuxt-typed-vuex-example</h1>
+      <h2 class="subtitle">Example project for nuxt-typed-vuex.</h2>
       <div class="row">Email: {{ email }}</div>
       <div class="row"><button @click="setEmail">Set email</button></div>
       <div class="links">
         <a
-          href="https://nuxt-typed-vuex.roe.dev/"
+          href="https://typed-vuex.roe.dev/"
           target="_blank"
           class="button--green"
         >
           Documentation
         </a>
         <a
-          href="https://github.com/danielroe/nuxt-typed-vuex"
+          href="https://github.com/danielroe/typed-vuex"
           target="_blank"
           class="button--grey"
         >
