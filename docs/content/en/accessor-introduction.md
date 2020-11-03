@@ -16,6 +16,12 @@ The accessor serves two purposes:
 2. Getters take priority over state (so state is not included if a getter of the same name exists).
 3. Modules are namespaced.
 
+<alert type="warning">
+
+Because the accessor is flattened, you should avoid using the same name more than once between your getters, state, mutations and actions or you may receive the following error: `Cannot set property <name> of #<Object> which has only a getter.`
+
+</alert>
+
 So, for example:
 
 ```ts
