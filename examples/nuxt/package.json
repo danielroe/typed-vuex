@@ -12,13 +12,13 @@
     "now-build": "nuxt generate"
   },
   "dependencies": {
-    "@vue/composition-api": "1.0.0-beta.11",
-    "nuxt": "2.14.4"
+    "@vue/composition-api": "latest",
+    "nuxt": "latest"
   },
   "devDependencies": {
-    "@nuxt/types": "^2.14.4",
-    "@nuxt/typescript-build": "2.0.3",
-    "nuxt-typed-vuex": "0.1.21",
+    "@nuxt/types": "latest",
+    "@nuxt/typescript-build": "latest",
+    "nuxt-typed-vuex": "latest",
     "vue-property-decorator": "9.0.0"
   }
 }

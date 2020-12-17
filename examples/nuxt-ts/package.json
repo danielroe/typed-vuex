@@ -12,14 +12,14 @@
     "now-build": "nuxt generate"
   },
   "dependencies": {
-    "nuxt": "2.14.4",
+    "nuxt": "latest",
     "vue-class-component": "^7.2.5"
   },
   "devDependencies": {
-    "@nuxt/types": "^2.14.4",
-    "@nuxt/typescript-build": "2.0.3",
-    "@nuxt/typescript-runtime": "2.0.0",
-    "nuxt-typed-vuex": "0.1.21",
+    "@nuxt/types": "latest",
+    "@nuxt/typescript-build": "latest",
+    "@nuxt/typescript-runtime": "latest",
+    "nuxt-typed-vuex": "latest",
     "vue-property-decorator": "9.0.0"
   }
 }

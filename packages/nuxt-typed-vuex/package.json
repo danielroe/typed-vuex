@@ -28,6 +28,7 @@
   ],
   "scripts": {
     "build": "yarn clean && yarn compile",
+    "dev": "nuxt-ts test/fixture",
     "clean": "rm -rf lib test/fixture/.nuxt test/fixture/dist",
     "compile": "siroc build"
   },
@@ -37,15 +38,17 @@
     "typed-vuex": "0.1.22"
   },
   "devDependencies": {
-    "@nuxt/types": "^2.14.7",
+    "@nuxt/test-utils": "^0.1.2",
+    "@nuxt/types": "^2.14.12",
     "@nuxt/typescript-build": "^2.0.3",
+    "@nuxt/typescript-runtime": "^2.0.0",
     "@types/normalize-path": "^3.0.0",
-    "nuxt": "2.14.7",
-    "ts-loader": "^8.0.7",
-    "tsd": "^0.13.1"
+    "nuxt": "^2.14.12",
+    "ts-loader": "^8.0.12",
+    "tsd": "^0.14.0"
   },
   "peerDependencies": {
-    "@nuxt/types": "^2.14.7"
+    "@nuxt/types": "^2.14.12"
   },
   "tsd": {
     "directory": "test/tsd",

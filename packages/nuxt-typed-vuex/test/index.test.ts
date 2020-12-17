@@ -1,13 +1,15 @@
-import path from 'path'
-import fs from 'fs'
+import { join, relative, resolve } from 'path'
+import { readdirSync, statSync } from 'fs'
 
-import { Nuxt, Builder, Generator } from 'nuxt'
+import { setupTest, getNuxt } from '@nuxt/test-utils'
+
+const { Nuxt } = require('nuxt')
 
 function walkDir(dir: string, callback: (filename: string) => any) {
-  fs.readdirSync(dir).forEach(f => {
-    const dirPath = path.join(dir, f)
-    const isDirectory = fs.statSync(dirPath).isDirectory()
-    isDirectory ? walkDir(dirPath, callback) : callback(path.join(dir, f))
+  readdirSync(dir).forEach(f => {
+    const dirPath = join(dir, f)
+    const isDirectory = statSync(dirPath).isDirectory()
+    isDirectory ? walkDir(dirPath, callback) : callback(join(dir, f))
   })
 }
 
@@ -15,41 +17,34 @@ function iterateOnDirectory(
   directory: string,
   callback: (filename: string) => any
 ) {
-  walkDir(path.resolve(__dirname, directory), filename => callback(filename))
+  walkDir(resolve(__dirname, directory), filename => callback(filename))
 }
 
-describe('nuxt-typed-vuex', () => {
-  let nuxt
-  let builder
-
-  test('build project', async () => {
-    nuxt = new Nuxt(require('./fixture/nuxt.config'))
-    await nuxt.ready()
-
-    // Build for more coverage
-    builder = new Builder(nuxt)
-    await builder.build()
-  }, 60000)
-
-  test('build files (.nuxt) includes plugin', async () => {
-    const buildFiles = []
-    await iterateOnDirectory(nuxt.options.buildDir, filename => {
-      buildFiles.push(path.relative(__dirname, filename))
-    })
-    expect(buildFiles.includes('fixture/.nuxt/nuxt-typed-vuex.js')).toBeTruthy()
+describe('nuxt-typed-vuex build', () => {
+  setupTest({
+    testDir: __dirname,
+    build: true,
+    generate: true,
   })
 
-  test('generate files', async () => {
-    const generator = new Generator(nuxt, builder)
-    await generator.generate()
-  }, 60000)
+  test('build files (.nuxt) includes plugin', async () => {
+    const { options } = getNuxt()
+
+    const buildFiles: string[] = []
+    iterateOnDirectory(options.buildDir, filename =>
+      buildFiles.push(relative(__dirname, filename))
+    )
+    expect(buildFiles).toContainEqual(expect.stringMatching('nuxt-typed-vuex.js'))
+  })
 
   test('generated files (dist) exist', async () => {
-    const generatedFiles = []
-    iterateOnDirectory(nuxt.options.generate.dir, filename => {
-      generatedFiles.push(path.relative(__dirname, filename))
-    })
-    expect(generatedFiles.includes('fixture/dist/index.html')).toBeTruthy()
+    const { options } = getNuxt()
+
+    const generatedFiles: string[] = []
+    iterateOnDirectory(options.generate.dir!, filename =>
+      generatedFiles.push(relative(__dirname, filename))
+    )
+    expect(generatedFiles).toContainEqual(expect.stringMatching('dist/index.html'))
   })
 
   test('plugin fails without store', async () => {
