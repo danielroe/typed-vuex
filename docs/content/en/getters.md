@@ -39,6 +39,6 @@ export const getters = getterTree(state, {
 
 <alert type="info">
 
-Even if you do not use the `getterTree` helper function, make sure not to use the `GetterTree` type provided by Vuex. This will interfere with type inference. You won't lose out by omitting it, as Typescript will complain if you pass an improperly formed getter into [the `getAccessorType` function](/setup.html#add-type-definitions).
+Even if you do not use the `getterTree` helper function, make sure not to use the `GetterTree` type provided by Vuex. This will interfere with type inference. You won't lose out by omitting it, as Typescript will complain if you pass an improperly formed getter into [the `getAccessorType` function](/getting-started-nuxt#add-type-definitions).
 
 </alert>

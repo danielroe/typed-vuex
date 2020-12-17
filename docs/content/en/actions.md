@@ -13,7 +13,7 @@ This package provides a helper function to reduce boilerplate: `actionTree`. Thi
 
 <alert type="info">
 
-1. Even if you do not use the `actionTree` helper function, make sure not to use the `ActionTree` type provided by Vuex. This will interfere with type inference. You won't lose out by omitting it, as Typescript will complain if you pass an incompatible action into [the `getAccessorType` function](/setup.html#add-type-definitions).
+1. Even if you do not use the `actionTree` helper function, make sure not to use the `ActionTree` type provided by Vuex. This will interfere with type inference. You won't lose out by omitting it, as Typescript will complain if you pass an incompatible action into [the `getAccessorType` function](/getting-started-nuxt#add-type-definitions).
 
 2. This package does not support [object-style dispatches](https://vuex.vuejs.org/guide/actions.html).
 

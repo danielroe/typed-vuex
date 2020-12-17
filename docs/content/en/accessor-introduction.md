@@ -47,7 +47,7 @@ this.$accessor.submodule.id
 
 Adding types is simple. A helper function, `getAccessorType`, is provided, which compiles to nothing and only serves to return the correct type of the accessor so that it can be used where you see fit.
 
-Make sure you define types correctly following [these instructions](/setup.html#add-type-definitions).
+Make sure you define types correctly following [these instructions](/getting-started-nuxt#add-type-definitions).
 
 ## Using the accessor
 
