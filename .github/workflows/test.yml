@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        nuxt: ["2.9", "2.11", "2.13", "2.14"]
+        nuxt: ["2.13", "2.14"]
 
     steps:
       - uses: actions/checkout@master
