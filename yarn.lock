@@ -6757,17 +6757,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"core-js@npm:3, core-js@npm:^3.6.1":
+  version: 3.8.1
+  resolution: "core-js@npm:3.8.1"
+  checksum: e9364ce130241b65f73e0be84721f3cd704b5db77709476e2d6c1e4b56e58e3af9b46e6b51bd019865083d2d55b38a8e0888e862f75e65332c37820cb0d3c58e
+  languageName: node
+  linkType: hard
+
 "core-js@npm:^2.6.5":
   version: 2.6.12
   resolution: "core-js@npm:2.6.12"
   checksum: b865823ce9cb5bc63336856440f6525e4996bb91af30660081e82bf447d177f36104f0986906a34ea0c9c03cb8b3d960380848a478e2621dac30c9b8198d28da
-  languageName: node
-  linkType: hard
-
-"core-js@npm:^3.6.1":
-  version: 3.8.1
-  resolution: "core-js@npm:3.8.1"
-  checksum: e9364ce130241b65f73e0be84721f3cd704b5db77709476e2d6c1e4b56e58e3af9b46e6b51bd019865083d2d55b38a8e0888e862f75e65332c37820cb0d3c58e
   languageName: node
   linkType: hard
 
@@ -13460,6 +13460,7 @@ fsevents@~2.1.2:
     "@nuxt/typescript-runtime": ^2.0.0
     "@types/normalize-path": ^3.0.0
     consola: ^2.15.0
+    core-js: 3
     normalize-path: ^3.0.0
     nuxt: ^2.14.12
     ts-loader: ^8.0.12
