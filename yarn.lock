@@ -18240,8 +18240,9 @@ fsevents@~2.1.2:
   dependencies:
     tsd: ^0.14.0
     vue: ^2.6.12
+    vuex: ^3.6.0
   peerDependencies:
-    vuex: ^3.5.1
+    vuex: ^3.6.0
   languageName: unknown
   linkType: soft
 
