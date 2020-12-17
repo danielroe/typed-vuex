@@ -37,7 +37,7 @@
     "vue": "^2.6.12"
   },
   "peerDependencies": {
-    "vuex": "^3.5.1"
+    "vuex": "^3.6.0"
   },
   "tsd": {
     "directory": "test/tsd",
