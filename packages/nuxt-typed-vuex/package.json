@@ -43,9 +43,9 @@
     "@nuxt/typescript-build": "^2.0.3",
     "@nuxt/typescript-runtime": "^2.0.0",
     "@types/normalize-path": "^3.0.0",
-    "core-js": "3",
+    "core-js": "3.8.2",
     "nuxt": "^2.14.12",
-    "ts-loader": "^8.0.12",
+    "ts-loader": "^8.0.14",
     "tsd": "^0.14.0"
   },
   "peerDependencies": {
