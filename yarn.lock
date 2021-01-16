@@ -3326,9 +3326,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@rollup/plugin-node-resolve@npm:^11.0.0":
-  version: 11.0.1
-  resolution: "@rollup/plugin-node-resolve@npm:11.0.1"
+"@rollup/plugin-node-resolve@npm:^11.1.0":
+  version: 11.1.0
+  resolution: "@rollup/plugin-node-resolve@npm:11.1.0"
   dependencies:
     "@rollup/pluginutils": ^3.1.0
     "@types/resolve": 1.17.1
@@ -3338,7 +3338,7 @@ __metadata:
     resolve: ^1.19.0
   peerDependencies:
     rollup: ^1.20.0||^2.0.0
-  checksum: bbec78fba9faab9e82b8f019d8883f119b2aa59cf90aa86f48767242235e39ca76ac2d130f0404553b2fa89dbd8fef90e32159642618f1e75ced7029f1bcece5
+  checksum: 87332c94d1ebf50d8238eabd7901ec802e076f566538db929155e2ac2227796a6e7cb35994bd7d15e191c4835e00bf4aac58a21615a276fc6df5fbce7b7fb050
   languageName: node
   linkType: hard
 
@@ -5545,7 +5545,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"cac@npm:^6.6.1":
+"cac@npm:^6.7.1":
   version: 6.7.1
   resolution: "cac@npm:6.7.1"
   checksum: f8bc8f0cccb627c40300d3290d106d264e8d391e07beaaa7e1b44b3365d745bc43fca88aab33e18c18153b537c0f7f84e6f4dbfaaeda0a15feeb50213f5e1928
@@ -11667,6 +11667,15 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
+"jiti@npm:^1.2.0":
+  version: 1.2.0
+  resolution: "jiti@npm:1.2.0"
+  bin:
+    jiti: bin/jiti.js
+  checksum: bdc8b567b57f8f8586aff7869a9d786771cf76690625a7ca899d427db426db946d1bcd0c4ecd1a77ae8e66fd984b80d0de2e8e077dc18d8926cb4e8e501b74e1
+  languageName: node
+  linkType: hard
+
 "joycon@npm:^2.2.5":
   version: 2.2.5
   resolution: "joycon@npm:2.2.5"
@@ -16342,7 +16351,7 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
-"rollup-plugin-dts@npm:^2.0.0":
+"rollup-plugin-dts@npm:^2.0.1":
   version: 2.0.1
   resolution: "rollup-plugin-dts@npm:2.0.1"
   dependencies:
@@ -16371,9 +16380,9 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
-"rollup@npm:^2.34.2":
-  version: 2.35.1
-  resolution: "rollup@npm:2.35.1"
+"rollup@npm:^2.36.2":
+  version: 2.36.2
+  resolution: "rollup@npm:2.36.2"
   dependencies:
     fsevents: ~2.1.2
   dependenciesMeta:
@@ -16381,7 +16390,7 @@ fsevents@~2.3.1:
       optional: true
   bin:
     rollup: dist/bin/rollup
-  checksum: 01e8b621baf3b35e1a28e3679cf9bdd4c22c2e999a895343e0b1e02dfe735f92a9fe439042e1b35c981663e9a8b75c1d707e6c27d786170febbb503b83dfed39
+  checksum: 65a892680d0da59b77a8174d90ff203bd8f4a34a5ec9d230d9bbf735ecad700426f1e079ed1953cd24bc9c0fcf77aed7219da77db11347222814e8d9364c60cd
   languageName: node
   linkType: hard
 
@@ -16407,7 +16416,7 @@ fsevents@~2.3.1:
     lerna: ^3.22.1
     release-it: ^14.2.2
     release-it-yarn-workspaces: ^2.0.0
-    siroc: ^0.6.0
+    siroc: ^0.6.1
     typescript: 4.1.3
   languageName: unknown
   linkType: soft
@@ -16844,16 +16853,16 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
-"siroc@npm:^0.6.0":
-  version: 0.6.0
-  resolution: "siroc@npm:0.6.0"
+"siroc@npm:^0.6.1":
+  version: 0.6.2
+  resolution: "siroc@npm:0.6.2"
   dependencies:
     "@rollup/plugin-alias": ^3.1.1
     "@rollup/plugin-commonjs": ^17.0.0
     "@rollup/plugin-json": ^4.1.0
-    "@rollup/plugin-node-resolve": ^11.0.0
+    "@rollup/plugin-node-resolve": ^11.1.0
     "@rollup/plugin-replace": ^2.3.4
-    cac: ^6.6.1
+    cac: ^6.7.1
     chalk: ^4.1.0
     consola: ^2.15.0
     defu: ^3.2.2
@@ -16861,17 +16870,17 @@ fsevents@~2.3.1:
     execa: ^5.0.0
     fs-extra: ^9.0.1
     glob: ^7.1.6
-    jiti: ^0.1.17
-    rollup: ^2.34.2
-    rollup-plugin-dts: ^2.0.0
+    jiti: ^1.2.0
+    rollup: ^2.36.2
+    rollup-plugin-dts: ^2.0.1
     rollup-plugin-esbuild: 2.5.2
-    sort-package-json: ^1.48.0
-    typescript: ^4.1.2
+    sort-package-json: ^1.48.1
+    typescript: ^4.1.3
     v8-compile-cache: ^2.2.0
   bin:
     siroc: bin/cli.js
     siroc-runner: bin/runtime.js
-  checksum: 599c85d862b451a7f2bff4ba65d99de172aebfaf214c3c94a9307f5afcb071b2416a7420003d66ec6abbb5b07ffb1db06182809896a948c5418ca92472590617
+  checksum: 7d32a91f475c50acdec15cd5102314f3aa57b39a1717c73644d60a61b221339925f1f26cc9cc338c09c3c379a9b04911484efc7451322a4388993a201dd1a569
   languageName: node
   linkType: hard
 
@@ -17002,9 +17011,9 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
-"sort-package-json@npm:^1.48.0":
-  version: 1.48.0
-  resolution: "sort-package-json@npm:1.48.0"
+"sort-package-json@npm:^1.48.1":
+  version: 1.48.1
+  resolution: "sort-package-json@npm:1.48.1"
   dependencies:
     detect-indent: ^6.0.0
     detect-newline: 3.1.0
@@ -17014,7 +17023,7 @@ fsevents@~2.3.1:
     sort-object-keys: ^1.1.3
   bin:
     sort-package-json: cli.js
-  checksum: 42cba5356ead7ae6c51f4d3d35d3ed730b1416d55d68d713363d62cceebbbd6cba2936c35117897d03d07038cddd53fb8fdafcf7a79539cf500c16bce7a6dc10
+  checksum: 4537158dea7e640ecd34d3af0fe683c7fed5ef3b5d361b30ba502b1e1a9ac3b84a77517901ce75fd9804da99255f41fc003ef3f473e55d5728e724cf18658f5c
   languageName: node
   linkType: hard
 
@@ -18310,7 +18319,7 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
-"typescript@4.1.3, typescript@^4.1.2, typescript@~4.1":
+"typescript@4.1.3, typescript@^4.1.3, typescript@~4.1":
   version: 4.1.3
   resolution: "typescript@npm:4.1.3"
   bin:
@@ -18320,7 +18329,7 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
-"typescript@patch:typescript@4.1.3#builtin<compat/typescript>, typescript@patch:typescript@^4.1.2#builtin<compat/typescript>, typescript@patch:typescript@~4.1#builtin<compat/typescript>":
+"typescript@patch:typescript@4.1.3#builtin<compat/typescript>, typescript@patch:typescript@^4.1.3#builtin<compat/typescript>, typescript@patch:typescript@~4.1#builtin<compat/typescript>":
   version: 4.1.3
   resolution: "typescript@patch:typescript@npm%3A4.1.3#builtin<compat/typescript>::version=4.1.3&hash=cc6730"
   bin:
