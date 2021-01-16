@@ -1432,9 +1432,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eslint/eslintrc@npm:^0.2.2":
-  version: 0.2.2
-  resolution: "@eslint/eslintrc@npm:0.2.2"
+"@eslint/eslintrc@npm:^0.3.0":
+  version: 0.3.0
+  resolution: "@eslint/eslintrc@npm:0.3.0"
   dependencies:
     ajv: ^6.12.4
     debug: ^4.1.1
@@ -1443,10 +1443,10 @@ __metadata:
     ignore: ^4.0.6
     import-fresh: ^3.2.1
     js-yaml: ^3.13.1
-    lodash: ^4.17.19
+    lodash: ^4.17.20
     minimatch: ^3.0.4
     strip-json-comments: ^3.1.1
-  checksum: 049c98898934100aa5ad4912242ecbec136454787c00776a236e5321c73176dbc813917445a3d50d230a5a84531a99ec0e2885dd7a6838be68b46b6720fa1459
+  checksum: 00e87c194672eb85dcea22ba749fb3cabdd9768e952e748b2c727940f06691c873369d75cf3bddb239301eca8c38de6e098b0de4839fa7c16a2062e536e8ff5a
   languageName: node
   linkType: hard
 
@@ -2885,32 +2885,32 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@nuxt/typescript-build@npm:^2.0.3":
-  version: 2.0.3
-  resolution: "@nuxt/typescript-build@npm:2.0.3"
+"@nuxt/typescript-build@npm:^2.0.4":
+  version: 2.0.4
+  resolution: "@nuxt/typescript-build@npm:2.0.4"
   dependencies:
     consola: ^2.15.0
-    fork-ts-checker-webpack-plugin: ^5.1.0
-    ts-loader: ^8.0.3
-    typescript: ~4.0
+    fork-ts-checker-webpack-plugin: ^6.1.0
+    ts-loader: ^8.0.14
+    typescript: ~4.1
   peerDependencies:
     "@nuxt/types": ">=2.13.1"
-  checksum: 07af0deda0225629b109f27cfdaf30add3bdc2af26dfcdd53c114843e92a875bfe5ff55f78b2977ef3376afb22b6f7a505629e43af5377e66d04827dafe508fc
+  checksum: e29fb719a5fe48aabb04436511d896fb045f8f1be000f8487ff8dd40269e7d4c55aea7099c2daa14ab25119fc648c4561af0a77db01a5e07be45854ba09e1e98
   languageName: node
   linkType: hard
 
-"@nuxt/typescript-runtime@npm:^2.0.0":
-  version: 2.0.0
-  resolution: "@nuxt/typescript-runtime@npm:2.0.0"
+"@nuxt/typescript-runtime@npm:^2.0.1":
+  version: 2.0.1
+  resolution: "@nuxt/typescript-runtime@npm:2.0.1"
   dependencies:
-    ts-node: ^9.0.0
-    typescript: ~4.0
+    ts-node: ^9.1.1
+    typescript: ~4.1
   peerDependencies:
     "@nuxt/types": ">=2.13.1"
   bin:
     nuxt-ts: bin/nuxt-ts.js
     nuxts: bin/nuxt-ts.js
-  checksum: 2e5272c084653b4aefa595f52b9fecebd1ee9b01784ac12a3092474d8ca1ebc7a998df0829eedf09dd1b1e2cf60182c867719754d395469136f1fe6d2c65914b
+  checksum: a74f2152a17ff6377f00a8472e1f212689f56a4a41fbcf155fa0643c0e70d22072e665e41b235d16fd8f0f3e891b44228a8cd221255aa08c29cb2f82854f6077
   languageName: node
   linkType: hard
 
@@ -5942,6 +5942,25 @@ __metadata:
   languageName: node
   linkType: hard
 
+"chokidar@npm:^3.4.2":
+  version: 3.5.1
+  resolution: "chokidar@npm:3.5.1"
+  dependencies:
+    anymatch: ~3.1.1
+    braces: ~3.0.2
+    fsevents: ~2.3.1
+    glob-parent: ~5.1.0
+    is-binary-path: ~2.1.0
+    is-glob: ~4.0.1
+    normalize-path: ~3.0.0
+    readdirp: ~3.5.0
+  dependenciesMeta:
+    fsevents:
+      optional: true
+  checksum: 61b3f710f9e7dc69d76f638d8b0d37bad586497444165125ca8062f7192695f35403b5f622cbd7dfdd06805201ceaba40ff90e53ea2974df9a8087861192a99b
+  languageName: node
+  linkType: hard
+
 "chownr@npm:^1.1.1, chownr@npm:^1.1.2":
   version: 1.1.4
   resolution: "chownr@npm:1.1.4"
@@ -8336,12 +8355,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint@npm:7.17.0":
-  version: 7.17.0
-  resolution: "eslint@npm:7.17.0"
+"eslint@npm:7.18.0":
+  version: 7.18.0
+  resolution: "eslint@npm:7.18.0"
   dependencies:
     "@babel/code-frame": ^7.0.0
-    "@eslint/eslintrc": ^0.2.2
+    "@eslint/eslintrc": ^0.3.0
     ajv: ^6.10.0
     chalk: ^4.0.0
     cross-spawn: ^7.0.2
@@ -8365,7 +8384,7 @@ __metadata:
     js-yaml: ^3.13.1
     json-stable-stringify-without-jsonify: ^1.0.1
     levn: ^0.4.1
-    lodash: ^4.17.19
+    lodash: ^4.17.20
     minimatch: ^3.0.4
     natural-compare: ^1.4.0
     optionator: ^0.9.1
@@ -8379,7 +8398,7 @@ __metadata:
     v8-compile-cache: ^2.0.3
   bin:
     eslint: bin/eslint.js
-  checksum: 12b09a972eb0b81fabf9c1b38b3e9ada0cc051a22ee5022e31852e7babde6fe02a0135be3027451ee02c9ff4a6f738b55205d2953f98eb16a43350ad73070b27
+  checksum: 5c6f6ca0eb6c3738a0d14d3441a23f045ef9e7f73aaba4848aea0877c5fd50ec42937ccdaf53fb9107694f5700a9989bca55334b7b17e5d3be2f6e69a42241fa
   languageName: node
   linkType: hard
 
@@ -9042,13 +9061,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"fork-ts-checker-webpack-plugin@npm:^5.1.0":
-  version: 5.2.1
-  resolution: "fork-ts-checker-webpack-plugin@npm:5.2.1"
+"fork-ts-checker-webpack-plugin@npm:^6.1.0":
+  version: 6.1.0
+  resolution: "fork-ts-checker-webpack-plugin@npm:6.1.0"
   dependencies:
     "@babel/code-frame": ^7.8.3
     "@types/json-schema": ^7.0.5
     chalk: ^4.1.0
+    chokidar: ^3.4.2
     cosmiconfig: ^6.0.0
     deepmerge: ^4.2.2
     fs-extra: ^9.0.0
@@ -9057,7 +9077,7 @@ __metadata:
     schema-utils: 2.7.0
     semver: ^7.3.2
     tapable: ^1.0.0
-  checksum: 0e6098f2929355568bc367fd58dfb761f8a4b8190a6ea97aa1cb1c218054e6cb0915cd1a424c0d1812db1cee14a2cceaa93d2bfec4aa627a8f772097c7ba8666
+  checksum: 34785a8c0506b8bc0a0da5adfc95dc785e209de85a63f9924c8a47ef743cea5bd481e8d196323e13e671e86e571f34ab98423ff8f5bd3a349da2e8087bb78dc9
   languageName: node
   linkType: hard
 
@@ -9237,12 +9257,30 @@ fsevents@^2.1.2:
   languageName: node
   linkType: hard
 
+"fsevents@patch:fsevents@~2.3.1#builtin<compat/fsevents>":
+  version: 2.3.1
+  resolution: "fsevents@patch:fsevents@npm%3A2.3.1#builtin<compat/fsevents>::version=2.3.1&hash=11e9ea"
+  dependencies:
+    node-gyp: latest
+  checksum: 66b24358e15cdd0f705b456346e58b4613f2bf54206b47874decda4152614fb0632d2d662c92b0ea54810109f646e5233e4cdd64dbb2a1949070ee5dc14dab87
+  languageName: node
+  linkType: hard
+
 fsevents@~2.1.2:
   version: 2.1.3
   resolution: "fsevents@npm:2.1.3"
   dependencies:
     node-gyp: latest
   checksum: 8977781884d06c5bcb97b5f909efdce9683c925f2a0ce7e098d2cdffe2e0a0a50b1868547bb94dca75428c06535a4a70517a7bb3bb5a974d93bf9ffc067291eb
+  languageName: node
+  linkType: hard
+
+fsevents@~2.3.1:
+  version: 2.3.1
+  resolution: "fsevents@npm:2.3.1"
+  dependencies:
+    node-gyp: latest
+  checksum: 32619a121e7f9ac8a5ce4954f5fdf06be68b7b1c16e4ac8fa6e5e13cbf97d83c86cdcdf872ab7b188ebb07b34d2271b7818aebfc305b4a7d5b35f4bc2117f8be
   languageName: node
   linkType: hard
 
@@ -10223,9 +10261,9 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
-"husky@npm:4.3.7":
-  version: 4.3.7
-  resolution: "husky@npm:4.3.7"
+"husky@npm:4.3.8":
+  version: 4.3.8
+  resolution: "husky@npm:4.3.8"
   dependencies:
     chalk: ^4.0.0
     ci-info: ^2.0.0
@@ -10240,7 +10278,7 @@ fsevents@~2.1.2:
   bin:
     husky-run: bin/run.js
     husky-upgrade: lib/upgrader/bin.js
-  checksum: 799b1484e47f868760a612d8578f0bc2cf8848a55719ad00bfbd6bec3d094afaca024631949157390a05616a1c83242c3d917f33c049d9161f7af3ec313b6870
+  checksum: 1ac4fb51ffd93547ec861f185d86bdbfbac8ee24ce60417d531dbe5222e33fc754436e87e4e2b37a44dcefdc78c151f9ba4ac57c05773f5c36377cc4eb73732b
   languageName: node
   linkType: hard
 
@@ -13457,8 +13495,8 @@ fsevents@~2.1.2:
   dependencies:
     "@nuxt/test-utils": ^0.1.2
     "@nuxt/types": ^2.14.12
-    "@nuxt/typescript-build": ^2.0.3
-    "@nuxt/typescript-runtime": ^2.0.0
+    "@nuxt/typescript-build": ^2.0.4
+    "@nuxt/typescript-runtime": ^2.0.1
     "@types/normalize-path": ^3.0.0
     consola: ^2.15.0
     core-js: 3.8.2
@@ -16363,8 +16401,8 @@ fsevents@~2.1.2:
     "@typescript-eslint/eslint-plugin": 4.13.0
     "@typescript-eslint/parser": 4.13.0
     codecov: ^3.8.1
-    eslint: 7.17.0
-    husky: 4.3.7
+    eslint: 7.18.0
+    husky: 4.3.8
     jest: 26.6.3
     lerna: ^3.22.1
     release-it: ^14.2.2
@@ -18054,7 +18092,7 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
-"ts-loader@npm:^8.0.14, ts-loader@npm:^8.0.3":
+"ts-loader@npm:^8.0.14":
   version: 8.0.14
   resolution: "ts-loader@npm:8.0.14"
   dependencies:
@@ -18070,7 +18108,7 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
-"ts-node@npm:^9.0.0":
+"ts-node@npm:^9.1.1":
   version: 9.1.1
   resolution: "ts-node@npm:9.1.1"
   dependencies:
@@ -18272,7 +18310,7 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
-"typescript@4.1.3, typescript@^4.1.2":
+"typescript@4.1.3, typescript@^4.1.2, typescript@~4.1":
   version: 4.1.3
   resolution: "typescript@npm:4.1.3"
   bin:
@@ -18282,33 +18320,13 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
-"typescript@patch:typescript@4.1.3#builtin<compat/typescript>, typescript@patch:typescript@^4.1.2#builtin<compat/typescript>":
+"typescript@patch:typescript@4.1.3#builtin<compat/typescript>, typescript@patch:typescript@^4.1.2#builtin<compat/typescript>, typescript@patch:typescript@~4.1#builtin<compat/typescript>":
   version: 4.1.3
   resolution: "typescript@patch:typescript@npm%3A4.1.3#builtin<compat/typescript>::version=4.1.3&hash=cc6730"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
   checksum: 017af992148346e671d5b83b041773825888e9c94db8d2b9472cdbb6d6f0ee85927817473121524d319f8be6ffe5a6904d27ff6ef21356d2274fcadd52e17938
-  languageName: node
-  linkType: hard
-
-"typescript@patch:typescript@~4.0#builtin<compat/typescript>":
-  version: 4.0.5
-  resolution: "typescript@patch:typescript@npm%3A4.0.5#builtin<compat/typescript>::version=4.0.5&hash=cc6730"
-  bin:
-    tsc: bin/tsc
-    tsserver: bin/tsserver
-  checksum: ada6fea7657a51d1b842682d31233e53a3cf509b0edbd6288fda3cfd01643d0190b7ea77837527c4d282c90e61690e19dbfd91be6913e7e7292aa0b588d3506c
-  languageName: node
-  linkType: hard
-
-typescript@~4.0:
-  version: 4.0.5
-  resolution: "typescript@npm:4.0.5"
-  bin:
-    tsc: bin/tsc
-    tsserver: bin/tsserver
-  checksum: ce94d4bbb914cc9d6fbd42e1476ab18c3292b262b8ba7ba76cd167a858545207a604e75bf1efbb75b8654c8f85deaa19795c3ef00098d7612855139b4ecc0240
   languageName: node
   linkType: hard
 
