@@ -28,9 +28,9 @@
   ],
   "scripts": {
     "build": "yarn clean && yarn compile",
-    "dev": "nuxt-ts test/fixture",
     "clean": "rm -rf lib test/fixture/.nuxt test/fixture/dist",
-    "compile": "siroc build"
+    "compile": "siroc build",
+    "dev": "nuxt-ts test/fixture"
   },
   "dependencies": {
     "consola": "^2.15.0",
