@@ -35,10 +35,10 @@
   "devDependencies": {
     "tsd": "^0.14.0",
     "vue": "^2.6.12",
-    "vuex": "^3.6.0"
+    "vuex": "^3.6.2"
   },
   "peerDependencies": {
-    "vuex": "^3.6.0"
+    "vuex": "^3.6.2"
   },
   "tsd": {
     "directory": "test/tsd",
