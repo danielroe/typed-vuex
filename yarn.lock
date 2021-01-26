@@ -18260,9 +18260,9 @@ fsevents@~2.1.2:
   dependencies:
     tsd: ^0.14.0
     vue: ^2.6.12
-    vuex: ^3.6.0
+    vuex: ^3.6.2
   peerDependencies:
-    vuex: ^3.6.0
+    vuex: ^3.6.2
   languageName: unknown
   linkType: soft
 
@@ -18921,12 +18921,12 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
-"vuex@npm:^3.6.0":
-  version: 3.6.0
-  resolution: "vuex@npm:3.6.0"
+"vuex@npm:^3.6.0, vuex@npm:^3.6.2":
+  version: 3.6.2
+  resolution: "vuex@npm:3.6.2"
   peerDependencies:
     vue: ^2.0.0
-  checksum: 809226864ef4765058c6c94c731e18805fe2ce0dd176d39ded2ef48d070e957b76d62f5c823711242e3d3fb693e6fccf843745869184495b881c4c017c296e70
+  checksum: baa9a1206439520105da67f40ea8cab19ccc792e73c8e5e3a42bd424255d99a1019cc90f8cecd3aeb0c177fa9cf1ec6b907b652761e3d9f4c6471e4cc63ac00a
   languageName: node
   linkType: hard
 

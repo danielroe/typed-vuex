@@ -13,7 +13,7 @@
     "vue": "2.6.12",
     "vue-class-component": "7.2.5",
     "vue-property-decorator": "9.0.0",
-    "vuex": "3.5.1"
+    "vuex": "3.6.2"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "4.0.1",
