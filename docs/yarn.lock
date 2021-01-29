@@ -1569,13 +1569,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@nuxt/content-theme-docs@npm:^0.8.2":
-  version: 0.8.2
-  resolution: "@nuxt/content-theme-docs@npm:0.8.2"
+"@nuxt/content-theme-docs@npm:^0.9.0":
+  version: 0.9.0
+  resolution: "@nuxt/content-theme-docs@npm:0.9.0"
   dependencies:
     "@docsearch/css": ^1.0.0-alpha.28
     "@docsearch/js": ^1.0.0-alpha.28
-    "@nuxt/content": ^1.11.1
+    "@nuxt/content": ^1.12.0
     "@nuxt/types": ^2.14.7
     "@nuxtjs/color-mode": ^2.0.0
     "@nuxtjs/google-fonts": 1.2.0
@@ -1591,18 +1591,18 @@ __metadata:
     tailwind-css-variables: ^2.0.3
     theme-colors: ^0.0.5
     vue-scrollactive: ^0.9.3
-  checksum: 820e3b013682811959e9c83f556e2836dbdcb0ec0ba9b108b99df337f1fb80a31a19256cd6014efdd51e19deae430a802c6676e09279efbafa931d9e5ee0d0f9
+  checksum: 6e8ee53c149f2269171c2b3cc58247771d99c38b5e3a83b76bdc24245f5d0bc3b346050d5255923fd7e28f7a3b72867191c1d60acd5482fa1e978af64bb58593
   languageName: node
   linkType: hard
 
-"@nuxt/content@npm:^1.11.1":
-  version: 1.11.1
-  resolution: "@nuxt/content@npm:1.11.1"
+"@nuxt/content@npm:^1.12.0":
+  version: 1.12.0
+  resolution: "@nuxt/content@npm:1.12.0"
   dependencies:
     "@lokidb/full-text-search": ^2.1.0
     "@lokidb/loki": ^2.1.0
     "@nuxt/types": ^2.14.7
-    "@types/js-yaml": ^3.12.5
+    "@types/js-yaml": ^4.0.0
     "@types/xml2js": ^0.4.7
     change-case: ^4.1.1
     chokidar: ^3.4.3
@@ -1616,7 +1616,7 @@ __metadata:
     hasha: ^5.2.2
     hookable: ^4.3.1
     html-tags: ^3.1.0
-    js-yaml: 3.14.0
+    js-yaml: 4.0.0
     mdast-util-to-hast: ^10.0.1
     mkdirp: ^1.0.4
     node-req: ^2.1.2
@@ -1639,7 +1639,7 @@ __metadata:
     unist-builder: ^2.0.3
     ws: ^7.4.0
     xml2js: ^0.4.23
-  checksum: 9c434bbd3866da487dced14e71174dd7efd08dd281002f884b6e9835625ee8969e0b630bd9ae95d1676becbf9d3726bc07c65423ef796d82efd9c354801cd7a7
+  checksum: 03f791626da24de8790de15e9bfa38097c17bd8b6821fc78fac7008c671646e7bd62d754ecc64f0a875cab4d48aa0a31ec605b277f0ecb527e1e6949c13523f9
   languageName: node
   linkType: hard
 
@@ -2200,10 +2200,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/js-yaml@npm:^3.12.5":
-  version: 3.12.5
-  resolution: "@types/js-yaml@npm:3.12.5"
-  checksum: 82ca4b40ee1baf82961f75b7db8fae5a1d63410c066475424659c3bd1873cf02bf015ebdeb8751e7b6d0c87b4d3f09f20d2cc2075c4bdd4e7d58409ddd6ad925
+"@types/js-yaml@npm:^4.0.0":
+  version: 4.0.0
+  resolution: "@types/js-yaml@npm:4.0.0"
+  checksum: 7a4431db3069988c5fa7fd00be45f18f6e355ab227b3ba23c993eeb949ee6ee39bf7180663b94f5a2378bece277ec4c49f26a27189edc263da7eeb6cd4a09d27
   languageName: node
   linkType: hard
 
@@ -3049,6 +3049,13 @@ __metadata:
   dependencies:
     sprintf-js: ~1.0.2
   checksum: 435adaef5f6671c3ef1478a22be6fd54bdb99fdbbce8f5561b9cbbb05068ccce87b7df3b9f3322ff52a6ebb9cab2b427cbedac47a07611690a9beaa5184093e2
+  languageName: node
+  linkType: hard
+
+"argparse@npm:^2.0.1":
+  version: 2.0.1
+  resolution: "argparse@npm:2.0.1"
+  checksum: 160b7a25d2a7097fd5fdf25eb8a99e037340078f70e6c7cfdef305837ed14d54570b2b13261bcae26c8cd44ad6e9a7136a0110d815ac65a7891c69c7bf2f4afd
   languageName: node
   linkType: hard
 
@@ -7440,7 +7447,18 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
-"js-yaml@npm:3.14.0, js-yaml@npm:^3.11.0, js-yaml@npm:^3.13.1":
+"js-yaml@npm:4.0.0":
+  version: 4.0.0
+  resolution: "js-yaml@npm:4.0.0"
+  dependencies:
+    argparse: ^2.0.1
+  bin:
+    js-yaml: bin/js-yaml.js
+  checksum: ee9b16cdbba690ec70f46d61737b28b35e26e6d51606c466de7fa876d3517de0cfdffd2e1ef21263d5ca3b32659d2e4c65255f50d6e236f022305bce72242d46
+  languageName: node
+  linkType: hard
+
+"js-yaml@npm:^3.11.0, js-yaml@npm:^3.13.1":
   version: 3.14.0
   resolution: "js-yaml@npm:3.14.0"
   dependencies:
@@ -11180,7 +11198,7 @@ fsevents@~2.1.2:
   version: 0.0.0-use.local
   resolution: "root-workspace-0b6124@workspace:."
   dependencies:
-    "@nuxt/content-theme-docs": ^0.8.2
+    "@nuxt/content-theme-docs": ^0.9.0
     nuxt: ^2.14.12
   languageName: unknown
   linkType: soft
