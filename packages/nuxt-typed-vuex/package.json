@@ -33,19 +33,19 @@
     "dev": "nuxt-ts test/fixture"
   },
   "dependencies": {
-    "consola": "^2.15.0",
+    "consola": "^2.15.3",
     "normalize-path": "^3.0.0",
     "typed-vuex": "0.1.22"
   },
   "devDependencies": {
-    "@nuxt/test-utils": "^0.1.2",
+    "@nuxt/test-utils": "^0.1.3",
     "@nuxt/types": "^2.14.12",
     "@nuxt/typescript-build": "^2.0.4",
     "@nuxt/typescript-runtime": "^2.0.1",
     "@types/normalize-path": "^3.0.0",
     "core-js": "3.8.3",
     "nuxt": "^2.14.12",
-    "ts-loader": "^8.0.14",
+    "ts-loader": "^8.0.16",
     "tsd": "^0.14.0"
   },
   "peerDependencies": {
