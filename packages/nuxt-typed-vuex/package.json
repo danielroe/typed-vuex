@@ -45,7 +45,7 @@
     "@types/normalize-path": "^3.0.0",
     "core-js": "3.8.3",
     "nuxt": "^2.14.12",
-    "ts-loader": "^8.0.16",
+    "ts-loader": "^8.0.17",
     "tsd": "^0.14.0"
   },
   "peerDependencies": {
