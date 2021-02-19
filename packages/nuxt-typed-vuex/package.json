@@ -43,7 +43,7 @@
     "@nuxt/typescript-build": "^2.0.4",
     "@nuxt/typescript-runtime": "^2.0.1",
     "@types/normalize-path": "^3.0.0",
-    "core-js": "3.8.3",
+    "core-js": "3.9.0",
     "nuxt": "^2.15.0",
     "ts-loader": "^8.0.17",
     "tsd": "^0.14.0"
