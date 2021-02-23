@@ -42,6 +42,10 @@ jobs:
         if: steps.cache.outputs.cache-hit != 'true'
         run: yarn && yarn workspace nuxt-typed-vuex add nuxt@${{ matrix.nuxt }}
 
+      - name: Install dependencies
+        if: steps.cache.outputs.cache-hit != 'true' && matrix.node == '2.13'
+        run: yarn workspace nuxt-typed-vuex add @babel/preset-env@~7.12.17
+
       - name: Test project
         run: yarn build && yarn test
 
