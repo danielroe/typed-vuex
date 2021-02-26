@@ -3437,7 +3437,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@rollup/plugin-replace@npm:^2.4.1":
+"@rollup/plugin-replace@npm:^2.4.0":
   version: 2.4.1
   resolution: "@rollup/plugin-replace@npm:2.4.1"
   dependencies:
@@ -3462,7 +3462,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@rollup/pluginutils@npm:^4.1.0":
+"@rollup/pluginutils@npm:^4.0.0":
   version: 4.1.0
   resolution: "@rollup/pluginutils@npm:4.1.0"
   dependencies:
@@ -8092,12 +8092,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"esbuild@npm:^0.8.52":
-  version: 0.8.52
-  resolution: "esbuild@npm:0.8.52"
+"esbuild@npm:^0.7.22":
+  version: 0.7.22
+  resolution: "esbuild@npm:0.7.22"
   bin:
     esbuild: bin/esbuild
-  checksum: e36c92920dc6ef4f8598d211fd4fec2d9bd99b792e13113bbf813e66a2c76ae7c8b882494b35173cf20355fda5659a8d49d6bb285406b771d79748804cad0059
+  checksum: 4f8b5bbfd023b1f0751275537306968abae8a67558a347dba1d48ee26bf4e4b5e069b66b892fa2772dd677b0432ff36e3a2cb4e89a1f0b7b0ace01fd08734834
   languageName: node
   linkType: hard
 
@@ -16201,20 +16201,20 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"rollup-plugin-esbuild@npm:2.6.1":
-  version: 2.6.1
-  resolution: "rollup-plugin-esbuild@npm:2.6.1"
+"rollup-plugin-esbuild@npm:2.5.2":
+  version: 2.5.2
+  resolution: "rollup-plugin-esbuild@npm:2.5.2"
   dependencies:
-    "@rollup/pluginutils": ^4.1.0
+    "@rollup/pluginutils": ^4.0.0
     joycon: ^2.2.5
     strip-json-comments: ^3.1.1
   peerDependencies:
-    esbuild: ">=0.7.0"
-  checksum: 90a731a839d3d5db05dbd4ab8ded04b37785063039b6abb1e2162cf77eb05942aa6d400697e91b2284a3940b574f9d1413081b5298b33b353cca1ecca6718413
+    esbuild: ^0.6.0
+  checksum: 4d658db21103241c6597b2678eab37bfe8bd1b54a1bf102f220d9279f22ce2587b5c03ec88e98e89c25eb7f7cdc6870e273724c970ce4856031e9ae5ad3707b0
   languageName: node
   linkType: hard
 
-"rollup@npm:^2.39.1":
+"rollup@npm:^2.39.0":
   version: 2.40.0
   resolution: "rollup@npm:2.40.0"
   dependencies:
@@ -16252,7 +16252,7 @@ fsevents@^1.2.7:
     release-it: ^14.4.1
     release-it-yarn-workspaces: ^2.0.0
     semver: ^7.3.4
-    siroc: ^0.7.0
+    siroc: ^0.6.7
     typescript: 4.1.5
   languageName: unknown
   linkType: soft
@@ -16698,27 +16698,27 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"siroc@npm:^0.7.0":
-  version: 0.7.0
-  resolution: "siroc@npm:0.7.0"
+"siroc@npm:^0.6.7":
+  version: 0.6.7
+  resolution: "siroc@npm:0.6.7"
   dependencies:
     "@rollup/plugin-alias": ^3.1.2
     "@rollup/plugin-commonjs": ^17.1.0
     "@rollup/plugin-json": ^4.1.0
     "@rollup/plugin-node-resolve": ^11.2.0
-    "@rollup/plugin-replace": ^2.4.1
+    "@rollup/plugin-replace": ^2.4.0
     cac: ^6.7.2
     chalk: ^4.1.0
     consola: ^2.15.3
     defu: ^3.2.2
-    esbuild: ^0.8.52
+    esbuild: ^0.7.22
     execa: ^5.0.0
     fs-extra: ^9.1.0
     glob: ^7.1.6
     jiti: ^1.3.0
-    rollup: ^2.39.1
+    rollup: ^2.39.0
     rollup-plugin-dts: ^2.0.1
-    rollup-plugin-esbuild: 2.6.1
+    rollup-plugin-esbuild: 2.5.2
     sort-package-json: ^1.49.0
     typescript: ^4.1.5
     upath: ^2.0.1
@@ -16726,7 +16726,7 @@ fsevents@^1.2.7:
   bin:
     siroc: bin/cli.js
     siroc-runner: bin/runtime.js
-  checksum: d4cc960a7c260bc0f0d7ba5cd3f9b6ffee8bce471030e95f15ac0f4947789cd859ffcd4d2daa250a43438608c6f2f23459b43882f497fbe20b3718cb65dda9a9
+  checksum: 05d9ae78d86355a65dd8f8955017854e9290d1a055523b3059936971a41cccefac1697ca5c879d42ceb0bc0d81e761a0d5017a1995cae6b923f30c1d5e3d026e
   languageName: node
   linkType: hard
 
