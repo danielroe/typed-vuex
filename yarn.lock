@@ -995,9 +995,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/plugin-transform-runtime@npm:^7.13.2, @babel/plugin-transform-runtime@npm:^7.13.5":
-  version: 7.13.5
-  resolution: "@babel/plugin-transform-runtime@npm:7.13.5"
+"@babel/plugin-transform-runtime@npm:^7.13.2, @babel/plugin-transform-runtime@npm:^7.13.7":
+  version: 7.13.7
+  resolution: "@babel/plugin-transform-runtime@npm:7.13.7"
   dependencies:
     "@babel/helper-module-imports": ^7.12.13
     "@babel/helper-plugin-utils": ^7.13.0
@@ -1007,7 +1007,7 @@ __metadata:
     semver: 7.0.0
   peerDependencies:
     "@babel/core": ^7.0.0-0
-  checksum: ca80f64122f93e42799d297748749980ab399ab350d12100440450fe5119b2a35c00f5b46f2cb29fc17eb946442b9f527639545ffcc9879180f6b0922ca710c2
+  checksum: f1bb7bb8541c483332c48036f4c68e21d5e4a25e8ddb006d390779756276bcae1950121bea5d2a1244b5273f64ed87ed69f038fb8d6415ee352c4856f2c0a2e4
   languageName: node
   linkType: hard
 
@@ -1352,7 +1352,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@commitlint/cli@npm:^12.0.1":
+"@commitlint/cli@npm:^12.0.0":
   version: 12.0.1
   resolution: "@commitlint/cli@npm:12.0.1"
   dependencies:
@@ -1372,7 +1372,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@commitlint/config-conventional@npm:^12.0.1":
+"@commitlint/config-conventional@npm:^12.0.0":
   version: 12.0.1
   resolution: "@commitlint/config-conventional@npm:12.0.1"
   dependencies:
@@ -2996,9 +2996,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@nuxt/typescript-build@npm:^2.0.5":
-  version: 2.0.5
-  resolution: "@nuxt/typescript-build@npm:2.0.5"
+"@nuxt/typescript-build@npm:^2.0.6":
+  version: 2.0.6
+  resolution: "@nuxt/typescript-build@npm:2.0.6"
   dependencies:
     consola: ^2.15.3
     fork-ts-checker-webpack-plugin: ^6.1.0
@@ -3006,22 +3006,7 @@ __metadata:
     typescript: ~4.1
   peerDependencies:
     "@nuxt/types": ">=2.13.1"
-  checksum: 1294a143d33e015cd611b9f1cced44cee93bf624311329ff28908e0a558b1305e4eedd53a34e15482563a7413003b960aacf89e1e3a6b69fdc1cb89535d81d43
-  languageName: node
-  linkType: hard
-
-"@nuxt/typescript-runtime@npm:^2.0.1":
-  version: 2.0.1
-  resolution: "@nuxt/typescript-runtime@npm:2.0.1"
-  dependencies:
-    ts-node: ^9.1.1
-    typescript: ~4.1
-  peerDependencies:
-    "@nuxt/types": ">=2.13.1"
-  bin:
-    nuxt-ts: bin/nuxt-ts.js
-    nuxts: bin/nuxt-ts.js
-  checksum: a74f2152a17ff6377f00a8472e1f212689f56a4a41fbcf155fa0643c0e70d22072e665e41b235d16fd8f0f3e891b44228a8cd221255aa08c29cb2f82854f6077
+  checksum: fe8325a2b84673d16acdb2bbdc5710bdbf790037e48ff30d19b3bb7e4ee688769602146043b9432c6eb41fe956f5f5b7ec989d9f2343fdc6e9625b97b07c1598
   languageName: node
   linkType: hard
 
@@ -3452,15 +3437,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@rollup/plugin-replace@npm:^2.4.0":
-  version: 2.4.0
-  resolution: "@rollup/plugin-replace@npm:2.4.0"
+"@rollup/plugin-replace@npm:^2.4.1":
+  version: 2.4.1
+  resolution: "@rollup/plugin-replace@npm:2.4.1"
   dependencies:
     "@rollup/pluginutils": ^3.1.0
     magic-string: ^0.25.7
   peerDependencies:
     rollup: ^1.20.0 || ^2.0.0
-  checksum: 5151bed6479eeddfb0368f21e4ebc9a872f46e0443f17e32fc9362164ab9a4fd996b0703361190d085b46fc911e5d6ae757866a318e5651583af7019b2ee533e
+  checksum: cbb79ee0176bd333c4c3a9def89c05394363ec7bd496e1298f40f012b48f2093413bfd618eb1b7b39f0f00f2976b56cfcd4f40a2eed1c2a99386c537c816ff7b
   languageName: node
   linkType: hard
 
@@ -3477,7 +3462,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@rollup/pluginutils@npm:^4.0.0":
+"@rollup/pluginutils@npm:^4.1.0":
   version: 4.1.0
   resolution: "@rollup/pluginutils@npm:4.1.0"
   dependencies:
@@ -4854,13 +4839,6 @@ __metadata:
     delegates: ^1.0.0
     readable-stream: ^2.0.6
   checksum: 2d6fdb0ddde9b8cb120b6851b42c75f6b6db78b540b579a00d144ad38cb9e1bdf1248e5454049fcf5b47ef61d1a6f2ea433a8e38984158afd441bc1e0db7a625
-  languageName: node
-  linkType: hard
-
-"arg@npm:^4.1.0":
-  version: 4.1.3
-  resolution: "arg@npm:4.1.3"
-  checksum: 81b3b40b1529c4fbf75b12f7c3e6fb2dcce9e78072063babc169de9b4f40777788f3d2b04380f659ef676a756e03ccfbfe78adf4477353bda906295fa69dab89
   languageName: node
   linkType: hard
 
@@ -6955,7 +6933,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"create-require@npm:^1.1.0, create-require@npm:^1.1.1":
+"create-require@npm:^1.1.1":
   version: 1.1.1
   resolution: "create-require@npm:1.1.1"
   checksum: babd307893abfb26d77ae11cb9d6b6cfa6d18c9cee435cf70b5a3fb44aa8d90c9ec26ea89cbb16e0a94b8d34f5fcaee164b90ed526cdd3158955673ab9652d01
@@ -7676,13 +7654,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"diff@npm:^4.0.1":
-  version: 4.0.2
-  resolution: "diff@npm:4.0.2"
-  checksum: 81b5cd7ddde6f0ba2a532d434cfdca365aedd6cc62bb133e851e66e071d40382a30924a07c1034bd3d5a2e332146f64514b73c06fe2ebc0490a67f0c98da79fb
-  languageName: node
-  linkType: hard
-
 "diffie-hellman@npm:^5.0.0":
   version: 5.0.3
   resolution: "diffie-hellman@npm:5.0.3"
@@ -8121,12 +8092,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"esbuild@npm:^0.7.22":
-  version: 0.7.22
-  resolution: "esbuild@npm:0.7.22"
+"esbuild@npm:^0.8.52":
+  version: 0.8.52
+  resolution: "esbuild@npm:0.8.52"
   bin:
     esbuild: bin/esbuild
-  checksum: 4f8b5bbfd023b1f0751275537306968abae8a67558a347dba1d48ee26bf4e4b5e069b66b892fa2772dd677b0432ff36e3a2cb4e89a1f0b7b0ace01fd08734834
+  checksum: e36c92920dc6ef4f8598d211fd4fec2d9bd99b792e13113bbf813e66a2c76ae7c8b882494b35173cf20355fda5659a8d49d6bb285406b771d79748804cad0059
   languageName: node
   linkType: hard
 
@@ -12312,13 +12283,6 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"make-error@npm:^1.1.1":
-  version: 1.3.6
-  resolution: "make-error@npm:1.3.6"
-  checksum: 2c780bab8409b865e8ee86697c599a2bf2765ec64d21eb67ccda27050e039f983feacad05a0d43aba3c966ea03d305d2612e94fec45474bcbc61181f57c5bb88
-  languageName: node
-  linkType: hard
-
 "make-fetch-happen@npm:^5.0.0":
   version: 5.0.2
   resolution: "make-fetch-happen@npm:5.0.2"
@@ -13416,8 +13380,7 @@ fsevents@^1.2.7:
   dependencies:
     "@nuxt/test-utils": ^0.1.3
     "@nuxt/types": ^2.15.2
-    "@nuxt/typescript-build": ^2.0.5
-    "@nuxt/typescript-runtime": ^2.0.1
+    "@nuxt/typescript-build": ^2.0.6
     "@types/normalize-path": ^3.0.0
     consola: ^2.15.3
     core-js: 3.9.0
@@ -16238,22 +16201,22 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"rollup-plugin-esbuild@npm:2.5.2":
-  version: 2.5.2
-  resolution: "rollup-plugin-esbuild@npm:2.5.2"
+"rollup-plugin-esbuild@npm:2.6.1":
+  version: 2.6.1
+  resolution: "rollup-plugin-esbuild@npm:2.6.1"
   dependencies:
-    "@rollup/pluginutils": ^4.0.0
+    "@rollup/pluginutils": ^4.1.0
     joycon: ^2.2.5
     strip-json-comments: ^3.1.1
   peerDependencies:
-    esbuild: ^0.6.0
-  checksum: 4d658db21103241c6597b2678eab37bfe8bd1b54a1bf102f220d9279f22ce2587b5c03ec88e98e89c25eb7f7cdc6870e273724c970ce4856031e9ae5ad3707b0
+    esbuild: ">=0.7.0"
+  checksum: 90a731a839d3d5db05dbd4ab8ded04b37785063039b6abb1e2162cf77eb05942aa6d400697e91b2284a3940b574f9d1413081b5298b33b353cca1ecca6718413
   languageName: node
   linkType: hard
 
-"rollup@npm:^2.39.0":
-  version: 2.39.0
-  resolution: "rollup@npm:2.39.0"
+"rollup@npm:^2.39.1":
+  version: 2.40.0
+  resolution: "rollup@npm:2.40.0"
   dependencies:
     fsevents: ~2.3.1
   dependenciesMeta:
@@ -16261,7 +16224,7 @@ fsevents@^1.2.7:
       optional: true
   bin:
     rollup: dist/bin/rollup
-  checksum: b504b080e41382b1f7ff4327c970446458a10e9e083e080175435a1848df5403c10106440551276bfa2d23e56be2810ba52ec19794c74b50854ca89817e36b61
+  checksum: c512236087c32f661181d65489341a01fdd8a41ff3992479d049e999d9070387b20c8b37a5fbdda6af9507fce435e0b9dc510dbf058573575a157d3e61bd2bd4
   languageName: node
   linkType: hard
 
@@ -16270,11 +16233,11 @@ fsevents@^1.2.7:
   resolution: "root-workspace-0b6124@workspace:."
   dependencies:
     "@babel/core": 7.13.1
-    "@babel/plugin-transform-runtime": ^7.13.5
+    "@babel/plugin-transform-runtime": ^7.13.7
     "@babel/preset-env": ^7.13.5
     "@babel/preset-typescript": ^7.13.0
-    "@commitlint/cli": ^12.0.1
-    "@commitlint/config-conventional": ^12.0.1
+    "@commitlint/cli": ^12.0.0
+    "@commitlint/config-conventional": ^12.0.0
     "@nuxtjs/eslint-config-typescript": 5.0.0
     "@release-it/conventional-changelog": ^2.0.1
     "@types/jest": 26.0.20
@@ -16289,7 +16252,7 @@ fsevents@^1.2.7:
     release-it: ^14.4.1
     release-it-yarn-workspaces: ^2.0.0
     semver: ^7.3.4
-    siroc: ^0.6.7
+    siroc: ^0.7.0
     typescript: 4.1.5
   languageName: unknown
   linkType: soft
@@ -16735,27 +16698,27 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"siroc@npm:^0.6.7":
-  version: 0.6.7
-  resolution: "siroc@npm:0.6.7"
+"siroc@npm:^0.7.0":
+  version: 0.7.0
+  resolution: "siroc@npm:0.7.0"
   dependencies:
     "@rollup/plugin-alias": ^3.1.2
     "@rollup/plugin-commonjs": ^17.1.0
     "@rollup/plugin-json": ^4.1.0
     "@rollup/plugin-node-resolve": ^11.2.0
-    "@rollup/plugin-replace": ^2.4.0
+    "@rollup/plugin-replace": ^2.4.1
     cac: ^6.7.2
     chalk: ^4.1.0
     consola: ^2.15.3
     defu: ^3.2.2
-    esbuild: ^0.7.22
+    esbuild: ^0.8.52
     execa: ^5.0.0
     fs-extra: ^9.1.0
     glob: ^7.1.6
     jiti: ^1.3.0
-    rollup: ^2.39.0
+    rollup: ^2.39.1
     rollup-plugin-dts: ^2.0.1
-    rollup-plugin-esbuild: 2.5.2
+    rollup-plugin-esbuild: 2.6.1
     sort-package-json: ^1.49.0
     typescript: ^4.1.5
     upath: ^2.0.1
@@ -16763,7 +16726,7 @@ fsevents@^1.2.7:
   bin:
     siroc: bin/cli.js
     siroc-runner: bin/runtime.js
-  checksum: 05d9ae78d86355a65dd8f8955017854e9290d1a055523b3059936971a41cccefac1697ca5c879d42ceb0bc0d81e761a0d5017a1995cae6b923f30c1d5e3d026e
+  checksum: d4cc960a7c260bc0f0d7ba5cd3f9b6ffee8bce471030e95f15ac0f4947789cd859ffcd4d2daa250a43438608c6f2f23459b43882f497fbe20b3718cb65dda9a9
   languageName: node
   linkType: hard
 
@@ -16941,7 +16904,7 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"source-map-support@npm:^0.5.17, source-map-support@npm:^0.5.6, source-map-support@npm:~0.5.12, source-map-support@npm:~0.5.19":
+"source-map-support@npm:^0.5.6, source-map-support@npm:~0.5.12, source-map-support@npm:~0.5.19":
   version: 0.5.19
   resolution: "source-map-support@npm:0.5.19"
   dependencies:
@@ -18029,27 +17992,6 @@ fsevents@^1.2.7:
     typescript: "*"
     webpack: "*"
   checksum: e09b71875034ec5daf0f6eac2acefea31c78df1a0aa2d6f76f66954326acf93bafa9092a5a7f5872276bba39ba4dfebbcb7c21ef88d4334ff95bb4d216b9dfe0
-  languageName: node
-  linkType: hard
-
-"ts-node@npm:^9.1.1":
-  version: 9.1.1
-  resolution: "ts-node@npm:9.1.1"
-  dependencies:
-    arg: ^4.1.0
-    create-require: ^1.1.0
-    diff: ^4.0.1
-    make-error: ^1.1.1
-    source-map-support: ^0.5.17
-    yn: 3.1.1
-  peerDependencies:
-    typescript: ">=2.7"
-  bin:
-    ts-node: dist/bin.js
-    ts-node-script: dist/bin-script.js
-    ts-node-transpile-only: dist/bin-transpile.js
-    ts-script: dist/bin-script-deprecated.js
-  checksum: a90db4a342872cd0e7a80babdfcb15d2f7c06e700d735003098f7cc79db575c3380580c58a19ae0d0eaab553af083651d4237060c92170e6f8ac4e64693113ea
   languageName: node
   linkType: hard
 
@@ -19500,13 +19442,6 @@ fsevents@^1.2.7:
     y18n: ^5.0.5
     yargs-parser: ^20.2.2
   checksum: a79ce1f043021cd645de1ffebb6149541d382ba68f4a6b5eca5d2ad65af51893371bbd78e240dc3b6cf0cbb419511ba5bda715dec992e4266e6863ea49f14feb
-  languageName: node
-  linkType: hard
-
-"yn@npm:3.1.1":
-  version: 3.1.1
-  resolution: "yn@npm:3.1.1"
-  checksum: bff63b80568d80c711670935427494dde47cdf97e8b04196b140ce0af519c81c5ee857eddad0caa8b422dd65aea0157bbfaacbb1546bebba623f0f383d5d9ae5
   languageName: node
   linkType: hard
 

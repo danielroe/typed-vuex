@@ -5,10 +5,10 @@
   "author": "Daniel Roe",
   "private": true,
   "scripts": {
-    "dev": "nuxt-ts",
-    "build": "nuxt-ts build",
-    "start": "nuxt-ts start",
-    "generate": "nuxt-ts generate",
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate",
     "now-build": "nuxt generate"
   },
   "dependencies": {
@@ -18,7 +18,6 @@
   "devDependencies": {
     "@nuxt/types": "latest",
     "@nuxt/typescript-build": "latest",
-    "@nuxt/typescript-runtime": "latest",
     "nuxt-typed-vuex": "latest",
     "vue-property-decorator": "9.0.0"
   }
