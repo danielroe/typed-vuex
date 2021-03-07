@@ -38,7 +38,7 @@
     "typed-vuex": "0.1.22"
   },
   "devDependencies": {
-    "@nuxt/test-utils": "^0.1.3",
+    "@nuxt/test-utils": "^0.2.0",
     "@nuxt/types": "^2.15.2",
     "@nuxt/typescript-build": "^2.0.6",
     "@types/normalize-path": "^3.0.0",
