@@ -9,25 +9,25 @@ position: 2
 
 1. Install Nuxt module:
 
-  <code-group>
-    <code-block label="Yarn" active>
-
+    <d-code-group>
+    <d-code-block label="Yarn" active>
+  
     ```bash
     yarn add nuxt-typed-vuex
     ```
-
-    </code-block>
-    <code-block label="NPM">
-
+  
+    </d-code-block>
+    <d-code-block label="NPM">
+  
     ```bash
     npm install nuxt-typed-vuex --save
     ```
+  
+    </d-code-block>
+  
+    </d-code-group>
 
-    </code-block>
-
-  </code-group>
-
-    <alert type="info">This will also install `typed-vuex` in your project, which is where the store accessor lives. You can import its helper functions from either `nuxt-typed-vuex` or from `typed-vuex`.</alert>
+    <d-alert type="info">This will also install `typed-vuex` in your project, which is where the store accessor lives. You can import its helper functions from either `nuxt-typed-vuex` or from `typed-vuex`.</d-alert>
 
 2. Add module to your `nuxt.config`:
 
@@ -37,11 +37,11 @@ position: 2
    ],
    ```
 
-   <alert type="info">
+   <d-alert type="info">
 
    `buildModules` require Nuxt 2.10+. If you are using an older version, add `nuxt-typed-vuex` to `modules` instead.
 
-    </alert>
+    </d-alert>
 
 ## Add type definitions
 
@@ -73,7 +73,7 @@ export const accessorType = getAccessorType({
 })
 ```
 
-<alert type="info">This may look different if you split your modules into separate files for `state`, `actions`, `mutations` and `getters`.</alert>
+<d-alert type="info">This may look different if you split your modules into separate files for `state`, `actions`, `mutations` and `getters`.</d-alert>
 
 ### Creating type definitions
 

@@ -32,7 +32,7 @@ export default async ({ store }: Context, inject: Inject) => {
 }
 ```
 
-<alert>If you are using a custom accessor in a Nuxt project, bear in mind that `useAccessor` used on its own will treat modules as non-namespaced unless they include `namespaced: true`.</alert>
+<d-alert>If you are using a custom accessor in a Nuxt project, bear in mind that `useAccessor` used on its own will treat modules as non-namespaced unless they include `namespaced: true`.</d-alert>
 
 ## Typing your custom accessor
 

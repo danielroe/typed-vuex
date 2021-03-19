@@ -9,11 +9,11 @@ A getter is a function that receives `state`, `getters`, `rootState` and `rootGe
 
 This package provides a helper function to reduce boilerplate: `getterTree`. This function adds typings and returns the getters passed to it, without transforming them.
 
-<alert>
+<d-alert>
 
 `typed-vuex` does not currently type-check anything but the state received.
 
-</alert>
+</d-alert>
 
 ```ts
 // Vanilla
@@ -37,8 +37,8 @@ export const getters = getterTree(state, {
 })
 ```
 
-<alert type="info">
+<d-alert type="info">
 
 Even if you do not use the `getterTree` helper function, make sure not to use the `GetterTree` type provided by Vuex. This will interfere with type inference. You won't lose out by omitting it, as Typescript will complain if you pass an improperly formed getter into [the `getAccessorType` function](/getting-started-nuxt#add-type-definitions).
 
-</alert>
+</d-alert>

@@ -6,4 +6,4 @@ fullscreen: True
 position: 33
 ---
 
-<code-sandbox src="https://codesandbox.io/s/github/danielroe/typed-vuex/tree/main/examples/vue?from-embed"></code-sandbox>
+<d-code-sandbox src="https://codesandbox.io/s/github/danielroe/typed-vuex/tree/main/examples/vue?from-embed"></d-code-sandbox>

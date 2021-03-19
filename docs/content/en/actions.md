@@ -9,15 +9,15 @@ Actions are async functions that have access to the Vuex instance and are passed
 
 This package provides a helper function to reduce boilerplate: `actionTree`. This function adds typings and returns the actions passed to it, without transforming them.
 
-<alert>If you use the helper function, only the `commit` method is typed - and only for mutations within the module.</alert>
+<d-alert>If you use the helper function, only the `commit` method is typed - and only for mutations within the module.</d-alert>
 
-<alert type="info">
+<d-alert type="info">
 
 1. Even if you do not use the `actionTree` helper function, make sure not to use the `ActionTree` type provided by Vuex. This will interfere with type inference. You won't lose out by omitting it, as Typescript will complain if you pass an incompatible action into [the `getAccessorType` function](/getting-started-nuxt#add-type-definitions).
 
 2. This package does not support [object-style dispatches](https://vuex.vuejs.org/guide/actions.html).
 
-</alert>
+</d-alert>
 
 ## Referencing other modules
 

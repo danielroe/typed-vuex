@@ -7,33 +7,32 @@ position: 3
 
 If you would like to benefit from a typed accessor to your store, but you're not using Nuxt, you can still use `typed-vuex`.
 
-<alert>
+<d-alert>
 
 Many of this project's default settings are based on Nuxt, so please file an issue if you experience any problems.
 
-</alert>
+</d-alert>
 
 ## Setup
 
 1. Install package:
 
-  <code-group>
-    <code-block label="Yarn" active>
+   <d-code-group>
+    <d-code-block label="Yarn" active>
 
     ```bash
     yarn add typed-vuex
     ```
 
-    </code-block>
-    <code-block label="NPM">
+    </d-code-block>
+    <d-code-block label="NPM">
 
     ```bash
     npm install typed-vuex --save
     ```
 
-    </code-block>
-
-  </code-group>
+    </d-code-block>
+   </d-code-group>
 
 2. Instantiate your accessor
 
