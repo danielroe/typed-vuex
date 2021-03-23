@@ -15771,7 +15771,7 @@ fsevents@^1.2.7:
     lerna: ^4.0.0
     release-it: ^14.5.0
     release-it-yarn-workspaces: ^2.0.0
-    semver: ^7.3.4
+    semver: ^7.3.5
     siroc: ^0.8.0
     typescript: 4.2.3
   languageName: unknown
@@ -16010,6 +16010,17 @@ fsevents@^1.2.7:
   bin:
     semver: ./bin/semver.js
   checksum: f0d155c06a67cc7e500c92d929339f1c6efd4ce9fe398aee6acc00a2333489cca0f5b4e76ee7292beba237fcca4b5a3d4a6153471f105f56299801bdab37289f
+  languageName: node
+  linkType: hard
+
+"semver@npm:^7.3.5":
+  version: 7.3.5
+  resolution: "semver@npm:7.3.5"
+  dependencies:
+    lru-cache: ^6.0.0
+  bin:
+    semver: bin/semver.js
+  checksum: c53624ddf4b9779bcbf55a1eb8b37074cc44bfeca416f3cc263429408202a8a3c59b00eef8c647d697303bc39b95c022a5c61959221d3814bfb1270ff7c14986
   languageName: node
   linkType: hard
 
