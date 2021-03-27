@@ -1,4 +1,9 @@
-import { getterTree, mutationTree, actionTree, useAccessor } from '../../../src'
+import {
+  getterTree,
+  mutationTree,
+  actionTree,
+  useAccessor,
+} from '../../../../typed-vuex/src'
 import { pattern } from '.'
 
 export const state = () => ({

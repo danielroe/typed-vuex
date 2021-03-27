@@ -33,15 +33,13 @@
     "dev": "nuxt test/fixture"
   },
   "dependencies": {
-    "consola": "^2.15.3",
-    "normalize-path": "^3.0.0",
-    "typed-vuex": "0.1.22"
+    "typed-vuex": "0.1.22",
+    "upath": "^2.0.1"
   },
   "devDependencies": {
     "@nuxt/test-utils": "^0.2.0",
     "@nuxt/types": "^2.15.3",
     "@nuxt/typescript-build": "^2.1.0",
-    "@types/normalize-path": "^3.0.0",
     "core-js": "3.9.1",
     "nuxt": "^2.15.3",
     "ts-loader": "^8.0.18",

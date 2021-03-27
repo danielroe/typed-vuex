@@ -1,4 +1,4 @@
-import { getAccessorType, mutationTree, actionTree } from 'nuxt-typed-vuex'
+import { getAccessorType, mutationTree, actionTree } from 'typed-vuex'
 import { Context } from '@nuxt/types'
 
 import * as submodule from './submodule'

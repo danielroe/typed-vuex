@@ -1,4 +1,4 @@
-import { actionTree } from '../../../src'
+import { actionTree } from '../../../../typed-vuex/src'
 
 export const state = () => ({
   n: '',

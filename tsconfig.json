@@ -2,6 +2,7 @@
   "compilerOptions": {
     "strict": true,
     "sourceMap": true,
+    "resolveJsonModule": true,
     "declaration": true,
     "target": "esnext",
     "module": "esnext",
