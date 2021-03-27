@@ -1,31 +1,21 @@
 import nuxtModule from '../src'
-import path from 'path'
+
+import { setupTest, expectModuleToBeCalledWith } from '@nuxt/test-utils'
 
 describe('nuxt module', () => {
+  setupTest({
+    testDir: __dirname,
+  })
   it('exists', () => {
     expect(nuxtModule).toBeDefined()
   })
-  it('warns without store defined', () => {
-    // @ts-ignore
-    global.console = { warn: jest.fn() }
-    const addPlugin = jest.fn()
-    nuxtModule.call({
-      options: {},
-      addPlugin,
-    })
-
-    expect(console.warn).toBeCalled()
-  })
   it('adds plugin', () => {
-    const addPlugin = jest.fn()
-    nuxtModule.call({
+    expectModuleToBeCalledWith('addPlugin', {
+      src: expect.stringContaining('template/plugin.js'),
+      fileName: 'nuxt-typed-vuex.js',
       options: {
-        store: {},
+        store: expect.stringContaining('store'),
       },
-      addPlugin,
     })
-    expect(addPlugin).toHaveBeenCalled()
-    expect(addPlugin.mock.calls[0][0].options.store).toBeDefined()
-    expect(path.resolve(addPlugin.mock.calls[0][0].src)).toBeDefined()
   })
 })

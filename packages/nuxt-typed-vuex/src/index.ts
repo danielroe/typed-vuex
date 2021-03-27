@@ -7,7 +7,7 @@ import { name, version } from '../package.json'
 /**
  * @private
  */
-const nuxtTypedVuex: Module = async function() {
+const nuxtTypedVuex: Module = function nuxtTypedVuex() {
   const nuxtOptions = this.nuxt.options as NuxtOptions
 
   if (!nuxtOptions.store) console.warn('You do not have a store defined.')
