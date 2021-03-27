@@ -27,7 +27,7 @@ position: 2
   
     </d-code-group>
 
-    <d-alert type="info">This will also install `typed-vuex` in your project, which is where the store accessor lives. You can import its helper functions from either `nuxt-typed-vuex` or from `typed-vuex`.</d-alert>
+    <d-alert type="info">This will also install `typed-vuex` in your project, which is where the store accessor lives. All the helper functions are imported from `typed-vuex`.</d-alert>
 
 2. Add module to your `nuxt.config`:
 

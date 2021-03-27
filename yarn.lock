@@ -3697,13 +3697,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/normalize-path@npm:^3.0.0":
-  version: 3.0.0
-  resolution: "@types/normalize-path@npm:3.0.0"
-  checksum: 1cff3a34d0c0c37bca26a60e19407783fe85cde0af0ccfe7773001019c6339927460127c043163638d04f54415d165766173d9881ad8e7eb7870e4be2657ee45
-  languageName: node
-  linkType: hard
-
 "@types/optimize-css-assets-webpack-plugin@npm:^5.0.2":
   version: 5.0.2
   resolution: "@types/optimize-css-assets-webpack-plugin@npm:5.0.2"
@@ -12919,14 +12912,12 @@ fsevents@^1.2.7:
     "@nuxt/test-utils": ^0.2.0
     "@nuxt/types": ^2.15.3
     "@nuxt/typescript-build": ^2.1.0
-    "@types/normalize-path": ^3.0.0
-    consola: ^2.15.3
     core-js: 3.9.1
-    normalize-path: ^3.0.0
     nuxt: ^2.15.3
     ts-loader: ^8.0.18
     tsd: ^0.14.0
     typed-vuex: 0.1.22
+    upath: ^2.0.1
   peerDependencies:
     "@nuxt/types": ^2.15.3
   languageName: unknown
