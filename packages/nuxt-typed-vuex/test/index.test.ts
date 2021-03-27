@@ -44,7 +44,9 @@ describe('nuxt-typed-vuex build', () => {
     iterateOnDirectory(options.generate.dir!, filename =>
       generatedFiles.push(relative(__dirname, filename))
     )
-    expect(generatedFiles).toContainEqual(expect.stringMatching('dist/index.html'))
+    expect(generatedFiles).toContainEqual(
+      expect.stringMatching(/dist[\\/]index.html/)
+    )
   })
 
   test('plugin fails without store', async () => {
