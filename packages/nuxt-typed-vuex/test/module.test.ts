@@ -11,7 +11,7 @@ describe('nuxt module', () => {
   })
   it('adds plugin', () => {
     expectModuleToBeCalledWith('addPlugin', {
-      src: expect.stringContaining('template/plugin.js'),
+      src: expect.stringMatching(/template[\\/]plugin.js/),
       fileName: 'nuxt-typed-vuex.js',
       options: {
         store: expect.stringContaining('store'),

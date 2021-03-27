@@ -10,10 +10,11 @@ on:
 
 jobs:
   compatibility:
-    runs-on: ubuntu-latest
+    runs-on: ${{ matrix.os }}
     strategy:
       matrix:
         nuxt: ["2.13", "2.14"]
+        os: [windows-latest, ubuntu-latest]
 
     steps:
       - uses: actions/checkout@master
