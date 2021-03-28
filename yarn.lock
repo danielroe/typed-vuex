@@ -12914,7 +12914,7 @@ fsevents@^1.2.7:
     "@nuxt/typescript-build": ^2.1.0
     core-js: 3.9.1
     nuxt: ^2.15.3
-    ts-loader: ^8.0.18
+    ts-loader: ^8.1.0
     tsd: ^0.14.0
     typed-vuex: 0.1.22
     upath: ^2.0.1
@@ -17438,7 +17438,7 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"ts-loader@npm:^8.0.17, ts-loader@npm:^8.0.18":
+"ts-loader@npm:^8.0.17":
   version: 8.0.18
   resolution: "ts-loader@npm:8.0.18"
   dependencies:
@@ -17451,6 +17451,22 @@ fsevents@^1.2.7:
     typescript: "*"
     webpack: "*"
   checksum: 16c1a3cc4d03fb96293f9e0dd163e9eb872d8b2e610eeff50ed1502b3c5fda870cff3b9cc48423cf1f4bcd4cb5755c4456b3e7d8351014702a7f34d5fdd1ecc0
+  languageName: node
+  linkType: hard
+
+"ts-loader@npm:^8.1.0":
+  version: 8.1.0
+  resolution: "ts-loader@npm:8.1.0"
+  dependencies:
+    chalk: ^4.1.0
+    enhanced-resolve: ^4.0.0
+    loader-utils: ^2.0.0
+    micromatch: ^4.0.0
+    semver: ^7.3.4
+  peerDependencies:
+    typescript: "*"
+    webpack: "*"
+  checksum: f49f5a4e04d3032d5be72f0d29b572eedd57069c206566a443d4b0246409048ccbd85596bb9bd377999875d41c28b8e193b6f54a139c4fae52a3a3768f7020ee
   languageName: node
   linkType: hard
 
