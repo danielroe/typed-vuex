@@ -40,7 +40,7 @@
     "@nuxt/test-utils": "^0.2.0",
     "@nuxt/types": "^2.15.3",
     "@nuxt/typescript-build": "^2.1.0",
-    "core-js": "3.9.1",
+    "core-js": "3.10.0",
     "nuxt": "^2.15.3",
     "ts-loader": "^8.1.0",
     "tsd": "^0.14.0"

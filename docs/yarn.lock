@@ -5517,10 +5517,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"core-js@npm:3.9.1":
-  version: 3.9.1
-  resolution: "core-js@npm:3.9.1"
-  checksum: 3f360466246e816ff745f349bf0ea0c54bc3a05203638d84c5f0eae3583f07e7d848d6aa9b69c30467efb418e526bae034a6da50bcfda8b2cd413e5144cd1444
+"core-js@npm:3.10.0":
+  version: 3.10.0
+  resolution: "core-js@npm:3.10.0"
+  checksum: d8bb20f7da9fdd944057cb41938153a7c4e471fb7d529e37958e32c7a20ab9506abbd03932750c27c8fd02de03a8e4775ba68252506a0dd42dda5404901ae9f1
   languageName: node
   linkType: hard
 
@@ -13378,7 +13378,7 @@ fsevents@~2.3.1:
   version: 0.0.0-use.local
   resolution: "root-workspace-0b6124@workspace:."
   dependencies:
-    core-js: 3.9.1
+    core-js: 3.10.0
     docus: ^0.1.5
     nuxt: ^2.15.3
   languageName: unknown
