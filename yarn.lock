@@ -16109,7 +16109,7 @@ fsevents@^1.2.7:
     release-it: ^14.5.1
     release-it-yarn-workspaces: ^2.0.0
     semver: ^7.3.5
-    siroc: ^0.9.0
+    siroc: ^0.9.1
     typescript: 4.2.3
   languageName: unknown
   linkType: soft
@@ -16555,9 +16555,9 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"siroc@npm:^0.9.0":
-  version: 0.9.0
-  resolution: "siroc@npm:0.9.0"
+"siroc@npm:^0.9.1":
+  version: 0.9.1
+  resolution: "siroc@npm:0.9.1"
   dependencies:
     "@rollup/plugin-alias": ^3.1.2
     "@rollup/plugin-commonjs": ^18.0.0
@@ -16584,7 +16584,7 @@ fsevents@^1.2.7:
   bin:
     siroc: bin/cli.js
     siroc-runner: bin/runtime.js
-  checksum: 18f6e704b398c0b5cf808e265c8a857b61efce64f52006e2f932eb5614993fac94d4fbcd5a57273d0a3adaf44eb5649f1f771a5cc7469d89c9d1e38fe40820ce
+  checksum: b73a5474593263b73f73ebd1b5d93e0d246e249c09cdb37eef4b7354309ed7e75c35071272ad5d2880a6c260f45da5da84dbccb1c76999b2b1be77eec492158a
   languageName: node
   linkType: hard
 
