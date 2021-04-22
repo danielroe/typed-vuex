@@ -8130,6 +8130,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"enhanced-resolve@npm:^5.0.0":
+  version: 5.8.0
+  resolution: "enhanced-resolve@npm:5.8.0"
+  dependencies:
+    graceful-fs: ^4.2.4
+    tapable: ^2.2.0
+  checksum: a3e1131c9ba0dd6f8276f068ddac4e6469d824ee8132f748e2734722b9f25360f4cb5a7fbec1cab8cd56815a6762e0bb1b8d088cbdf2a276d30d573ac5528bbb
+  languageName: node
+  linkType: hard
+
 "enquirer@npm:^2.3.5":
   version: 2.3.6
   resolution: "enquirer@npm:2.3.6"
@@ -13516,7 +13526,7 @@ fsevents@^1.2.7:
     "@nuxt/typescript-build": ^2.1.0
     core-js: 3.10.1
     nuxt: ^2.15.4
-    ts-loader: ^8.1.0
+    ts-loader: ^9.1.0
     tsd: ^0.14.0
     typed-vuex: 0.1.22
     upath: ^2.0.1
@@ -17648,6 +17658,13 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
+"tapable@npm:^2.2.0":
+  version: 2.2.0
+  resolution: "tapable@npm:2.2.0"
+  checksum: f8ed725aedb3d777bf908ff06c02d1a2108667d3e64af87dd45354ac8de67e7e4fe1a567e215057fb1a2a5437b31d80cc5e5ddbb8327f7280afd4494967a9a93
+  languageName: node
+  linkType: hard
+
 "tar@npm:^4.4.12":
   version: 4.4.13
   resolution: "tar@npm:4.4.13"
@@ -18045,19 +18062,18 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"ts-loader@npm:^8.1.0":
-  version: 8.1.0
-  resolution: "ts-loader@npm:8.1.0"
+"ts-loader@npm:^9.1.0":
+  version: 9.1.0
+  resolution: "ts-loader@npm:9.1.0"
   dependencies:
     chalk: ^4.1.0
-    enhanced-resolve: ^4.0.0
-    loader-utils: ^2.0.0
+    enhanced-resolve: ^5.0.0
     micromatch: ^4.0.0
     semver: ^7.3.4
   peerDependencies:
     typescript: "*"
     webpack: "*"
-  checksum: f49f5a4e04d3032d5be72f0d29b572eedd57069c206566a443d4b0246409048ccbd85596bb9bd377999875d41c28b8e193b6f54a139c4fae52a3a3768f7020ee
+  checksum: 1491c75c96cb59c1ca85110d7ab24512365da37637140da05c36809de924f953ade5a367b62a1dcfa477e9b104f42d28541a9a116acd12ae9357b04d13e7bfb8
   languageName: node
   linkType: hard
 
