@@ -40,9 +40,9 @@
     "@nuxt/test-utils": "^0.2.2",
     "@nuxt/types": "^2.15.4",
     "@nuxt/typescript-build": "^2.1.0",
-    "core-js": "3.10.1",
+    "core-js": "3.11.1",
     "nuxt": "^2.15.4",
-    "ts-loader": "^8.1.0",
+    "ts-loader": "^8.2.0",
     "tsd": "^0.14.0"
   },
   "peerDependencies": {
