@@ -1,3 +1,21 @@
+## [0.2.0](https://github.com/danielroe/typed-vuex/compare/0.1.22...0.2.0) (2021-04-29)
+
+
+### ⚠ BREAKING CHANGES
+
+* all imports are now from `typed-vuex` rather than `nuxt-typed-vuex`, which is *exclusively* the module in your `nuxt.config`
+
+**Migration path**: Search/replace through your project `nuxt-typed-vuex` for `typed-vuex`, with the sole exception of your `nuxt.config.js`. 😊
+
+### Bug Fixes
+
+* expose all typed-vuex types ([#231](https://github.com/danielroe/typed-vuex/issues/231)) ([9d6c479](https://github.com/danielroe/typed-vuex/commit/9d6c479b0d0781916596fd27e5f5e5e32f8579c9))
+
+
+### Code Refactoring
+
+* separate module from runtime ([#219](https://github.com/danielroe/typed-vuex/issues/219)) ([b8d556b](https://github.com/danielroe/typed-vuex/commit/b8d556b041e162c66de3e8dbd11c8f1dd5461c2a))
+
 ### [0.1.22](https://github.com/danielroe/nuxt-typed-vuex/compare/0.1.21...0.1.22) (2020-09-30)
 
 
