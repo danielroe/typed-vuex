@@ -38,10 +38,10 @@
   },
   "devDependencies": {
     "@nuxt/test-utils": "^0.2.2",
-    "@nuxt/types": "^2.15.4",
+    "@nuxt/types": "^2.15.5",
     "@nuxt/typescript-build": "^2.1.0",
-    "core-js": "3.11.2",
-    "nuxt": "^2.15.4",
+    "core-js": "3.12.1",
+    "nuxt": "^2.15.5",
     "ts-loader": "^8.2.0",
     "tsd": "^0.14.0"
   },
