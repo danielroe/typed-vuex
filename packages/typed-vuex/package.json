@@ -33,7 +33,7 @@
     "test:types": "yarn tsd"
   },
   "devDependencies": {
-    "tsd": "^0.14.0",
+    "tsd": "^0.15.1",
     "vue": "^2.6.12",
     "vuex": "^3.6.2"
   },
