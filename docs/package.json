@@ -1,8 +1,8 @@
 {
   "private": true,
   "scripts": {
-    "dev": "nuxt",
-    "generate": "nuxt generate",
+    "dev": "npx nuxt dev",
+    "generate": "npx nuxt generate",
     "now-build": "yarn generate"
   },
   "devDependencies": {
