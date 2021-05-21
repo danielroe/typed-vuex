@@ -46,7 +46,7 @@
     "tsd": "^0.15.1"
   },
   "peerDependencies": {
-    "@nuxt/types": "^2.15.4"
+    "@nuxt/types": "^2.15.6"
   },
   "tsd": {
     "directory": "test/tsd",
