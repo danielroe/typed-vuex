@@ -9757,12 +9757,12 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"husky@npm:^6.0.0":
-  version: 6.0.0
-  resolution: "husky@npm:6.0.0"
+"husky@npm:^7.0.1":
+  version: 7.0.1
+  resolution: "husky@npm:7.0.1"
   bin:
     husky: lib/bin.js
-  checksum: db6da76a670b2cd1e967990decfd291e6f35a5aee4d362208a51771474d3b4896d526acb4bf0413c2d7154716e42a4d8b6cc19f2bb108e48d1f554624c723a00
+  checksum: b2ea1460f1126ed7161779b1b89f7ec8ae66fb6723e0e9fd47c522f454f4a2ea7e31a21d6ce2eb5d32e9837d232fb0245783425c109df0adab53668f8c8d8fc8
   languageName: node
   linkType: hard
 
@@ -15951,7 +15951,7 @@ fsevents@^1.2.7:
     codecov: ^3.8.2
     conventional-changelog-conventionalcommits: ^4.6.0
     eslint: 7.29.0
-    husky: ^6.0.0
+    husky: ^7.0.1
     jest: 27.0.6
     lerna: ^4.0.0
     release-it: ^14.10.0
