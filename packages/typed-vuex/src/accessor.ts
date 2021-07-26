@@ -42,7 +42,7 @@ const createAccessor = <T extends State, G, M, A, S extends NuxtModules>(
     })
   })
   const evaluatedState = state
-    ? typeof state === 'function'
+    ? state instanceof Function
       ? state()
       : state
     : {}
