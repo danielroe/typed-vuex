@@ -83,7 +83,7 @@ export default Vue.extend({
 ### Composition API
 
 ```ts{}[components/sampleComponent.vue]
-import { defineComponent, computed } from "@nuxtjs/composition-api"
+import { defineComponent, computed } from '@nuxtjs/composition-api'
 
 export default defineComponent({
   setup(_props, { root }) {
@@ -99,7 +99,7 @@ export default defineComponent({
 Since you are already using Composition API, you might as well create a hook dedicated to this
 
 ```ts{}[hooks/useAccessor.ts]
-import { wrapProperty } from "@nuxtjs/composition-api"
+import { wrapProperty } from '@nuxtjs/composition-api'
 
 export const useAccessor = wrapProperty('$accessor', false)
 ```
@@ -108,8 +108,8 @@ Should your IDE not properly recognize type declarations setup as described in [
 you may want to explicitly define accessor types like in the following example:
 
 ```ts{}[hooks/useAccessor.ts]
-import { wrapProperty } from "@nuxtjs/composition-api"
-import { accessorType } from "~/store"
+import { wrapProperty } from '@nuxtjs/composition-api'
+import { accessorType } from '~/store'
 
 export const useAccessor = (): typeof accessorType => (wrapProperty('$accessor', false))()
 ```
