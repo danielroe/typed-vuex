@@ -3720,13 +3720,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/jest@npm:26.0.23":
-  version: 26.0.23
-  resolution: "@types/jest@npm:26.0.23"
+"@types/jest@npm:27.0.0":
+  version: 27.0.0
+  resolution: "@types/jest@npm:27.0.0"
   dependencies:
     jest-diff: ^26.0.0
     pretty-format: ^26.0.0
-  checksum: 69db26061e6be34de2a440c8a470b651c53ba6ee0057614a278c4f756ff00281f46cc075b24e5bd761f399f175f49d0a5758b50dd921342a8592461548dea29a
+  checksum: bb894a1fcc0e244ecefdf2b43ed786c0354c416d00e433155bf68569d0d8a45b012b008fbe6673890903b785076b9a34f128c7095e1b25f4481f3d2a76c7495f
   languageName: node
   linkType: hard
 
@@ -15946,7 +15946,7 @@ fsevents@^1.2.7:
     "@commitlint/config-conventional": ^13.1.0
     "@nuxtjs/eslint-config-typescript": 6.0.1
     "@release-it/conventional-changelog": ^3.0.1
-    "@types/jest": 26.0.23
+    "@types/jest": 27.0.0
     "@typescript-eslint/eslint-plugin": 4.28.1
     "@typescript-eslint/parser": 4.28.1
     codecov: ^3.8.2
