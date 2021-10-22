@@ -26,7 +26,7 @@
     "@typescript-eslint/parser": "4.30.0",
     "codecov": "^3.8.3",
     "conventional-changelog-conventionalcommits": "^4.6.0",
-    "eslint": "7.32.0",
+    "eslint": "8.1.0",
     "husky": "^7.0.2",
     "jest": "27.1.0",
     "lerna": "^4.0.0",
