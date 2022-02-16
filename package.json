@@ -9,7 +9,6 @@
     "lint": "eslint --ext .ts,.tsx,.js .",
     "lint:fix": "yarn lint --fix",
     "postinstall": "husky install",
-    "test:types": "lerna run test:types",
     "test": "yarn lint && jest && yarn test:types"
   },
   "devDependencies": {
@@ -29,7 +28,6 @@
     "eslint": "8.9.0",
     "husky": "^7.0.4",
     "jest": "27.5.1",
-    "lerna": "^4.0.0",
     "release-it": "^14.12.4",
     "release-it-yarn-workspaces": "^2.0.1",
     "semver": "^7.3.5",
