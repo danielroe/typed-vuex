@@ -4,6 +4,7 @@ import {
   getAccessorType,
   mutationTree,
   actionTree,
+  createMapper,
 } from '../../../../typed-vuex/src'
 
 import * as submodule from './submodule'
@@ -56,3 +57,4 @@ export const pattern = {
 export const storeType = getStoreType(pattern)
 
 export const accessorType = getAccessorType(pattern)
+export const mapper = createMapper(accessorType)

@@ -12,7 +12,7 @@ export const getAccessorType = <
 >(
   store: Partial<NuxtStoreInput<T, G, M, A, S>>
 ) => {
-  return {} as MergedStoreType<typeof store & BlankStore>
+  return (undefined as any) as MergedStoreType<typeof store & BlankStore>
 }
 
 const getNestedState = (parent: any, namespaces: string[]): any => {

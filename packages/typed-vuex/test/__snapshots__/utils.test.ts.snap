@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`mapper works within a component with injected accessor 1`] = `
+"email: \\"\\"
+        firstName: \\"\\"
+        fullEmail: \\"\\"
+        fullName: \\" \\""
+`;
+
+exports[`mapper works within a component with injected accessor 2`] = `
+"<pre>        email: \\"daniel@test.com\\"
+        firstName: \\"\\"
+        fullEmail: \\"daniel@test.com\\"
+        fullName: \\" Smith\\"
+      </pre>"
+`;
