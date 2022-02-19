@@ -12,5 +12,6 @@
       "infile": "CHANGELOG.md"
     },
     "release-it-yarn-workspaces": true
-  }
+  },
+  "npm": false
 }
