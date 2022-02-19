@@ -8,8 +8,10 @@ export const createMapper = <T extends Record<string, any>>(accessor: T) => {
         (Array.isArray(prop) ? prop : [prop]).map(property => [
           property,
           function(...args: any[]) {
-            // @ts-ignore
-            const value = accessor?.[property] ?? this.$accessor?.[property]
+            const value = accessor
+              ? accessor[property]
+              : // @ts-ignore
+                this.$accessor[property]
             if (value && typeof value === 'function') return value(...args)
             return value
           },
@@ -22,7 +24,7 @@ export const createMapper = <T extends Record<string, any>>(accessor: T) => {
         function(...args: any[]) {
           const value =
             // @ts-ignore
-            accessor?.[prop][property] ?? this.$accessor?.[prop][property]
+            accessor ? accessor[prop][property] : this.$accessor[prop][property]
           if (value && typeof value === 'function') return value(...args)
           return value
         },
