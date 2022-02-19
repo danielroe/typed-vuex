@@ -1,6 +1,6 @@
 {
   "name": "nuxt-typed-vuex",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "A typed store accessor for Nuxt.",
   "keywords": [
     "vuex",
@@ -33,7 +33,7 @@
     "dev": "nuxt test/fixture"
   },
   "dependencies": {
-    "typed-vuex": "0.2.0",
+    "typed-vuex": "0.3.0",
     "upath": "^2.0.1"
   },
   "devDependencies": {

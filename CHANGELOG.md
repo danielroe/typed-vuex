@@ -1,3 +1,15 @@
+## [0.3.0](https://github.com/danielroe/typed-vuex/compare/0.2.0...0.3.0) (2022-02-19)
+
+
+### Features
+
+* add `createMapper` convenience utility ([#264](https://github.com/danielroe/typed-vuex/issues/264)) ([a26d2da](https://github.com/danielroe/typed-vuex/commit/a26d2da67c51beb0733e44c1da05482eaeca1d90))
+
+
+### Bug Fixes
+
+* check Function instance for store state rather than typeof ([4363a56](https://github.com/danielroe/typed-vuex/commit/4363a5602d1031944d226117f04970785f14b5c8))
+
 ## [0.2.0](https://github.com/danielroe/typed-vuex/compare/0.1.22...0.2.0) (2021-04-29)
 
 
