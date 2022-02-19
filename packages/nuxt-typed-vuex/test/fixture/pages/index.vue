@@ -12,6 +12,7 @@
 
 <script>
 import Vue from 'vue'
+import { mapper } from '~/store'
 
 export default Vue.extend({
   asyncData() {
@@ -24,11 +25,19 @@ export default Vue.extend({
     this.int = setInterval(() => {
       this.date = Date.now()
     }, 1000)
+    this.setEmail('my@test.com')
+    console.log(this.fullEmail)
+    this.setFirstName('John')
   },
   computed: {
+    ...mapper('fullEmail'),
     computedDate() {
       return new Date(this.date)
     },
+  },
+  methods: {
+    ...mapper(['setEmail']),
+    ...mapper('submodule', ['setFirstName']),
   },
   beforeDestroy() {
     clearInterval(this.int)
