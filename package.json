@@ -2,8 +2,7 @@
   "private": true,
   "version": "0.3.0",
   "workspaces": [
-    "packages/*",
-    "examples/*"
+    "packages/*"
   ],
   "scripts": {
     "build": "siroc build",
