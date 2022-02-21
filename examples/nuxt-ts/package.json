@@ -13,12 +13,12 @@
   },
   "dependencies": {
     "nuxt": "latest",
-    "vue-class-component": "^7.2.5"
+    "vue-class-component": "^7"
   },
   "devDependencies": {
     "@nuxt/types": "latest",
     "@nuxt/typescript-build": "latest",
     "nuxt-typed-vuex": "latest",
-    "vue-property-decorator": "9.0.0"
+    "vue-property-decorator": "^9"
   }
 }

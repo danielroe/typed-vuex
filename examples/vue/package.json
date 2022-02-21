@@ -8,26 +8,26 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
-    "core-js": "3.6.5",
+    "core-js": "latest",
     "typed-vuex": "latest",
-    "vue": "2.6.12",
-    "vue-class-component": "7.2.5",
-    "vue-property-decorator": "9.0.0",
-    "vuex": "3.6.2"
+    "vue": "^2",
+    "vue-class-component": "^7",
+    "vue-property-decorator": "^9",
+    "vuex": "^3"
   },
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "4.0.1",
-    "@typescript-eslint/parser": "4.0.1",
-    "@vue/cli-plugin-babel": "4.5.4",
-    "@vue/cli-plugin-eslint": "4.5.4",
-    "@vue/cli-plugin-typescript": "4.5.4",
-    "@vue/cli-plugin-vuex": "4.5.4",
-    "@vue/cli-service": "4.5.4",
-    "@vue/eslint-config-typescript": "5.1.0",
-    "eslint": "7.8.1",
-    "eslint-plugin-vue": "6.2.2",
-    "typescript": "4.0.2",
-    "vue-template-compiler": "2.6.12"
+    "@typescript-eslint/eslint-plugin": "^4",
+    "@typescript-eslint/parser": "^4",
+    "@vue/cli-plugin-babel": "^4",
+    "@vue/cli-plugin-eslint": "^4",
+    "@vue/cli-plugin-typescript": "^4",
+    "@vue/cli-plugin-vuex": "^4",
+    "@vue/cli-service": "^4",
+    "@vue/eslint-config-typescript": "^5",
+    "eslint": "^7",
+    "eslint-plugin-vue": "^6",
+    "typescript": "^4",
+    "vue-template-compiler": "^2"
   },
   "resolutions": {
     "minimist": ">=1.2.2",

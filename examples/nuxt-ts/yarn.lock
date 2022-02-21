@@ -7305,8 +7305,8 @@ fsevents@~2.1.2:
     "@nuxt/typescript-build": latest
     nuxt: latest
     nuxt-typed-vuex: latest
-    vue-class-component: ^7.2.5
-    vue-property-decorator: 9.0.0
+    vue-class-component: ^7
+    vue-property-decorator: ^9
   languageName: unknown
   linkType: soft
 
@@ -10639,12 +10639,12 @@ typescript@~4.0:
   languageName: node
   linkType: hard
 
-"vue-class-component@npm:^7.2.5":
-  version: 7.2.5
-  resolution: "vue-class-component@npm:7.2.5"
+"vue-class-component@npm:^7":
+  version: 7.2.6
+  resolution: "vue-class-component@npm:7.2.6"
   peerDependencies:
     vue: ^2.0.0
-  checksum: 2c9de8e196663c17c849ec1d8dfccac72b9cb13d010eb8144d2347c101624416b143a08725aa017882449985b6f26e1796e33d16c6633aa8d1d96020475e9c0a
+  checksum: 3b4e1de0328b2af0216cbbf125c4ac3da5701c9585713ee634f887092f4faaa1ff9589130ec9fc0b3240d7709217eb8d03e9c0e27fe80768d2883ffe5faf9a14
   languageName: node
   linkType: hard
 
@@ -10699,13 +10699,13 @@ typescript@~4.0:
   languageName: node
   linkType: hard
 
-"vue-property-decorator@npm:9.0.0":
-  version: 9.0.0
-  resolution: "vue-property-decorator@npm:9.0.0"
+"vue-property-decorator@npm:^9":
+  version: 9.1.2
+  resolution: "vue-property-decorator@npm:9.1.2"
   peerDependencies:
     vue: "*"
     vue-class-component: "*"
-  checksum: 31cdd1b70bb15da6d8e383c8cc4549e9d1be51fc619ecbc005f7ce989165ded7482d79e72b38bb0b0841f74353e66296daac9ee8139efefb0b00c1652b75bf11
+  checksum: 0155127c3e31bde1c6da13116793a215d60f445b5338e5f2717e0090556f698284d555b7c3f3e76c651c82880f1560d6f8d992f183c50a9be09ce7fe6d1f5300
   languageName: node
   linkType: hard
 
