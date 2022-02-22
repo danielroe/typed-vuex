@@ -26,12 +26,16 @@ export interface NuxtStore {
   modules: NuxtModules
 }
 
+export interface ExtendedNuxtStore extends NuxtStore {
+  dynamic: boolean;
+}
+
 export interface NuxtStoreInput<
   T extends State,
   G,
   M,
   A,
-  S extends { [key: string]: Partial<NuxtStore> }
+  S extends { [key: string]: Partial<ExtendedNuxtStore> }
 > {
   namespaced?: boolean
   state: T

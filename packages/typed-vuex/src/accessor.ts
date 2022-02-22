@@ -1,15 +1,13 @@
-import { Store, GetterTree, MutationTree, ActionTree } from 'vuex'
-import { NuxtStoreInput, MergedStoreType, BlankStore } from './types/store'
-import { State, StateType } from './types/state'
-import { NuxtModules } from './types/modules'
+import {ActionTree, GetterTree, Module, MutationTree, Store} from 'vuex'
+import {BlankStore, MergedStoreType, NuxtStoreInput} from './types/store'
+import {State, StateType} from './types/state'
+import {NuxtModules} from './types/modules'
 
-export const getAccessorType = <
-  T extends State,
+export const getAccessorType = <T extends State,
   G extends GetterTree<StateType<T>, any>,
   M extends MutationTree<StateType<T>>,
   A extends ActionTree<StateType<T>, any>,
-  S extends NuxtModules
->(
+  S extends NuxtModules>(
   store: Partial<NuxtStoreInput<T, G, M, A, S>>
 ) => {
   return (undefined as any) as MergedStoreType<typeof store & BlankStore>
@@ -65,13 +63,11 @@ const createAccessor = <T extends State, G, M, A, S extends NuxtModules>(
   return accessor
 }
 
-export const useAccessor = <
-  T extends State,
+export const useAccessor = <T extends State,
   G extends GetterTree<StateType<T>, any>,
   M extends MutationTree<StateType<T>>,
   A extends ActionTree<StateType<T>, any>,
-  S extends NuxtModules
->(
+  S extends NuxtModules>(
   store: Store<any>,
   input: Partial<NuxtStoreInput<T, G, M, A, S>>,
   namespace?: string
@@ -96,4 +92,57 @@ export const useAccessor = <
 export const getAccessorFromStore = (pattern: any) => {
   return (store: Store<any>) =>
     useAccessor(store, pattern._modules.root._rawModule)
+}
+
+export const registerModule = (
+  path: string | [string, ...string[]],
+  store: Store<any>,
+  accessor: MergedStoreType<Partial<NuxtStoreInput<any, any, any, any, any>> & BlankStore, string>,
+  module: Module<any, any>
+) => {
+  module.namespaced = true
+
+  if (module.modules) module.modules = Object.entries(module.modules).reduce((acc, [key, value]) => ({
+    ...acc,
+    [key]: {
+      ...value,
+      namespaced: true,
+    }
+  }), {}) as typeof module['modules']
+
+  let preserveState = false
+  if (typeof path === 'string') preserveState = !!store.state[path]
+  else {
+    let target = store.state
+    for (const key of path) {
+      if (!target) break
+      target = target[key]
+    }
+    preserveState = !!target
+  }
+
+  const paths = typeof path === 'string' ? [path] : path
+
+  let target = accessor;
+  paths.forEach((part, index) => {
+    if (index === paths.length - 1) {
+      if (!target) throw new Error(`Could not find parent module for ${paths[index - 1] || paths[index]}`);
+
+      store.registerModule(path as string, module as Module<any, any>, {
+        preserveState,
+      })
+      target[part] = useAccessor(store, module, paths.join('/'));
+    } else {
+      target = target[part];
+    }
+  })
+}
+
+export const unregisterModule = (
+  path: string | [string, ...string[]],
+  store: Store<any>,
+  accessor: MergedStoreType<Partial<NuxtStoreInput<any, any, any, any, any>> & BlankStore, string>
+) => {
+  store.unregisterModule(path as string)
+  delete accessor[path[path.length - 1]]
 }
