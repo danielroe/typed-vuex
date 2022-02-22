@@ -1,7 +1,7 @@
-import {ActionTree, GetterTree, Module, MutationTree, Store} from 'vuex'
-import {BlankStore, MergedStoreType, NuxtStoreInput} from './types/store'
-import {State, StateType} from './types/state'
-import {NuxtModules} from './types/modules'
+import { ActionTree, GetterTree, Module, MutationTree, Store } from 'vuex'
+import { BlankStore, MergedStoreType, NuxtStoreInput } from './types/store'
+import { State, StateType } from './types/state'
+import { NuxtModules } from './types/modules'
 
 export const getAccessorType = <T extends State,
   G extends GetterTree<StateType<T>, any>,
@@ -63,11 +63,13 @@ const createAccessor = <T extends State, G, M, A, S extends NuxtModules>(
   return accessor
 }
 
-export const useAccessor = <T extends State,
+export const useAccessor = <
+  T extends State,
   G extends GetterTree<StateType<T>, any>,
   M extends MutationTree<StateType<T>>,
   A extends ActionTree<StateType<T>, any>,
-  S extends NuxtModules>(
+  S extends NuxtModules
+>(
   store: Store<any>,
   input: Partial<NuxtStoreInput<T, G, M, A, S>>,
   namespace?: string
