@@ -118,9 +118,9 @@ describe('accessor', () => {
     submoduleBehaviour(accessor.submodule.nestedSubmodule)
   })
   test('namespaced dynamic modules work', async () => {
-    store.registerModule('dynamicSubmodule', {...submodule, namespaced: true})
+    store.registerModule('dynamicSubmodule', { ...submodule, namespaced: true })
     const dynamicAccessor = useAccessor(store, {
-      modules: {dynamicSubmodule: {...submodule, namespaced: true}},
+      modules: {dynamicSubmodule: { ...submodule, namespaced: true }},
     })
 
     submoduleBehaviour(dynamicAccessor.dynamicSubmodule)
