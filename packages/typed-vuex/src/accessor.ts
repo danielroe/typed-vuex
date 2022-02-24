@@ -3,11 +3,13 @@ import { BlankStore, MergedStoreType, NuxtStoreInput } from './types/store'
 import { State, StateType } from './types/state'
 import { NuxtModules } from './types/modules'
 
-export const getAccessorType = <T extends State,
+export const getAccessorType = <
+  T extends State,
   G extends GetterTree<StateType<T>, any>,
   M extends MutationTree<StateType<T>>,
   A extends ActionTree<StateType<T>, any>,
-  S extends NuxtModules>(
+  S extends NuxtModules
+>(
   store: Partial<NuxtStoreInput<T, G, M, A, S>>
 ) => {
   return (undefined as any) as MergedStoreType<typeof store & BlankStore>
@@ -96,6 +98,30 @@ export const getAccessorFromStore = (pattern: any) => {
     useAccessor(store, pattern._modules.root._rawModule)
 }
 
+const processModuleByPath = (
+  accessor: MergedStoreType<Partial<NuxtStoreInput<any, any, any, any, any>> & BlankStore, string>,
+  path: string | string[]
+): {target: Record<string, any>, key: string} => {
+  const paths = typeof path === 'string' ? [path] : path
+
+  let target = accessor;
+  let key: string | undefined;
+  paths.forEach((part, index) => {
+    if (index === paths.length - 1) {
+      if (!target) throw new Error(`Could not find parent module for ${paths[index - 1] || paths[index]}`);
+      key = part;
+    } else {
+      target = target[part];
+    }
+  })
+
+  return {
+    target,
+    //Key can not be undefined
+    key: key as string,
+  }
+}
+
 export const registerModule = (
   path: string | [string, ...string[]],
   store: Store<any>,
@@ -124,20 +150,11 @@ export const registerModule = (
   }
 
   const paths = typeof path === 'string' ? [path] : path
-
-  let target = accessor;
-  paths.forEach((part, index) => {
-    if (index === paths.length - 1) {
-      if (!target) throw new Error(`Could not find parent module for ${paths[index - 1] || paths[index]}`);
-
-      store.registerModule(path as string, module as Module<any, any>, {
-        preserveState,
-      })
-      target[part] = useAccessor(store, module, paths.join('/'));
-    } else {
-      target = target[part];
-    }
+  const processedModule = processModuleByPath(accessor, paths)
+  store.registerModule(path as string, module as Module<any, any>, {
+    preserveState,
   })
+  processedModule.target[processedModule.key] = useAccessor(store, module, paths.join('/'))
 }
 
 export const unregisterModule = (
@@ -145,6 +162,7 @@ export const unregisterModule = (
   store: Store<any>,
   accessor: MergedStoreType<Partial<NuxtStoreInput<any, any, any, any, any>> & BlankStore, string>
 ) => {
+  const processedModule = processModuleByPath(accessor, path)
   store.unregisterModule(path as string)
-  delete accessor[path[path.length - 1]]
+  delete processedModule.target[processedModule.key]
 }

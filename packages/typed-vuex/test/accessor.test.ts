@@ -1,4 +1,4 @@
-import { useAccessor, getAccessorType, getAccessorFromStore } from 'typed-vuex'
+import { useAccessor, getAccessorType, getAccessorFromStore, registerModule, unregisterModule } from 'typed-vuex'
 import Vuex, { Store } from 'vuex'
 import Vue from 'vue'
 
@@ -118,9 +118,9 @@ describe('accessor', () => {
     submoduleBehaviour(accessor.submodule.nestedSubmodule)
   })
   test('namespaced dynamic modules work', async () => {
-    store.registerModule('dynamicSubmodule', { ...submodule, namespaced: true })
+    store.registerModule('dynamicSubmodule', {...submodule, namespaced: true})
     const dynamicAccessor = useAccessor(store, {
-      modules: { dynamicSubmodule: { ...submodule, namespaced: true } },
+      modules: {dynamicSubmodule: {...submodule, namespaced: true}},
     })
 
     submoduleBehaviour(dynamicAccessor.dynamicSubmodule)
@@ -133,5 +133,34 @@ describe('accessor', () => {
 
     submoduleBehaviour(dynamicAccessor)
     store.unregisterModule('dynamicSubmodule')
+  })
+  test('dynamic module global registration works', async () => {
+    registerModule('dynamicSubmodule', store, accessor, submodule)
+    expect(store.state.dynamicSubmodule.firstName).toBeDefined()
+    expect(store.state.dynamicSubmodule.nestedSubmodule).toBeUndefined()
+    submoduleBehaviour(accessor.dynamicSubmodule)
+    expect(accessor.dynamicSubmodule.nestedSubmodule).toBeUndefined()
+
+    registerModule(['dynamicSubmodule', 'nestedSubmodule'], store, accessor, submodule)
+    expect(store.state.dynamicSubmodule.nestedSubmodule.firstName).toBeDefined()
+    submoduleBehaviour(accessor.dynamicSubmodule.nestedSubmodule)
+
+    unregisterModule('dynamicSubmodule', store, accessor)
+    expect(store.state.dynamicSubmodule).toBeUndefined()
+    expect(accessor.dynamicSubmodule).toBeUndefined()
+
+    registerModule('dynamicSubmodule', store, accessor, submodule)
+    expect(store.state.dynamicSubmodule.nestedSubmodule).toBeUndefined()
+    expect(accessor.dynamicSubmodule.nestedSubmodule).toBeUndefined()
+
+    registerModule(['dynamicSubmodule', 'nestedSubmodule'], store, accessor, submodule)
+    expect(store.state.dynamicSubmodule.nestedSubmodule.firstName).toBeDefined()
+    expect(accessor.dynamicSubmodule.nestedSubmodule.firstName).toBeDefined()
+
+    unregisterModule(['dynamicSubmodule', 'nestedSubmodule'], store, accessor)
+    expect(store.state.dynamicSubmodule).toBeDefined()
+    expect(accessor.dynamicSubmodule).toBeDefined()
+    expect(store.state.dynamicSubmodule.nestedSubmodule).toBeUndefined()
+    expect(accessor.dynamicSubmodule.nestedSubmodule).toBeUndefined()
   })
 })
