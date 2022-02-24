@@ -1,4 +1,4 @@
-import { getAccessorFromStore, registerModule } from 'typed-vuex'
+import { getAccessorFromStore, registerModule, unregisterModule } from 'typed-vuex'
 
 import { createStore } from '<%= options.store %>'
 
@@ -9,5 +9,8 @@ export default async ({ store }, inject) => {
   inject('accessor', accessor)
   inject('accessorRegisterModule', (path, module) => {
     registerModule(path, store, accessor, module)
+  })
+  inject('accessorUnregisterModule', (path) => {
+    unregisterModule(path, store, accessor)
   })
 }
