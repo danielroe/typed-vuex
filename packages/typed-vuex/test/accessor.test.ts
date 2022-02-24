@@ -162,5 +162,7 @@ describe('accessor', () => {
     expect(accessor.dynamicSubmodule).toBeDefined()
     expect(store.state.dynamicSubmodule.nestedSubmodule).toBeUndefined()
     expect(accessor.dynamicSubmodule.nestedSubmodule).toBeUndefined()
+
+    unregisterModule('dynamicSubmodule', store, accessor)
   })
 })
