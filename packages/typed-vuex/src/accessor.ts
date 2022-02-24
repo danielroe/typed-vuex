@@ -104,14 +104,14 @@ const processModuleByPath = (
 ): {target: Record<string, any>, key: string} => {
   const paths = typeof path === 'string' ? [path] : path
 
-  let target = accessor;
-  let key: string | undefined;
+  let target = accessor
+  let key: string | undefined
   paths.forEach((part, index) => {
     if (index === paths.length - 1) {
-      if (!target) throw new Error(`Could not find parent module for ${paths[index - 1] || paths[index]}`);
-      key = part;
+      if (!target) throw new Error(`Could not find parent module for ${paths[index - 1] || paths[index]}`)
+      key = part
     } else {
-      target = target[part];
+      target = target[part]
     }
   })
 
