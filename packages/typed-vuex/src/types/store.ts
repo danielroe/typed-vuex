@@ -16,6 +16,7 @@ export interface BlankStore {
   mutations: {}
   actions: {}
   modules: {}
+  dynamic: boolean
 }
 
 export interface NuxtStore {
@@ -24,6 +25,7 @@ export interface NuxtStore {
   mutations: Record<string, any>
   actions: Record<string, any>
   modules: NuxtModules
+  dynamic: boolean
 }
 
 export interface ExtendedNuxtStore extends NuxtStore {
@@ -37,6 +39,7 @@ export interface NuxtStoreInput<
   A,
   S extends { [key: string]: Partial<ExtendedNuxtStore> }
 > {
+  dynamic?: boolean
   namespaced?: boolean
   state: T
   getters?: G
