@@ -29,11 +29,9 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
-      - name: Install dependencies
-        run: cd packages/nuxt-typed-vuex && pnpm i nuxt@${{ matrix.nuxt }}
-
-      - name: Install dependencies
-        run: pnpm i @babel/preset-env@~7.12.17
+      - name: Add nuxt
+        run: pnpm i nuxt@${{ matrix.nuxt }}
+        working-directory: packages/nuxt-typed-vuex
 
       - name: Build
         run: pnpm build
