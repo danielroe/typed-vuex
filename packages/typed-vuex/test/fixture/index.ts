@@ -1,5 +1,10 @@
 import { Plugin } from 'vuex'
-import { getStoreType, getAccessorType, mutationTree, actionTree } from '../..'
+import {
+  getStoreType,
+  getAccessorType,
+  mutationTree,
+  actionTree,
+} from '../../src'
 
 import * as submodule from './submodule'
 
