@@ -2,7 +2,7 @@
   "private": true,
   "scripts": {
     "dev": "nuxt dev",
-    "build": "nuxt generate"
+    "now-build": "nuxt generate"
   },
   "devDependencies": {
     "docus": "0.5.6",
