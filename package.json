@@ -7,9 +7,9 @@
   "scripts": {
     "build": "siroc build",
     "lint": "eslint --ext .ts,.tsx,.js .",
-    "lint:fix": "yarn lint --fix",
+    "lint:fix": "npm run lint -- --fix",
     "postinstall": "husky install",
-    "test": "yarn lint && jest && yarn test:types"
+    "test": "pnpm run lint && jest && pnpm run -r test:types"
   },
   "devDependencies": {
     "@babel/core": "7.17.4",
@@ -23,7 +23,6 @@
     "@types/jest": "27.4.0",
     "@typescript-eslint/eslint-plugin": "5.12.0",
     "@typescript-eslint/parser": "5.12.0",
-    "codecov": "^3.8.3",
     "conventional-changelog-conventionalcommits": "^4.6.3",
     "eslint": "8.9.0",
     "husky": "^7.0.4",

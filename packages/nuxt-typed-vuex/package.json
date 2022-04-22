@@ -18,17 +18,17 @@
     "email": "daniel@roe.dev",
     "url": "https://github.com/danielroe"
   },
-  "main": "lib/index.js",
-  "module": "lib/index.es.js",
-  "types": "lib/index.d.ts",
+  "main": "dist/index.cjs",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
   "files": [
-    "lib/**/*",
+    "dist/**/*",
     "template/*",
     "!**/*.map"
   ],
   "scripts": {
-    "build": "yarn clean && yarn compile",
-    "clean": "rm -rf lib test/fixture/.nuxt test/fixture/dist",
+    "build": "npm run clean && npm run compile",
+    "clean": "rm -rf dist test/fixture/.nuxt test/fixture/dist",
     "compile": "siroc build",
     "dev": "nuxt test/fixture"
   },

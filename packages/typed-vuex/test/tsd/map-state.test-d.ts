@@ -1,5 +1,5 @@
 import Vue from 'vue'
-import { getAccessorType, createMapper } from 'typed-vuex'
+import { getAccessorType, createMapper } from '../..'
 import { expectType } from 'tsd'
 
 import { getters, state, actions, mutations } from '../fixture'

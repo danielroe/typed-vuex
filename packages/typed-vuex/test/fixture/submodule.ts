@@ -1,4 +1,4 @@
-import { getterTree, mutationTree, actionTree, useAccessor } from 'typed-vuex'
+import { getterTree, mutationTree, actionTree, useAccessor } from '../..'
 import { pattern } from '.'
 
 export const state = () => ({
@@ -7,7 +7,7 @@ export const state = () => ({
 })
 
 export const getters = getterTree(state, {
-  fullName: state => state.firstName + ' ' + state.lastName,
+  fullName: (state) => state.firstName + ' ' + state.lastName,
 })
 
 export const mutations = mutationTree(state, {
