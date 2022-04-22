@@ -8,7 +8,7 @@
     "build": "siroc build",
     "lint": "eslint --ext .ts,.tsx,.js .",
     "lint:fix": "npm run lint -- --fix",
-    "postinstall": "husky install && siroc build",
+    "postinstall": "husky install",
     "test": "pnpm run lint && jest && pnpm run -r test:types"
   },
   "devDependencies": {
