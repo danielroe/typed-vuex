@@ -37,10 +37,10 @@
     "upath": "^2.0.1"
   },
   "devDependencies": {
+    "@babel/preset-env": "~7.12.17",
     "@nuxt/test-utils": "^0.2.2",
     "@nuxt/types": "^2.15.8",
     "@nuxt/typescript-build": "^2.1.0",
-    "@babel/preset-env": "~7.12.17",
     "core-js": "3.21.0",
     "nuxt": "^2.15.8",
     "ts-loader": "^8.3.0",
