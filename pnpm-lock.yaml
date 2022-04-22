@@ -49,8 +49,10 @@ importers:
   docs:
     specifiers:
       docus: 0.5.6
+      nuxt-i18n: 6.27.0
     devDependencies:
       docus: 0.5.6_typescript@4.5.5
+      nuxt-i18n: 6.27.0
 
   packages/nuxt-typed-vuex:
     specifiers:
@@ -11328,6 +11330,10 @@ packages:
       nopt: 5.0.0
     dev: true
 
+  /js-cookie/2.2.1:
+    resolution: {integrity: sha512-HvdH2LzI/EAZcUwA8+0nKNtWHqS+ZmijLA30RwZA0bo7ToCckjK5MkGhjED9KoRcXO6BaGI3I9UIzSA1FKFPOQ==}
+    dev: true
+
   /js-cookie/3.0.1:
     resolution: {integrity: sha512-+0rgsUXZu4ncpPxRL+lNEptWMOWl9etvPHc/koSRp6MPwpRYAhmk0dUG00J4bxVV3r9uUzfo24wW0knS07SKSw==}
     engines: {node: '>=12'}
@@ -12821,6 +12827,25 @@ packages:
       defu: 4.0.1
       hookable: 4.4.1
       jiti: 1.13.0
+    dev: true
+
+  /nuxt-i18n/6.27.0:
+    resolution: {integrity: sha512-QOZ7ePML3/HyC6NgUSsNb/dItnySwYIRike1koWgSqwM3RK7RQBJD9egcc/IIqsYPuA7rIivb/csXjipiBZQjA==}
+    deprecated: Please use the @nuxtjs/i18n package going forward
+    dependencies:
+      '@babel/parser': 7.17.9
+      '@babel/traverse': 7.17.9
+      '@intlify/vue-i18n-extensions': 1.0.2
+      '@intlify/vue-i18n-loader': 1.1.0
+      cookie: 0.4.2
+      devalue: 2.0.1
+      js-cookie: 2.2.1
+      klona: 2.0.5
+      lodash.merge: 4.6.2
+      ufo: 0.7.11
+      vue-i18n: 8.27.1
+    transitivePeerDependencies:
+      - supports-color
     dev: true
 
   /nuxt-i18n/6.28.1:
