@@ -18,19 +18,19 @@
     "email": "daniel@roe.dev",
     "url": "https://github.com/danielroe"
   },
-  "main": "lib/index.js",
-  "module": "lib/index.es.js",
-  "types": "lib/index.d.ts",
+  "main": "dist/index.cjs",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
   "files": [
-    "lib/**/*",
-    "lib/index.d.ts",
+    "dist/**/*",
+    "dist/index.d.ts",
     "!**/*.map"
   ],
   "scripts": {
-    "build": "yarn clean && yarn compile",
-    "clean": "rm -rf lib",
+    "build": "npm run clean && npm run compile",
+    "clean": "rm -rf dist",
     "compile": "siroc build",
-    "test:types": "yarn tsd"
+    "test:types": "tsd"
   },
   "devDependencies": {
     "@vue/test-utils": "^1.0.0",

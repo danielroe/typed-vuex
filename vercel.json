@@ -3,18 +3,6 @@
     {
       "src": "docs/package.json",
       "use": "@vercel/static-build"
-    },
-    {
-      "src": "examples/nuxt-ts/package.json",
-      "use": "@vercel/static-build"
-    },
-    {
-      "src": "examples/nuxt/package.json",
-      "use": "@vercel/static-build"
-    },
-    {
-      "src": "examples/vue/package.json",
-      "use": "@vercel/static-build"
     }
   ],
   "routes": [{ "handle": "filesystem" }, { "src": "/(.*)", "dest": "/docs/$1" }]

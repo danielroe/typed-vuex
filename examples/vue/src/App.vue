@@ -17,6 +17,7 @@ import HelloWorld from './components/HelloWorld.vue'
 export default class App extends Vue {
   mounted() {
     this.$accessor.resetEmail()
+    // eslint-disable-next-line
     console.log(this.$accessor.email)
   }
 }

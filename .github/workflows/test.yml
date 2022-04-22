@@ -17,72 +17,49 @@ jobs:
         os: [windows-latest, ubuntu-latest]
 
     steps:
-      - uses: actions/checkout@master
+      - uses: actions/checkout@v3
 
-      - name: Get yarn cache directory path
-        id: yarn-cache-dir-path
-        run: echo "::set-output name=dir::$(yarn config get cacheFolder)"
+      - run: corepack enable
 
-      - uses: actions/cache@v2
-        id: cache
+      - uses: actions/setup-node@v3
         with:
-          path: |
-            node_modules
-            ${{ steps.yarn-cache-dir-path.outputs.dir }}
-            .yarn/*
-            !.yarn/releases
-            !.yarn/plugins
-            !.yarn/sdks
-            !.yarn/versions
-          key: yarn-${{ runner.os }}-node-v${{ matrix.node }}-nuxt-${{ matrix.nuxt }}-${{ hashFiles('**/yarn.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-node-v${{ matrix.node }}-yarn
-            ${{ runner.os }}-yarn
+          node-version: "14"
+          cache: "pnpm"
 
       - name: Install dependencies
-        if: steps.cache.outputs.cache-hit != 'true'
-        run: yarn && yarn workspace nuxt-typed-vuex add nuxt@${{ matrix.nuxt }}
+        run: pnpm install --frozen-lockfile
 
-      - name: Install dependencies
-        if: steps.cache.outputs.cache-hit != 'true'
-        run: yarn add @babel/preset-env@~7.12.17
+      - name: Add nuxt
+        run: pnpm i nuxt@${{ matrix.nuxt }}
+        working-directory: packages/nuxt-typed-vuex
 
-      - name: Test project
-        run: yarn build && yarn test
+      - name: Build
+        run: pnpm build
+
+      - name: Test
+        run: pnpm test
 
   latest:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@master
+      - uses: actions/checkout@v3
 
-      - name: Get yarn cache directory path
-        id: yarn-cache-dir-path
-        run: echo "::set-output name=dir::$(yarn config get cacheFolder)"
+      - run: corepack enable
 
-      - uses: actions/cache@v2
-        id: cache
+      - uses: actions/setup-node@v3
         with:
-          path: |
-            node_modules
-            ${{ steps.yarn-cache-dir-path.outputs.dir }}
-            .yarn/*
-            !.yarn/releases
-            !.yarn/plugins
-            !.yarn/sdks
-            !.yarn/versions
-          key: yarn-${{ runner.os }}-${{ hashFiles('**/yarn.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-yarn
+          node-version: "14"
+          cache: "pnpm"
 
       - name: Install dependencies
-        if: steps.cache.outputs.cache-hit != 'true'
-        run: yarn
+        run: pnpm install --frozen-lockfile
 
-      - name: Test project
-        run: yarn build && yarn test
+      - name: Build
+        run: pnpm build
+
+      - name: Test
+        run: pnpm test
 
       - name: Coverage
-        run: yarn codecov
-        env:
-          CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
+        uses: codecov/codecov-action@v2
