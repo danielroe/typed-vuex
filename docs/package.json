@@ -1,11 +1,11 @@
 {
   "private": true,
   "scripts": {
-    "dev": "npx nuxt dev",
-    "generate": "npx nuxt generate",
-    "now-build": "yarn generate"
+    "dev": "nuxt dev",
+    "now-build": "nuxt generate"
   },
   "devDependencies": {
-    "docus": "0.5.6"
+    "docus": "0.5.6",
+    "nuxt-i18n": "6.27.0"
   }
 }

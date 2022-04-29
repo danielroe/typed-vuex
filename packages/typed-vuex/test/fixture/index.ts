@@ -4,7 +4,7 @@ import {
   getAccessorType,
   mutationTree,
   actionTree,
-} from 'typed-vuex'
+} from '../../src'
 
 import * as submodule from './submodule'
 

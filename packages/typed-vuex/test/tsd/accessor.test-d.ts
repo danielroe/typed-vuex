@@ -1,7 +1,7 @@
 import { DispatchOptions, CommitOptions } from 'vuex'
 import { expectType, expectError } from 'tsd'
 
-import { getAccessorType } from 'typed-vuex'
+import { getAccessorType } from '../..'
 import { getters, state, actions, mutations } from '../fixture'
 
 import * as submodule from '../fixture/submodule'

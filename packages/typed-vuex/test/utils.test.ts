@@ -1,6 +1,6 @@
 /** @jest-environment jsdom */
 
-import { useAccessor, getAccessorType, createMapper, Mapper } from 'typed-vuex'
+import { useAccessor, getAccessorType, createMapper, Mapper } from '../src'
 import { mount, createLocalVue } from '@vue/test-utils'
 import Vuex, { Store } from 'vuex'
 
