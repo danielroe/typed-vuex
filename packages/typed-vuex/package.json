@@ -27,9 +27,7 @@
     "!**/*.map"
   ],
   "scripts": {
-    "build": "npm run clean && npm run compile",
-    "clean": "rm -rf dist",
-    "compile": "siroc build",
+    "build": "unbuild",
     "test:types": "tsd"
   },
   "devDependencies": {

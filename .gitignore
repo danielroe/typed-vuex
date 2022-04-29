@@ -82,8 +82,8 @@ dist
 # Service worker
 sw.*
 
-packages/*/lib/*
-!packages/*/lib/.gitkeep
+packages/*/dist/*
+!packages/*/dist/.gitkeep
 .now
 
 # https://yarnpkg.com/advanced/qa#which-files-should-be-gitignored
