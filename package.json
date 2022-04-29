@@ -26,7 +26,7 @@
     "conventional-changelog-conventionalcommits": "^4.6.3",
     "eslint": "8.9.0",
     "husky": "^7.0.4",
-    "jest": "27.5.1",
+    "jest": "28.0.3",
     "release-it": "^14.12.4",
     "release-it-yarn-workspaces": "^2.0.1",
     "semver": "^7.3.5",
