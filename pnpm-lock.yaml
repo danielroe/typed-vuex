@@ -23,7 +23,6 @@ importers:
       release-it: ^14.14.2
       release-it-yarn-workspaces: ^2.0.1
       semver: ^7.3.7
-      siroc: ^0.16.0
       typescript: 4.6.4
       unbuild: ^0.7.4
     devDependencies:
@@ -46,7 +45,6 @@ importers:
       release-it: 14.14.2
       release-it-yarn-workspaces: 2.0.1_release-it@14.14.2
       semver: 7.3.7
-      siroc: 0.16.0
       typescript: 4.6.4
       unbuild: 0.7.4
 
@@ -2938,22 +2936,6 @@ packages:
       rollup: 2.70.2
     dev: true
 
-  /@rollup/plugin-commonjs/20.0.0_rollup@2.70.2:
-    resolution: {integrity: sha512-5K0g5W2Ol8hAcTHqcTBHiA7M58tfmYi1o9KxeJuuRNpGaTa5iLjcyemBitCBcKXaHamOBBEH2dGom6v6Unmqjg==}
-    engines: {node: '>= 8.0.0'}
-    peerDependencies:
-      rollup: ^2.38.3
-    dependencies:
-      '@rollup/pluginutils': 3.1.0_rollup@2.70.2
-      commondir: 1.0.1
-      estree-walker: 2.0.2
-      glob: 7.2.0
-      is-reference: 1.2.1
-      magic-string: 0.25.9
-      resolve: 1.22.0
-      rollup: 2.70.2
-    dev: true
-
   /@rollup/plugin-commonjs/21.1.0_rollup@2.70.2:
     resolution: {integrity: sha512-6ZtHx3VHIp2ReNNDxHjuUml6ur+WcQ28N1yHgCQwsbNkQg2suhxGMDQGJOn/KuDxKtd1xuZP5xSTwBA4GQ8hbA==}
     engines: {node: '>= 8.0.0'}
@@ -2996,16 +2978,6 @@ packages:
 
   /@rollup/plugin-replace/2.4.2_rollup@2.70.2:
     resolution: {integrity: sha512-IGcu+cydlUMZ5En85jxHH4qj2hta/11BHq95iHEyb2sbgiN0eCdzvUcHw5gt9pBL5lTi4JDYJ1acCoMGpTvEZg==}
-    peerDependencies:
-      rollup: ^1.20.0 || ^2.0.0
-    dependencies:
-      '@rollup/pluginutils': 3.1.0_rollup@2.70.2
-      magic-string: 0.25.9
-      rollup: 2.70.2
-    dev: true
-
-  /@rollup/plugin-replace/3.1.0_rollup@2.70.2:
-    resolution: {integrity: sha512-pA3XRUrSKybVYqmH5TqWNZpGxF+VV+1GrYchKgCNIj2vsSOX7CVm2RCtx8p2nrC7xvkziYyK+lSi74T93MU3YA==}
     peerDependencies:
       rollup: ^1.20.0 || ^2.0.0
     dependencies:
@@ -7288,12 +7260,6 @@ packages:
 
   /esbuild/0.11.23:
     resolution: {integrity: sha512-iaiZZ9vUF5wJV8ob1tl+5aJTrwDczlvGP0JoMmnpC2B0ppiMCu8n8gmy5ZTGl5bcG081XBVn+U+jP+mPFm5T5Q==}
-    hasBin: true
-    requiresBuild: true
-    dev: true
-
-  /esbuild/0.12.29:
-    resolution: {integrity: sha512-w/XuoBCSwepyiZtIRsKsetiLDUVGPVw1E/R3VTFSecIy8UR7Cq3SOtwKHJMFoVqqVG36aGkzh4e8BvpO1Fdc7g==}
     hasBin: true
     requiresBuild: true
     dev: true
@@ -14398,20 +14364,6 @@ packages:
       '@babel/code-frame': 7.16.7
     dev: true
 
-  /rollup-plugin-dts/3.0.2_rollup@2.70.2+typescript@4.6.4:
-    resolution: {integrity: sha512-hswlsdWu/x7k5pXzaLP6OvKRKcx8Bzprksz9i9mUe72zvt8LvqAb/AZpzs6FkLgmyRaN8B6rUQOVtzA3yEt9Yw==}
-    engines: {node: '>=v12.22.1'}
-    peerDependencies:
-      rollup: ^2.48.0
-      typescript: ^4.2.4
-    dependencies:
-      magic-string: 0.25.9
-      rollup: 2.70.2
-      typescript: 4.6.4
-    optionalDependencies:
-      '@babel/code-frame': 7.16.7
-    dev: true
-
   /rollup-plugin-dts/4.2.1_rollup@2.70.2+typescript@4.6.4:
     resolution: {integrity: sha512-eaxQZNUJ5iQcxNGlpJ1CUgG4OSVqWjDZ3nNSWBIoGrpcote2aNphSe1RJOaSYkb8dwn3o+rYm1vvld/5z3EGSQ==}
     engines: {node: '>=v12.22.11'}
@@ -14435,20 +14387,6 @@ packages:
     dependencies:
       '@rollup/pluginutils': 4.2.1
       esbuild: 0.11.23
-      joycon: 3.1.1
-      jsonc-parser: 3.0.0
-      rollup: 2.70.2
-    dev: true
-
-  /rollup-plugin-esbuild/4.5.0_esbuild@0.12.29+rollup@2.70.2:
-    resolution: {integrity: sha512-ieUd3AoYWsN6Tfp0LBNnC+QpdhKjDEaH4NK3ghuEXOH56/7TAtD+hMbD9vSWZgsGSbaqCkrn4j6PaUj1vOSt1g==}
-    engines: {node: '>=12'}
-    peerDependencies:
-      esbuild: '>=0.10.1'
-      rollup: ^1.20.0 || ^2.0.0
-    dependencies:
-      '@rollup/pluginutils': 4.2.1
-      esbuild: 0.12.29
       joycon: 3.1.1
       jsonc-parser: 3.0.0
       rollup: 2.70.2
@@ -14850,35 +14788,6 @@ packages:
     resolution: {integrity: sha1-pNprY1/8zMoz9w0Xy5JZLeleVXo=}
     dependencies:
       is-arrayish: 0.3.2
-    dev: true
-
-  /siroc/0.16.0:
-    resolution: {integrity: sha512-BOK6Ih10CFSdq1bvvWt1ZGkvYGdKmCxPxuExYogg8lcOtsMr6ZFBuW7/U4oUJkdgXsXxFE55KCmJF1vSvOSYwA==}
-    hasBin: true
-    dependencies:
-      '@rollup/plugin-alias': 3.1.9_rollup@2.70.2
-      '@rollup/plugin-commonjs': 20.0.0_rollup@2.70.2
-      '@rollup/plugin-json': 4.1.0_rollup@2.70.2
-      '@rollup/plugin-node-resolve': 13.2.1_rollup@2.70.2
-      '@rollup/plugin-replace': 3.1.0_rollup@2.70.2
-      cac: 6.7.12
-      chalk: 4.1.2
-      consola: 2.15.3
-      defu: 5.0.1
-      detect-indent: 6.1.0
-      esbuild: 0.12.29
-      execa: 5.1.1
-      fs-extra: 10.1.0
-      glob: 7.2.0
-      jiti: 1.13.0
-      mkdist: 0.3.10_typescript@4.6.4
-      rollup: 2.70.2
-      rollup-plugin-dts: 3.0.2_rollup@2.70.2+typescript@4.6.4
-      rollup-plugin-esbuild: 4.5.0_esbuild@0.12.29+rollup@2.70.2
-      sort-package-json: 1.55.0
-      typescript: 4.6.4
-      upath: 2.0.1
-      v8-compile-cache: 2.3.0
     dev: true
 
   /siroc/0.9.3:
