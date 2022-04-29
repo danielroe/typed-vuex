@@ -1,4 +1,4 @@
-import { useAccessor, getAccessorType, getAccessorFromStore, registerModule, unregisterModule } from 'typed-vuex'
+import { useAccessor, getAccessorType, getAccessorFromStore, registerModule, unregisterModule } from '../src'
 import Vuex, { Store } from 'vuex'
 import Vue from 'vue'
 
