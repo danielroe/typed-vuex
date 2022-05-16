@@ -16,7 +16,7 @@
     "@babel/plugin-transform-runtime": "^7.17.10",
     "@babel/preset-env": "^7.17.10",
     "@babel/preset-typescript": "^7.16.7",
-    "@commitlint/cli": "^16.2.4",
+    "@commitlint/cli": "^17.0.0",
     "@commitlint/config-conventional": "^16.2.4",
     "@nuxtjs/eslint-config-typescript": "9.0.0",
     "@release-it/conventional-changelog": "^4.3.0",
