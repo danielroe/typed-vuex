@@ -23,7 +23,7 @@
     "@types/jest": "27.4.1",
     "@typescript-eslint/eslint-plugin": "5.21.0",
     "@typescript-eslint/parser": "5.21.0",
-    "conventional-changelog-conventionalcommits": "^4.6.3",
+    "conventional-changelog-conventionalcommits": "^5.0.0",
     "eslint": "8.14.0",
     "husky": "^7.0.4",
     "jest": "28.0.3",
