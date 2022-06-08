@@ -1,6 +1,6 @@
 {
   "name": "typed-vuex",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "A typed store accessor for Vuex.",
   "keywords": [
     "vuex",
