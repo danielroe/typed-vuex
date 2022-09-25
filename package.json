@@ -18,7 +18,7 @@
     "@babel/preset-typescript": "^7.17.12",
     "@commitlint/cli": "^17.0.2",
     "@commitlint/config-conventional": "^17.0.2",
-    "@nuxtjs/eslint-config-typescript": "10.0.0",
+    "@nuxtjs/eslint-config-typescript": "11.0.0",
     "@release-it/conventional-changelog": "^4.0.0",
     "@types/jest": "28.1.1",
     "@typescript-eslint/eslint-plugin": "5.27.1",
