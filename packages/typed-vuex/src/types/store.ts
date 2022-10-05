@@ -32,16 +32,12 @@ export interface NuxtStore {
   strict: boolean
 }
 
-export interface ExtendedNuxtStore extends NuxtStore {
-  dynamic: boolean;
-}
-
 export interface NuxtStoreInput<
   T extends State,
   G,
   M,
   A,
-  S extends { [key: string]: Partial<ExtendedNuxtStore> }
+  S extends { [key: string]: Partial<NuxtStore> }
 > {
   dynamic?: boolean
   strict?: boolean
