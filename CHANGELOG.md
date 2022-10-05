@@ -1,3 +1,13 @@
+
+
+## [0.3.1](https://github.com/danielroe/typed-vuex/compare/0.3.0...0.3.1) (2022-06-08)
+
+
+### Bug Fixes
+
+* add `namespaced` and `strict` properties to store interfaces ([#272](https://github.com/danielroe/typed-vuex/issues/272)) ([bb5ff8d](https://github.com/danielroe/typed-vuex/commit/bb5ff8d373bd8d7ef7c543bddf338dd6ecb8ff28))
+* update `vuex` peer dependency and bump dev-dependencies ([#308](https://github.com/danielroe/typed-vuex/issues/308)) ([2ee9967](https://github.com/danielroe/typed-vuex/commit/2ee996709f2758730707bf34d49a5aa3e8de5a16))
+
 ## [0.3.0](https://github.com/danielroe/typed-vuex/compare/0.2.0...0.3.0) (2022-02-19)
 
 

@@ -1,6 +1,6 @@
 {
   "name": "nuxt-typed-vuex",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "A typed store accessor for Nuxt.",
   "keywords": [
     "vuex",
@@ -27,27 +27,25 @@
     "!**/*.map"
   ],
   "scripts": {
-    "build": "npm run clean && npm run compile",
-    "clean": "rm -rf dist test/fixture/.nuxt test/fixture/dist",
-    "compile": "siroc build",
+    "build": "unbuild",
     "dev": "nuxt test/fixture"
   },
   "dependencies": {
-    "typed-vuex": "0.3.0",
+    "typed-vuex": "0.3.1",
     "upath": "^2.0.1"
   },
   "devDependencies": {
-    "@babel/preset-env": "~7.12.17",
+    "@babel/preset-env": "~7.17.10",
     "@nuxt/test-utils": "^0.2.2",
     "@nuxt/types": "^2.15.8",
     "@nuxt/typescript-build": "^2.1.0",
-    "core-js": "3.21.0",
+    "core-js": "3.22.3",
     "nuxt": "^2.15.8",
-    "ts-loader": "^8.3.0",
-    "tsd": "^0.19.1"
+    "ts-loader": "^8.4.0",
+    "tsd": "^0.20.0"
   },
   "peerDependencies": {
-    "@nuxt/types": "^2.15.6"
+    "@nuxt/types": "^2.15.8"
   },
   "tsd": {
     "directory": "test/tsd",
