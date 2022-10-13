@@ -1,14 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`accessor accessor can be generated from store object 1`] = `
-Object {
+{
   "initialiseStore": [Function],
   "resetEmail": [Function],
   "resetEmailWithOptionalPayload": [Function],
   "setEmail": [Function],
-  "submodule": Object {
+  "submodule": {
     "initialise": [Function],
-    "nestedSubmodule": Object {
+    "nestedSubmodule": {
       "initialise": [Function],
       "setFirstName": [Function],
       "setLastName": [Function],
@@ -22,14 +22,14 @@ Object {
 `;
 
 exports[`accessor accessor object exists 1`] = `
-Object {
+{
   "initialiseStore": [Function],
   "resetEmail": [Function],
   "resetEmailWithOptionalPayload": [Function],
   "setEmail": [Function],
-  "submodule": Object {
+  "submodule": {
     "initialise": [Function],
-    "nestedSubmodule": Object {
+    "nestedSubmodule": {
       "initialise": [Function],
       "setFirstName": [Function],
       "setLastName": [Function],
@@ -47,34 +47,34 @@ exports[`accessor accessor works with state object 1`] = `""`;
 exports[`accessor accessor works with state object 2`] = `"test1@email.com"`;
 
 exports[`accessor store exists 1`] = `
-Object {
-  "actions": Object {
+{
+  "actions": {
     "resetEmail": [Function],
     "resetEmailWithOptionalPayload": [Function],
   },
-  "getters": Object {
+  "getters": {
     "email": [Function],
     "fullEmail": [Function],
   },
-  "modules": Object {
-    "submodule": Object {
-      "actions": Object {
+  "modules": {
+    "submodule": {
+      "actions": {
         "initialise": [Function],
         "setName": [Function],
       },
-      "getters": Object {
+      "getters": {
         "fullName": [Function],
       },
-      "modules": Object {
-        "nestedSubmodule": Object {
-          "actions": Object {
+      "modules": {
+        "nestedSubmodule": {
+          "actions": {
             "initialise": [Function],
             "setName": [Function],
           },
-          "getters": Object {
+          "getters": {
             "fullName": [Function],
           },
-          "mutations": Object {
+          "mutations": {
             "setFirstName": [Function],
             "setLastName": [Function],
           },
@@ -82,7 +82,7 @@ Object {
           "state": [Function],
         },
       },
-      "mutations": Object {
+      "mutations": {
         "setFirstName": [Function],
         "setLastName": [Function],
       },
@@ -90,7 +90,7 @@ Object {
       "state": [Function],
     },
   },
-  "mutations": Object {
+  "mutations": {
     "initialiseStore": [Function],
     "setEmail": [Function],
   },
