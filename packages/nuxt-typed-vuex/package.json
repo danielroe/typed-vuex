@@ -42,7 +42,7 @@
     "core-js": "3.22.3",
     "nuxt": "^2.15.8",
     "ts-loader": "^8.4.0",
-    "tsd": "^0.20.0"
+    "tsd": "^0.31.0"
   },
   "peerDependencies": {
     "@nuxt/types": "^2.15.8"
