@@ -24,4 +24,5 @@ const nuxtTypedVuex: Module = function nuxtTypedVuex() {
 
 ;(nuxtTypedVuex as any).meta = { name, version }
 
+export * from './types/accessorRegisterModule'
 export default nuxtTypedVuex
