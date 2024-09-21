@@ -1,4 +1,4 @@
-import { join, resolve } from 'upath'
+import { join, resolve } from 'pathe'
 
 import type { Module } from '@nuxt/types'
 

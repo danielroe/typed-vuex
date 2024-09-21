@@ -11,7 +11,7 @@
       "preset": "conventionalcommits",
       "infile": "CHANGELOG.md"
     },
-    "release-it-yarn-workspaces": true
+    "@release-it-plugins/workspaces": true
   },
   "npm": false
 }
