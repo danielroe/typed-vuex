@@ -19,7 +19,10 @@ export interface Commit<T extends Record<string, () => any>> {
   ): ReturnType<T[P]>
 }
 
-export const mutationTree = <S, T extends MutationTree<StateType<S>>>(
+export const mutationTree = <
+  S extends Record<string, any>,
+  T extends MutationTree<StateType<S>>
+>(
   _state: S,
   tree: T
 ) => tree
