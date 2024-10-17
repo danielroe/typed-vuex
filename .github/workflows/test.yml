@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main
+      - renovate/*
   pull_request:
     branches:
       - main
@@ -23,7 +24,7 @@ jobs:
 
       - uses: actions/setup-node@v3
         with:
-          node-version: "14"
+          node-version: 20
           cache: "pnpm"
 
       - name: Install dependencies
@@ -49,7 +50,7 @@ jobs:
 
       - uses: actions/setup-node@v3
         with:
-          node-version: "14"
+          node-version: 20
           cache: "pnpm"
 
       - name: Install dependencies

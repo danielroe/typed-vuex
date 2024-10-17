@@ -1,4 +1,11 @@
 {
-  "extends": ["github>danielroe/renovate"],
-  "ignoreDeps": ["docus", "vue", "vuex"]
+  "extends": [
+    "github>danielroe/renovate"
+  ],
+  "ignoreDeps": [
+    "docus",
+    "vue",
+    "vuex"
+  ],
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json"
 }

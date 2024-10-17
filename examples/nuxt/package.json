@@ -19,6 +19,6 @@
     "@nuxt/types": "latest",
     "@nuxt/typescript-build": "latest",
     "nuxt-typed-vuex": "latest",
-    "vue-property-decorator": "^9"
+    "vue-property-decorator": "^9.1.2"
   }
 }
