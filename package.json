@@ -29,7 +29,7 @@
     "semver": "^7.6.3",
     "simple-git-hooks": "^2.11.1",
     "typescript": "4.9.5",
-    "unbuild": "^0.7.6"
+    "unbuild": "^0.9.0"
   },
   "resolutions": {
     "vue3": "npm:vue@latest"
