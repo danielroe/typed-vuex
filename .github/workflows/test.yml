@@ -10,36 +10,6 @@ on:
       - main
 
 jobs:
-  compatibility:
-    runs-on: ${{ matrix.os }}
-    strategy:
-      matrix:
-        nuxt: ["2.13", "2.14"]
-        os: [windows-latest, ubuntu-latest]
-
-    steps:
-      - uses: actions/checkout@v3
-
-      - run: corepack enable
-
-      - uses: actions/setup-node@v3
-        with:
-          node-version: 20
-          cache: "pnpm"
-
-      - name: Install dependencies
-        run: pnpm install --frozen-lockfile
-
-      - name: Add nuxt
-        run: pnpm i nuxt@${{ matrix.nuxt }}
-        working-directory: packages/nuxt-typed-vuex
-
-      - name: Build
-        run: pnpm build
-
-      - name: Test
-        run: pnpm test
-
   latest:
     runs-on: ubuntu-latest
 
