@@ -35,14 +35,14 @@
     "upath": "^2.0.1"
   },
   "devDependencies": {
-    "@babel/preset-env": "~7.25.8",
+    "@babel/preset-env": "~7.26.0",
     "@nuxt/test-utils": "^0.2.2",
     "@nuxt/types": "^2.18.1",
     "@nuxt/typescript-build": "^2.1.0",
-    "core-js": "3.38.1",
+    "core-js": "3.40.0",
     "nuxt": "^2.18.1",
     "ts-loader": "^8.4.0",
-    "tsd": "^0.20.0"
+    "tsd": "^0.31.0"
   },
   "peerDependencies": {
     "@nuxt/types": "^2.15.8"
