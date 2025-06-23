@@ -16,7 +16,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - run: npm i -g --force corepack && corepack enable
+      - run: corepack enable
 
       - uses: actions/setup-node@v3
         with:
