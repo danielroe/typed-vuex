@@ -31,8 +31,8 @@
     "test:types": "tsd"
   },
   "devDependencies": {
-    "@vue/test-utils": "^1.3.6",
-    "tsd": "^0.20.0",
+    "@vue/test-utils": "1.3.6",
+    "tsd": "0.20.0",
     "vue": "^2.7.16",
     "vuex": "^3.6.2"
   },
