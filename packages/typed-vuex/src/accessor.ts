@@ -1,5 +1,5 @@
-import { Store, GetterTree, MutationTree, ActionTree } from 'vuex'
-import { NuxtStoreInput, MergedStoreType, BlankStore } from './types/store'
+import { ActionTree, GetterTree, Module, MutationTree, Store } from 'vuex'
+import { BlankStore, MergedStoreType, NuxtStoreInput } from './types/store'
 import { State, StateType } from './types/state'
 import { NuxtModules } from './types/modules'
 
@@ -96,4 +96,73 @@ export const useAccessor = <
 export const getAccessorFromStore = (pattern: any) => {
   return (store: Store<any>) =>
     useAccessor(store, pattern._modules.root._rawModule)
+}
+
+const processModuleByPath = (
+  accessor: MergedStoreType<Partial<NuxtStoreInput<any, any, any, any, any>> & BlankStore, string>,
+  path: string | string[]
+): {target: Record<string, any>, key: string} => {
+  const paths = typeof path === 'string' ? [path] : path
+
+  let target = accessor
+  let key: string | undefined
+  paths.forEach((part, index) => {
+    if (index === paths.length - 1) {
+      if (!target) throw new Error(`Could not find parent module for ${paths[index - 1] || paths[index]}`)
+      key = part
+    } else {
+      target = target[part]
+    }
+  })
+
+  return {
+    target,
+    //Key can not be undefined
+    key: key as string,
+  }
+}
+
+export const registerModule = (
+  path: string | [string, ...string[]],
+  store: Store<any>,
+  accessor: MergedStoreType<Partial<NuxtStoreInput<any, any, any, any, any>> & BlankStore, string>,
+  module: Module<any, any>
+) => {
+  module.namespaced = true
+
+  if (module.modules) module.modules = Object.entries(module.modules).reduce((acc, [key, value]) => ({
+    ...acc,
+    [key]: {
+      ...value,
+      namespaced: true,
+    }
+  }), {}) as typeof module['modules']
+
+  let preserveState = false
+  if (typeof path === 'string') preserveState = !!store.state[path]
+  else {
+    let target = store.state
+    for (const key of path) {
+      if (!target) break
+      target = target[key]
+    }
+    preserveState = !!target
+  }
+
+  const paths = typeof path === 'string' ? [path] : path
+  const processedModule = processModuleByPath(accessor, paths)
+  store.registerModule(path as string, module as Module<any, any>, {
+    preserveState,
+  })
+  processedModule.target[processedModule.key] = useAccessor(store, module, paths.join('/'))
+}
+
+export const unregisterModule = (
+  path: string | [string, ...string[]],
+  store: Store<any>,
+  accessor: MergedStoreType<Partial<NuxtStoreInput<any, any, any, any, any>> & BlankStore, string>
+) => {
+  const processedModule = processModuleByPath(accessor, path)
+  store.unregisterModule(path as string)
+  delete processedModule.target[processedModule.key]
 }
