@@ -36,8 +36,8 @@
   },
   "devDependencies": {
     "@babel/preset-env": "~7.25.8",
-    "@nuxt/test-utils": "^0.2.2",
-    "@nuxt/types": "^2.18.1",
+    "@nuxt/test-utils": "0.2.2",
+    "@nuxt/types": "2.18.1",
     "@nuxt/typescript-build": "^2.1.0",
     "core-js": "3.38.1",
     "nuxt": "^2.18.1",
